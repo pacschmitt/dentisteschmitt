@@ -1,0 +1,53 @@
+{
+    "version": 2,
+    "settings": {
+        "appearanceTools": true,
+        "layout": {
+            "contentSize": "800px",
+            "wideSize": "1200px"
+        },
+        "color": {
+            "palette": [
+                {
+                    "slug": "primary",
+                    "color": "#1B3C73",
+                    "name": "Bleu Foncé"
+                },
+                {
+                    "slug": "secondary",
+                    "color": "#4D93CE",
+                    "name": "Bleu Clair"
+                },
+                {
+                    "slug": "background",
+                    "color": "#F5F5F5",
+                    "name": "Gris Clair"
+                },
+                {
+                    "slug": "white",
+                    "color": "#FFFFFF",
+                    "name": "Blanc"
+                },
+                {
+                    "slug": "black",
+                    "color": "#333333",
+                    "name": "Noir Texte"
+                }
+            ]
+        },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "fontFamily": "\"Inter\", sans-serif",
+                    "slug": "body",
+                    "name": "Inter"
+                },
+                {
+                    "fontFamily": "\"Montserrat\", sans-serif",
+                    "slug": "heading",
+                    "name": "Montserrat"
+                }
+            ]
+        }
+    }
+}
