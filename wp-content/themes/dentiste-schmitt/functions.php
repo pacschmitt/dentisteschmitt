@@ -31,10 +31,13 @@ function dentiste_schmitt_scripts() {
     // Main stylesheet
     wp_enqueue_style('dentiste-schmitt-style', get_stylesheet_uri(), array(), '1.0.0');
     
-    // Add Font Awesome for icons
+    // Responsive styles
+    wp_enqueue_style('dentiste-schmitt-responsive', get_template_directory_uri() . '/responsive.css', array('dentiste-schmitt-style'), '1.0.0');
+    
+    // Add Font Awesome for icons (loaded in header for immediate availability)
     wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', array(), '6.4.0');
     
-    // Main JavaScript
+    // Main JavaScript (loaded in footer)
     wp_enqueue_script('dentiste-schmitt-script', get_template_directory_uri() . '/js/main.js', array(), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'dentiste_schmitt_scripts');

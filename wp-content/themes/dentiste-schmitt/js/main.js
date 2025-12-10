@@ -5,6 +5,19 @@
 (function() {
     'use strict';
 
+    // Wait for fonts and CSS to be loaded
+    function waitForFontAwesome(callback) {
+        // Check if Font Awesome is loaded by testing for a known class
+        if (document.querySelector('.fa-bars') || 
+            (typeof FontAwesome !== 'undefined') ||
+            document.fonts.check('1em "Font Awesome 6 Free"')) {
+            callback();
+        } else {
+            // Retry after a short delay
+            setTimeout(function() { waitForFontAwesome(callback); }, 100);
+        }
+    }
+
     // Mobile menu toggle
     function initMobileMenu() {
         const nav = document.querySelector('.main-navigation');
@@ -91,16 +104,23 @@
     // Initialize on DOM ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
-            initMobileMenu();
+            // Wait for Font Awesome to load before initializing features that use icons
+            waitForFontAwesome(function() {
+                initMobileMenu();
+                initScrollToTop();
+            });
+            // These don't need Font Awesome
             initSmoothScroll();
             initActiveMenu();
-            initScrollToTop();
         });
     } else {
-        initMobileMenu();
+        // DOM already loaded
+        waitForFontAwesome(function() {
+            initMobileMenu();
+            initScrollToTop();
+        });
         initSmoothScroll();
         initActiveMenu();
-        initScrollToTop();
     }
 
 })();
