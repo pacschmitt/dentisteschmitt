@@ -16,31 +16,63 @@ get_header();
 
     <!-- Custom Team Grid Section -->
     <section class="team-grid">
-        <?php
-        // Standard loop to display page content (intro text)
-        while ( have_posts() ) :
-            the_post();
-            the_content();
-        endwhile;
-        ?>
-
-        <!-- Placeholder for Team Members (could be ACF repeater or hardcoded) -->
-        <div class="cards-grid">
-            <div class="card">
-                <div style="background:#ddd; height:200px; margin-bottom:15px;">Photo</div>
-                <h3>Dr L. Schmitt</h3>
-                <p>Chirurgien Dentiste</p>
-            </div>
-            <div class="card">
-                <div style="background:#ddd; height:200px; margin-bottom:15px;">Photo</div>
-                <h3>Assistante 1</h3>
-                <p>Hygiéniste</p>
-            </div>
-            <!-- Add more team members here -->
+        <div class="alignwide text-center mb-5" style="max-width: 900px; margin: 0 auto;">
+            <p class="lead">
+                <?php esc_html_e( 'Notre équipe se compose de nos trois chirurgiens-dentistes : Dr Laurent Schmitt, Dr Sacha Schmitt et Dr Aline Koring, de nos deux hygiénistes Mme Saskia Naz et Mme Néda Dolatshahi ainsi que nos deux chaleureuses assistantes Mme Céline Larouble et Mme Lore Dutoit.', 'dentiste-schmitt' ); ?>
+            </p>
+            <p>
+                <?php esc_html_e( 'Nos spécialistes en soins bucco-dentaires vous accueillent avec bienveillance et professionnalisme dans notre cabinet dentaire. Ainsi, nous répondons aux normes imposées en termes d’hygiène et de technologie. Dans l’intention de toujours offrir un service de qualité à nos patients, nous collaborons également avec un prothésiste dentaire installé à Nyon, au plus près du cabinet. Nous pouvons ainsi garantir un résultat esthétique et durable conforme à vos attentes avec des produits de qualité.', 'dentiste-schmitt' ); ?>
+            </p>
         </div>
-    </section>
 
-</main><!-- #main -->
+        <div class="cards-grid">
+            <!-- Docteurs -->
+            <div class="card">
+                <div style="background:#f0f0f0; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
+                <h3>Dr Sacha-Léo Schmitt</h3>
+                <p class="text-primary font-weight-bold">Docteur</p>
+            </div>
+            <div class="card">
+                <div style="background:#f0f0f0; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
+                <h3>Dr Laurent Schmitt</h3>
+                <p class="text-primary font-weight-bold">Docteur</p>
+            </div>
+            <div class="card">
+                <div style="background:#f0f0f0; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
+                <h3>Dr Aline Koring</h3>
+                <p class="text-primary font-weight-bold">Docteur</p>
+            </div>
+
+            <!-- Hygiénistes -->
+            <div class="card">
+                <div style="background:#f0f0f0; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
+                <h3>Saskia Naz Bjuhr</h3>
+                <p class="text-secondary font-weight-bold">Hygiéniste</p>
+            </div>
+            <div class="card">
+                <div style="background:#f0f0f0; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
+                <h3>Neda Dolatshahi</h3>
+                <p class="text-secondary font-weight-bold">Hygiéniste</p>
+            </div>
+
+            <!-- Assistantes -->
+            <div class="card">
+                <div style="background:#f0f0f0; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
+                <h3>Céline Larouble</h3>
+                <p class="text-muted">Assistante</p>
+            </div>
+            <div class="card">
+                <div style="background:#f0f0f0; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
+                <h3>Perrine Vinsonneau</h3>
+                <p class="text-muted">Assistante</p>
+            </div>
+            <div class="card">
+                <div style="background:#f0f0f0; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
+                <h3>Alexandra Alves Poget</h3>
+                <p class="text-muted">Assistante</p>
+            </div>
+        </div>
+    </section></main><!-- #main -->
 
 <?php
 get_footer();

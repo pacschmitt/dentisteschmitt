@@ -337,11 +337,11 @@ img {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .hero-content h1 {
         font-size: 2.5rem;
     }
-    
+
     .section-padding {
         padding: 60px 0;
     }

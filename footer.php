@@ -45,7 +45,7 @@
 
         <div class="site-info">
             <p>
-                &copy; <?php echo date( 'Y' ); ?> Cabinet Dentaire Schmitt. 
+                &copy; <?php echo date( 'Y' ); ?> Cabinet Dentaire Schmitt.
                 <?php esc_html_e( 'Tous droits réservés.', 'dentiste-schmitt' ); ?>
             </p>
         </div><!-- .site-info -->
