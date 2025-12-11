@@ -28,6 +28,10 @@
                 <span class="screen-reader-text"><?php esc_html_e( 'Menu', 'dentiste-schmitt' ); ?></span>
                 ☰
             </button>
+            <div class="lang-switcher">
+                <!-- Placeholder for language switcher plugin like Polylang or WPML -->
+                <a href="#">FR</a> | <a href="#">EN</a>
+            </div>
 			<?php
 			wp_nav_menu(
 				array(
@@ -37,10 +41,6 @@
 				)
 			);
 			?>
-            <div class="lang-switcher">
-                <!-- Placeholder for language switcher plugin like Polylang or WPML -->
-                <a href="#">FR</a> | <a href="#">EN</a>
-            </div>
 		</nav><!-- #site-navigation -->
 	</div>
 </header><!-- #masthead -->
