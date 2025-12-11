@@ -5,20 +5,20 @@
             <div class="footer-column">
                 <h3>Cabinet Nyon</h3>
                 <p>
-                    Rue de la Gare 12<br>
+                    Avenue Reverdil 2<br>
                     1260 Nyon<br>
-                    <a href="tel:+41223610000">022 361 00 00</a><br>
-                    <a href="mailto:nyon@cabinet-schmitt.ch">nyon@cabinet-schmitt.ch</a>
+                    <a href="tel:+41223617844">+41 22 361 78 44</a><br>
+                    <a href="mailto:drschmitt.nyon@bluewin.ch">drschmitt.nyon@bluewin.ch</a>
                 </p>
             </div>
 
             <div class="footer-column">
                 <h3>Cabinet Bassins</h3>
                 <p>
-                    Route de l'Arzier 5<br>
+                    Ruelle de la Repentance 4<br>
                     1269 Bassins<br>
-                    <a href="tel:+41223660000">022 366 00 00</a><br>
-                    <a href="mailto:bassins@cabinet-schmitt.ch">bassins@cabinet-schmitt.ch</a>
+                    <a href="tel:+41223652626">+41 22 365 26 26</a><br>
+                    <a href="mailto:cabinetdentairebassins@gmail.com">cabinetdentairebassins@gmail.com</a>
                 </p>
             </div>
 
@@ -33,27 +33,24 @@
             <div class="footer-column">
                 <h3>Informations</h3>
                 <ul>
-                    <li><a href="#"><?php esc_html_e( 'Mentions légales', 'dentiste-schmitt' ); ?></a></li>
-                    <li><a href="#"><?php esc_html_e( 'Protection des données', 'dentiste-schmitt' ); ?></a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/mentions-legales' ) ); ?>"><?php esc_html_e( 'Mentions légales', 'dentiste-schmitt' ); ?></a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/privacy' ) ); ?>"><?php esc_html_e( 'Protection des données', 'dentiste-schmitt' ); ?></a></li>
                 </ul>
                 <div class="social-icons">
                     <!-- Placeholders for social icons -->
-                    <a href="#" aria-label="Facebook">FB</a>
-                    <a href="#" aria-label="Instagram">IG</a>
+                    <!-- <a href="#" aria-label="Facebook">FB</a> -->
                 </div>
             </div>
         </div>
 
         <div class="site-info">
             <p>
-                &copy; <?php echo date( 'Y' ); ?> Cabinet Dentaire Schmitt.
+                &copy; <?php echo date( 'Y' ); ?> Cabinet Dentaire Schmitt. 
                 <?php esc_html_e( 'Tous droits réservés.', 'dentiste-schmitt' ); ?>
             </p>
         </div><!-- .site-info -->
     </div><!-- .container -->
-</footer><!-- #colophon -->
-
-<?php wp_footer(); ?>
+</footer><!-- #colophon --><?php wp_footer(); ?>
 
 </body>
 </html>
