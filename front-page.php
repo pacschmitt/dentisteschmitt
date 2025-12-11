@@ -20,7 +20,7 @@ get_header();
             <div class="hero-buttons">
                 <div class="hero-btn-wrapper">
                     <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn btn-outline"><?php esc_html_e( 'RDV en ligne à Nyon', 'dentiste-schmitt' ); ?></a>
-                    <p class="hero-address"><?php esc_html_e( 'Avenue Reverdil 2, \n 1260 Nyon', 'dentiste-schmitt' ); ?></p>
+                    <p class="hero-address"><?php esc_html_e( 'Avenue Reverdil 2, 1260 Nyon', 'dentiste-schmitt' ); ?></p>
                 </div>
                 <div class="hero-btn-wrapper">
                     <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn btn-outline"><?php esc_html_e( 'RDV en ligne à Bassins', 'dentiste-schmitt' ); ?></a>
