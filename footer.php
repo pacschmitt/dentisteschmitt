@@ -52,8 +52,48 @@
     </div><!-- .container -->
 </footer><!-- #colophon -->
 
-<!-- Floating CTA Button -->
-<a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="floating-cta">
+<!-- Floating CTA Button with Inline Styles to ensure visibility -->
+<style>
+.floating-cta-btn {
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999999;
+    background-color: #4D93CE; /* Secondary color */
+    color: #FFFFFF !important;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+    border: 2px solid #FFFFFF;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+.floating-cta-btn:hover {
+    background-color: #1B3C73; /* Primary color */
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    color: #FFFFFF !important;
+}
+
+@media (max-width: 768px) {
+    .floating-cta-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+}
+</style>
+
+<a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="floating-cta-btn">
     <?php esc_html_e( 'Prendre RDV', 'dentiste-schmitt' ); ?>
 </a>
 
