@@ -214,28 +214,32 @@ img {
 
 /* Floating CTA Button */
 .floating-cta {
-    position: fixed;
+    display: inline-block !important;
+    position: fixed !important;
     bottom: 30px;
     right: 30px;
-    z-index: 9999;
+    z-index: 2147483647; /* Max z-index */
     background-color: var(--color-secondary);
-    color: var(--color-white);
+    color: var(--color-white) !important;
     padding: 16px 32px;
     border-radius: 50px;
     font-weight: 700;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-size: 1rem;
     border: 2px solid var(--color-white);
+    text-decoration: none;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .floating-cta:hover {
     background-color: var(--color-primary);
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-    color: var(--color-white);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    color: var(--color-white) !important;
 }
 
 /* Mobile Menu Toggle (Hidden on Desktop) */
