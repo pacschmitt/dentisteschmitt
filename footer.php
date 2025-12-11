@@ -50,7 +50,14 @@
             </p>
         </div><!-- .site-info -->
     </div><!-- .container -->
-</footer><!-- #colophon --><?php wp_footer(); ?>
+</footer><!-- #colophon -->
+
+<!-- Floating CTA Button -->
+<a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="floating-cta">
+    <?php esc_html_e( 'Prendre RDV', 'dentiste-schmitt' ); ?>
+</a>
+
+<?php wp_footer(); ?>
 
 </body>
 </html>
