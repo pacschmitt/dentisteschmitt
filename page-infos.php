@@ -25,7 +25,7 @@ get_header();
         </div>
 
         <div class="cards-grid mb-5">
-            <div class="card" style="text-align: left;">
+            <div class="card">
                 <h3>Nyon</h3>
                 <p>
                     <strong>Adresse :</strong> Avenue Reverdil 2, 1260 Nyon<br>
@@ -46,7 +46,7 @@ get_header();
                 </p>
             </div>
 
-            <div class="card" style="text-align: left;">
+            <div class="card">
                 <h3>Bassins</h3>
                 <p>
                     <strong>Adresse :</strong> Ruelle de la Repentance 4, 1269 Bassins<br>

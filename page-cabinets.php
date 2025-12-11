@@ -30,7 +30,7 @@ get_header();
     </div>
 
     <div class="two-columns-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 60px;">
-        <div class="cabinet-nyon card" style="text-align: left;">
+        <div class="cabinet-nyon card">
             <h2 class="mb-4">Cabinet Nyon</h2>
             <p>
                 <strong>Adresse :</strong><br>
@@ -52,7 +52,7 @@ get_header();
             <div class="mt-4" style="background:#eee; height:300px; display:flex; align-items:center; justify-content:center; border-radius: 8px;">Google Maps Nyon</div>
         </div>
 
-        <div class="cabinet-bassins card" style="text-align: left;">
+        <div class="cabinet-bassins card">
             <h2 class="mb-4">Cabinet Bassins</h2>
             <p>
                 <strong>Adresse :</strong><br>
