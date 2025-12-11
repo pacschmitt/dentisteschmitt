@@ -11,7 +11,7 @@ get_header();
 <main id="primary" class="site-main container section-padding">
 
     <header class="entry-header text-center mb-5">
-        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+      <h1 class="entry-title">Notre Equipe</h1>
     </header>
 
     <!-- Custom Team Grid Section -->
