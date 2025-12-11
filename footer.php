@@ -52,11 +52,6 @@
     </div><!-- .container -->
 </footer><!-- #colophon -->
 
-<!-- Floating CTA Button with Inline Styles to ensure visibility -->
-<a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="floating-cta-btn" style="display: block !important; position: fixed !important; bottom: 30px !important; right: 30px !important; z-index: 999999 !important; background-color: #4D93CE !important; color: #FFFFFF !important; padding: 16px 32px !important; border-radius: 50px !important; font-weight: 700 !important; box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important; text-transform: uppercase !important; letter-spacing: 0.5px !important; font-size: 1rem !important; border: 2px solid #FFFFFF !important; text-decoration: none !important; cursor: pointer !important;">
-    <?php esc_html_e( 'Prendre RDV', 'dentiste-schmitt' ); ?>
-</a>
-
 <?php wp_footer(); ?>
 
 </body>
