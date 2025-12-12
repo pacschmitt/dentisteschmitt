@@ -52,6 +52,7 @@ body {
     font-size: 17px; /* Slightly larger */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-align: left;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -61,6 +62,16 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.02em;
+    text-align: center;
+}
+
+/* Safety net: ensure titles stay centered even inside left-aligned sections */
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
     text-align: center;
 }
 

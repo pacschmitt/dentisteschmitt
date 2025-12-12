@@ -85,10 +85,10 @@ get_header();
 
     <!-- 5. À propos -->
     <section class="section-padding">
-      <div class="text-center mb-5">
-          <h2>À propos</h2>
-      </div>
         <div class="container">
+            <div class="text-center mb-5">
+                <h2>À propos</h2>
+            </div>
             <div class="alignwide" style="max-width: 900px; margin: 0 auto;">
                 <p class="mb-4">
                     <?php esc_html_e( 'Nos dentistes et nos collaborateurs, spécialisés en santé bucco-dentaire, vous accueillent au cabinet du lundi au jeudi, pour vous prodiguer des soins de qualité dans une ambiance bienveillante et chaleureuse.', 'dentiste-schmitt' ); ?>
