@@ -54,6 +54,9 @@ get_header();
 
         <div class="cabinet-bassins card">
             <h2 class="mb-4">Cabinet Bassins</h2>
+            <div class="mt-4 mb-4">
+                <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn btn-sm">Prendre RDV à Bassins</a>
+            </div>
             <p>
                 <strong>Adresse :</strong><br>
                 Ruelle de la Repentance 4<br>
@@ -67,9 +70,6 @@ get_header();
                 <strong>Email :</strong><br>
                 <a href="mailto:cabinetdentairebassins@gmail.com">cabinetdentairebassins@gmail.com</a>
             </p>
-            <div class="mt-4">
-                <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn btn-sm">Prendre RDV à Bassins</a>
-            </div>
             <!-- Map Placeholder -->
             <div class="mt-4" style="background:#eee; height:300px; display:flex; align-items:center; justify-content:center; border-radius: 8px;">Google Maps Bassins</div>
         </div>
