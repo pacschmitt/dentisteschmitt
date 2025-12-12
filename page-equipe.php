@@ -20,7 +20,7 @@ get_header();
             <p class="lead">
                 <?php
                 echo wp_kses_post(
-                    __( 'Notre équipe se compose de nos trois chirurgiens-dentistes : <strong>Dr Laurent Schmitt</strong>, Dr Sacha Schmitt et Dr Aline Koring, de nos deux hygiénistes Mme Saskia Naz et Mme Néda Dolatshahi ainsi que nos deux chaleureuses assistantes Mme Céline Larouble et Mme Lore Dutoit.', 'dentiste-schmitt' )
+                    __( 'Notre équipe se compose de nos trois chirurgiens-dentistes : <strong>Dr Laurent Schmitt</strong>, <strong>Dr Sacha Schmitt</strong> et <strong>Dr Aline Koring</strong>, de nos deux hygiénistes Mme Saskia Naz et Mme Néda Dolatshahi ainsi que nos deux chaleureuses assistantes Mme Céline Larouble et Mme Lore Dutoit.', 'dentiste-schmitt' )
                 );
                 ?>
             </p>
