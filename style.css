@@ -379,6 +379,7 @@ img {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    position: relative;
 }
 
 .site-branding {
@@ -488,27 +489,19 @@ img {
         display: block;
     }
 
+    /* Keep nav visible (for hamburger), only dropdown panel overlays */
     .main-navigation {
-        display: block;
-        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        position: static;
     }
 
-    /* Hide only the menu contents by default on mobile */
+    /* Hide dropdown contents by default on mobile */
     .main-navigation .nav-menu,
-    .main-navigation > ul {
+    .main-navigation > ul,
+    .main-navigation .lang-switcher {
         display: none;
-    }
-
-    .main-navigation {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: var(--color-white);
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        padding: 20px;
-        border-top: 1px solid rgba(0,0,0,0.05);
-        z-index: 1001;
     }
 
     /* JS toggles the class on #site-navigation (nav), not on .site-header */
@@ -516,9 +509,24 @@ img {
         animation: slideDown 0.3s ease-out forwards;
     }
 
+    /* Dropdown panel */
     .main-navigation.toggled .nav-menu,
-    .main-navigation.toggled > ul {
+    .main-navigation.toggled > ul,
+    .main-navigation.toggled .lang-switcher {
         display: flex;
+    }
+
+    .main-navigation.toggled {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background-color: var(--color-white);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        padding: 16px;
+        border-top: 1px solid rgba(0,0,0,0.05);
+        z-index: 1001;
+        display: block;
     }
 
     .main-navigation ul {
