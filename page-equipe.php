@@ -18,7 +18,11 @@ get_header();
     <section class="team-grid">
         <div class="alignwide text-center mb-5" style="max-width: 900px; margin: 0 auto;">
             <p class="lead">
-                <?php esc_html_e( 'Notre équipe se compose de nos trois chirurgiens-dentistes : Dr Laurent Schmitt, Dr Sacha Schmitt et Dr Aline Koring, de nos deux hygiénistes Mme Saskia Naz et Mme Néda Dolatshahi ainsi que nos deux chaleureuses assistantes Mme Céline Larouble et Mme Lore Dutoit.', 'dentiste-schmitt' ); ?>
+                <?php
+                echo wp_kses_post(
+                    __( 'Notre équipe se compose de nos trois chirurgiens-dentistes : <strong>Dr Laurent Schmitt</strong>, Dr Sacha Schmitt et Dr Aline Koring, de nos deux hygiénistes Mme Saskia Naz et Mme Néda Dolatshahi ainsi que nos deux chaleureuses assistantes Mme Céline Larouble et Mme Lore Dutoit.', 'dentiste-schmitt' )
+                );
+                ?>
             </p>
             <p>
                 <?php esc_html_e( 'Nos spécialistes en soins bucco-dentaires vous accueillent avec bienveillance et professionnalisme dans notre cabinet dentaire. Ainsi, nous répondons aux normes imposées en termes d’hygiène et de technologie. Dans l’intention de toujours offrir un service de qualité à nos patients, nous collaborons également avec un prothésiste dentaire installé à Nyon, au plus près du cabinet. Nous pouvons ainsi garantir un résultat esthétique et durable conforme à vos attentes avec des produits de qualité.', 'dentiste-schmitt' ); ?>
