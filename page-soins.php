@@ -10,8 +10,8 @@ get_header();
 
 <main id="primary" class="site-main container section-padding">
 
-    <header class="entry-header text-center mb-5">
-        <h1 class="entry-title">Nos Soins</h1>
+    <header class="entry-header text-center mb-5 alignwide" style="margin-left: auto; margin-right: auto;">
+      <h1 class="entry-title"><?php esc_html_e( 'Nos Soins', 'dentiste-schmitt' ); ?></h1>
     </header>
 
     <div class="alignwide text-center mb-5" style="max-width: 900px; margin: 0 auto;">
