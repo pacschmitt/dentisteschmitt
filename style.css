@@ -240,9 +240,11 @@ img {
     display: flex;
     transition: transform 300ms ease;
     will-change: transform;
+    width: 100%;
 }
 
 .carousel-slide {
+    flex: 0 0 100%;
     min-width: 100%;
 }
 
