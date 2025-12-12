@@ -18,7 +18,7 @@ $fallback_img = 'https://via.placeholder.com/1200x800.png?text=Photo+cabinet';
 
     <div class="alignwide text-center mb-5" style="max-width: 900px; margin: 0 auto;">
         <p class="lead">
-            <?php esc_html_e( 'Notre deuxième cabinet dentaire et toute son équipe vous accueillent chaleureusement pour vous offrir les meilleurs soins bucco-dentaires. Nous mettons toutes nos compétences et notre expérience au service de nos patients, enfant ou adulte, pour prévenir et soigner leur dentition.', 'dentiste-schmitt' ); ?>
+            <?php esc_html_e( 'Nos deux cabinets dentaire et toute leurs équipes vous accueillent chaleureusement pour vous offrir les meilleurs soins bucco-dentaires. Nous mettons toutes nos compétences et notre expérience au service de nos patients, enfant ou adulte, pour prévenir et soigner leur dentition.', 'dentiste-schmitt' ); ?>
         </p>
         <p>
             <?php esc_html_e( 'Contactez le cabinet pour prendre rendez-vous avec nos chirurgiens-dentistes et nos hygiénistes de qualité.', 'dentiste-schmitt' ); ?>
