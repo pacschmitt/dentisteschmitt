@@ -126,7 +126,7 @@ get_header();
                 </div>
             </div>
             <div class="text-center mt-5">
-                 <a href="<?php echo esc_url( home_url( '/nos-soins' ) ); ?>" class="btn"><?php esc_html_e( 'En savoir plus sur nos soins', 'dentiste-schmitt' ); ?></a>
+                 <a href="<?php echo esc_url( home_url( '/page-soins' ) ); ?>" class="btn"><?php esc_html_e( 'En savoir plus sur nos soins', 'dentiste-schmitt' ); ?></a>
             </div>
         </div>
     </section>
