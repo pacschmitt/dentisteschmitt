@@ -233,6 +233,7 @@ img {
     width: 100%;
     border-radius: var(--border-radius);
     overflow: hidden;
+    overflow-x: clip;
     background: #eef2f7;
 }
 
@@ -241,6 +242,7 @@ img {
     transition: transform 300ms ease;
     will-change: transform;
     width: 100%;
+    transform: translate3d(0, 0, 0);
 }
 
 .carousel-slide {
