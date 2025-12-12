@@ -15,8 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let index = 0;
 
+    function getSlideWidth() {
+      const firstSlide = slides[0];
+      if (!firstSlide) return 0;
+      // Prefer the carousel viewport width; fallback to slide width.
+      const viewportWidth = Math.round(carousel.getBoundingClientRect().width);
+      if (viewportWidth > 0) return viewportWidth;
+      return Math.round(firstSlide.getBoundingClientRect().width);
+    }
+
     function update() {
-      track.style.transform = `translateX(-${index * 100}%)`;
+      const slideWidth = getSlideWidth();
+      track.style.transform = `translate3d(-${index * slideWidth}px, 0, 0)`;
       slides.forEach((slide, i) => {
         slide.setAttribute('aria-hidden', i === index ? 'false' : 'true');
       });
@@ -72,6 +82,16 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         goNext();
       }
+    });
+
+    // Keep sizing correct when viewport changes or images finish loading.
+    window.addEventListener('resize', () => update());
+    slides.forEach((slide) => {
+      const img = slide.querySelector('img');
+      if (!img) return;
+      if (img.complete) return;
+      img.addEventListener('load', () => update(), { once: true });
+      img.addEventListener('error', () => update(), { once: true });
     });
 
     update();
