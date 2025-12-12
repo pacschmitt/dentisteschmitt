@@ -23,6 +23,17 @@ function dentiste_schmitt_setup() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
+    // Enable Custom Logo (Appearance → Customize → Site Identity).
+    add_theme_support(
+        'custom-logo',
+        array(
+            'height'      => 120,
+            'width'       => 360,
+            'flex-height' => true,
+            'flex-width'  => true,
+        )
+    );
+
 	/*
 	 * Let WordPress manage the document title.
 	 * By adding theme support, we declare that this theme does not use a
