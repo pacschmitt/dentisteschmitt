@@ -53,6 +53,7 @@ get_header();
                     title="Cabinet Nyon - Google Maps"
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen
                     src="https://www.google.com/maps?q=Avenue%20Reverdil%202%2C%201260%20Nyon&output=embed">
                 </iframe>
             </div>
@@ -81,6 +82,7 @@ get_header();
                     title="Cabinet Bassins - Google Maps"
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen
                     src="https://www.google.com/maps?q=Ruelle%20de%20la%20Repentance%204%2C%201269%20Bassins&output=embed">
                 </iframe>
             </div>
