@@ -469,7 +469,17 @@ img {
     }
 
     .main-navigation {
+        display: block;
+        position: relative;
+    }
+
+    /* Hide only the menu contents by default on mobile */
+    .main-navigation .nav-menu,
+    .main-navigation > ul {
         display: none;
+    }
+
+    .main-navigation {
         position: absolute;
         top: 100%;
         left: 0;
@@ -478,11 +488,17 @@ img {
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         padding: 20px;
         border-top: 1px solid rgba(0,0,0,0.05);
+        z-index: 1001;
     }
 
-    .site-header.toggled .main-navigation {
-        display: block;
+    /* JS toggles the class on #site-navigation (nav), not on .site-header */
+    .main-navigation.toggled {
         animation: slideDown 0.3s ease-out forwards;
+    }
+
+    .main-navigation.toggled .nav-menu,
+    .main-navigation.toggled > ul {
+        display: flex;
     }
 
     .main-navigation ul {
