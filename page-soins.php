@@ -14,19 +14,19 @@ get_header();
       <h1 class="entry-title"><?php esc_html_e( 'Nos Soins', 'dentiste-schmitt' ); ?></h1>
     </header>
 
-    <div class="alignwide text-center mb-5" style="max-width: 900px; margin: 0 auto;">
-        <p class="lead">
-            <?php esc_html_e( 'Chez Dentiste Schmitt, nos praticiens proposent leurs compétences et leurs savoir-faire en dentisterie globale, pour parfaire l\'esthétique et l\'hygiène de vos dents.', 'dentiste-schmitt' ); ?>
-        </p>
-        <p>
-            <?php esc_html_e( 'En effet, à la suite d’une prise de rendez-vous, nous réalisons un examen complet de votre dentition. Notre hygiéniste vous accompagne minutieusement dans la collecte de toutes les données concernant votre santé buccale. Ainsi, nous pouvons réfléchir, concevoir et vous proposer un plan de traitement préventif ou curatif, personnalisé, adapté à vos besoins.', 'dentiste-schmitt' ); ?>
-        </p>
-        <p>
-            <?php esc_html_e( 'Consciencieux et minutieux dans notre travail, nous nous engageons à réaliser des soins de qualité en privilégiant le confort et la quiétude de nos patients. Durant nos consultations et dans la prise en charge de nos patients, nous respectons rigoureusement les normes d\'hygiène et utilisons des équipements derniers cris pour traiter et améliorer votre santé buccale.', 'dentiste-schmitt' ); ?>
-        </p>
-        <p>
-            <?php esc_html_e( 'À l\'écoute de notre patientèle, nous prenons le temps de comprendre leur histoire, leur priorité et quelques fois leur peur du dentiste. Au cabinet Dentiste Schmitt, nous souhaitons changer les appréhensions sur notre métier et réussir a traiter les problèmes dentaire en douceur et sans douleur. Nous adaptons notre façon de réaliser nos soins en fonction de l’âge de nos patients.', 'dentiste-schmitt' ); ?>
-        </p>
+    <div class="alignwide mb-5" style="max-width: 900px; margin: 0 auto; text-align: left;">
+      <p class="lead">
+        <?php esc_html_e( 'Chez Dentiste Schmitt, nos praticiens proposent leurs compétences et leurs savoir-faire en dentisterie globale, pour parfaire l\'esthétique et l\'hygiène de vos dents.', 'dentiste-schmitt' ); ?>
+      </p>
+      <p>
+        <?php esc_html_e( 'En effet, à la suite d’une prise de rendez-vous, nous réalisons un examen complet de votre dentition. Notre hygiéniste vous accompagne minutieusement dans la collecte de toutes les données concernant votre santé buccale. Ainsi, nous pouvons réfléchir, concevoir et vous proposer un plan de traitement préventif ou curatif, personnalisé, adapté à vos besoins.', 'dentiste-schmitt' ); ?>
+      </p>
+      <p>
+        <?php esc_html_e( 'Consciencieux et minutieux dans notre travail, nous nous engageons à réaliser des soins de qualité en privilégiant le confort et la quiétude de nos patients. Durant nos consultations et dans la prise en charge de nos patients, nous respectons rigoureusement les normes d\'hygiène et utilisons des équipements derniers cris pour traiter et améliorer votre santé buccale.', 'dentiste-schmitt' ); ?>
+      </p>
+      <p>
+        <?php esc_html_e( 'À l\'écoute de notre patientèle, nous prenons le temps de comprendre leur histoire, leur priorité et quelques fois leur peur du dentiste. Au cabinet Dentiste Schmitt, nous souhaitons changer les appréhensions sur notre métier et réussir a traiter les problèmes dentaire en douceur et sans douleur. Nous adaptons notre façon de réaliser nos soins en fonction de l’âge de nos patients.', 'dentiste-schmitt' ); ?>
+      </p>
     </div>
 
     <h2 class="text-center mb-5"><?php esc_html_e( 'Découvrez nos pratiques et soins disponibles', 'dentiste-schmitt' ); ?></h2>
