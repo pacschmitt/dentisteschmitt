@@ -41,13 +41,13 @@ $fallback_img = 'https://via.placeholder.com/1200x800.png?text=Photo+cabinet';
             <div class="carousel" data-carousel tabindex="0" aria-label="Photos du cabinet de Nyon">
                 <div class="carousel-track" data-carousel-track>
                     <div class="carousel-slide" data-carousel-slide aria-hidden="false">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/nyon-1.jpg' ); ?>" alt="Cabinet Nyon - photo 1" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/1.webp' ); ?>" alt="Cabinet Nyon - photo 1" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
                     </div>
                     <div class="carousel-slide" data-carousel-slide aria-hidden="true">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/nyon-2.jpg' ); ?>" alt="Cabinet Nyon - photo 2" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/2.jpg' ); ?>" alt="Cabinet Nyon - photo 2" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
                     </div>
                     <div class="carousel-slide" data-carousel-slide aria-hidden="true">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/nyon-3.jpg' ); ?>" alt="Cabinet Nyon - photo 3" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/3.png' ); ?>" alt="Cabinet Nyon - photo 3" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
                     </div>
                 </div>
                 <div class="carousel-nav" aria-hidden="true">
@@ -90,13 +90,13 @@ $fallback_img = 'https://via.placeholder.com/1200x800.png?text=Photo+cabinet';
             <div class="carousel" data-carousel tabindex="0" aria-label="Photos du cabinet de Bassins">
                 <div class="carousel-track" data-carousel-track>
                     <div class="carousel-slide" data-carousel-slide aria-hidden="false">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/bassins-1.jpg' ); ?>" alt="Cabinet Bassins - photo 1" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/1.webp' ); ?>" alt="Cabinet Bassins - photo 1" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
                     </div>
                     <div class="carousel-slide" data-carousel-slide aria-hidden="true">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/bassins-2.jpg' ); ?>" alt="Cabinet Bassins - photo 2" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/2.jpg' ); ?>" alt="Cabinet Bassins - photo 2" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
                     </div>
                     <div class="carousel-slide" data-carousel-slide aria-hidden="true">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/bassins-3.jpg' ); ?>" alt="Cabinet Bassins - photo 3" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/3.png' ); ?>" alt="Cabinet Bassins - photo 3" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
                     </div>
                 </div>
                 <div class="carousel-nav" aria-hidden="true">
