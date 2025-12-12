@@ -15,7 +15,7 @@ get_header();
 		the_post();
         ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <header class="entry-header">
+            <header class="entry-header text-center mb-5">
                 <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
                 <div class="entry-meta">
                     <?php echo get_the_date(); ?>
