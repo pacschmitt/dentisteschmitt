@@ -32,15 +32,15 @@ get_header();
                     <strong>Téléphone :</strong> <a href="tel:+41223617844">+41 22 361 78 44</a><br>
                     <strong>Email :</strong> <a href="mailto:drschmitt.nyon@bluewin.ch">drschmitt.nyon@bluewin.ch</a>
                 </p>
-                <p class="mt-3">
+                <p class="mt-5">
                     <strong>Horaires :</strong><br>
                     Lundi au Jeudi : 8h00 - 18h00 (sur rendez-vous)
                 </p>
-                <p class="mt-3">
+                <p class="mt-5">
                     <strong>Situation :</strong><br>
                     Le cabinet est situé en plein centre de Nyon à 100m de la gare au-dessus du centre commercial de La Combe (3ème étage avec ascenseurs).
                 </p>
-                <p class="mt-3">
+                <p class="mt-5">
                     <strong>Parking :</strong><br>
                     Parking P1 et P2 de la Combe (accès direct avec les ascenseurs).
                 </p>
