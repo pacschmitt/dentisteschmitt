@@ -21,7 +21,7 @@ get_header();
         <p>
             <?php esc_html_e( 'Contactez le cabinet pour prendre rendez-vous avec nos chirurgiens-dentistes et nos hygiénistes de qualité.', 'dentiste-schmitt' ); ?>
         </p>
-        <div class="mt-4 p-4 bg-light" style="border-radius: 8px; display: inline-block;">
+        <div class="mt-4 p-4 bg-light text-center" style="border-radius: 8px; display: inline-block;">
             <strong><?php esc_html_e( 'Tarifs', 'dentiste-schmitt' ); ?> :</strong>
             <?php esc_html_e( 'Tout mode et facilité de paiement', 'dentiste-schmitt' ); ?><br>
             <?php esc_html_e( 'Tarif hygiéniste : 150 CHF', 'dentiste-schmitt' ); ?> |
