@@ -239,6 +239,9 @@ img {
 
 .carousel-track {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
     transition: transform 300ms ease;
     will-change: transform;
     width: 100%;
@@ -248,6 +251,7 @@ img {
 .carousel-slide {
     flex: 0 0 100%;
     min-width: 100%;
+    max-width: 100%;
 }
 
 .carousel-slide img {
@@ -256,6 +260,10 @@ img {
     height: 320px;
     object-fit: cover;
     border-radius: 0;
+}
+
+.carousel-slide {
+    display: block;
 }
 
 @media (max-width: 768px) {
