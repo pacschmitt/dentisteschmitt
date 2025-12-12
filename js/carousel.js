@@ -86,14 +86,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Keep sizing correct when viewport changes or images finish loading.
     window.addEventListener('resize', () => update());
+
+    // Force update on window load to ensure all styles are applied
+    window.addEventListener('load', () => update());
+
     slides.forEach((slide) => {
       const img = slide.querySelector('img');
       if (!img) return;
-      if (img.complete) return;
-      img.addEventListener('load', () => update(), { once: true });
-      img.addEventListener('error', () => update(), { once: true });
+      if (img.complete) {
+         // If already loaded, update immediately
+         update();
+      } else {
+         img.addEventListener('load', () => update(), { once: true });
+         img.addEventListener('error', () => update(), { once: true });
+      }
     });
 
+    // Initial update
     update();
+
+    // Safety check: retry after a short delay in case of layout thrashing
+    setTimeout(update, 100);
+    setTimeout(update, 500);
   });
 });

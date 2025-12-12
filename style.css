@@ -238,9 +238,9 @@ img {
 }
 
 .carousel-track {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
     align-items: stretch;
     transition: transform 300ms ease;
     will-change: transform;
@@ -249,9 +249,11 @@ img {
 }
 
 .carousel-slide {
-    flex: 0 0 100%;
-    min-width: 100%;
-    max-width: 100%;
+    flex: 0 0 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    display: block;
 }
 
 .carousel-slide img {
