@@ -74,59 +74,6 @@ get_header();
         </div>
     </div>
 
-    <!-- Modal Structure -->
-    <div id="soinModal" class="modal-overlay">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <h3 class="modal-title"></h3>
-            <div class="modal-body"></div>
-        </div>
-    </div>
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const modal = document.getElementById('soinModal');
-        const modalTitle = modal.querySelector('.modal-title');
-        const modalBody = modal.querySelector('.modal-body');
-        const closeBtn = modal.querySelector('.modal-close');
-        const cards = document.querySelectorAll('.soins-grid .card');
-
-        cards.forEach(card => {
-            card.addEventListener('click', function() {
-                const title = this.getAttribute('data-title');
-                const desc = this.getAttribute('data-desc');
-                
-                modalTitle.textContent = title;
-                modalBody.textContent = desc;
-                
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
-            });
-        });
-
-        function closeModal() {
-            modal.classList.remove('active');
-            document.body.style.overflow = ''; // Restore scrolling
-        }
-
-        closeBtn.addEventListener('click', closeModal);
-
-        // Close on click outside
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-
-        // Close on Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && modal.classList.contains('active')) {
-                closeModal();
-            }
-        });
-    });
-    </script>
-
 </main><!-- #main -->
 
 <?php
