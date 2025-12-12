@@ -29,7 +29,7 @@ get_header();
       </p>
     </div>
 
-    <h2 class="text-center mb-5"><?php esc_html_e( 'Découvrez nos pratiques et soins disponibles', 'dentiste-schmitt' ); ?></h2>
+    <h2 class="text-center mb-5 mt-5"><?php esc_html_e( 'Découvrez nos pratiques et soins disponibles', 'dentiste-schmitt' ); ?></h2>
 
     <div class="soins-grid cards-grid">
         <div class="card" data-title="La dentisterie globale" data-desc="Approche médicale prenant en compte l'ensemble de la bouche et ses interactions avec le reste du corps pour proposer des traitements complets et durables.">
