@@ -104,7 +104,7 @@ function dentiste_schmitt_floating_cta() {
             background-color: #4D93CE;
             color: #FFFFFF !important;
             padding: 16px 32px;
-            border-radius: 20px;
+            border-radius: 10px;
             font-weight: 700;
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
