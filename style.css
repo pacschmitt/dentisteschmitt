@@ -173,6 +173,90 @@ img {
     }
 }
 
+/* Carousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background: #eef2f7;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 300ms ease;
+    will-change: transform;
+}
+
+.carousel-slide {
+    min-width: 100%;
+}
+
+.carousel-slide img {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+@media (max-width: 768px) {
+    .carousel-slide img {
+        height: 240px;
+    }
+}
+
+.carousel-nav {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+    padding: 0 12px;
+}
+
+.carousel-btn {
+    pointer-events: auto;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.7);
+    background: rgba(27, 60, 115, 0.75);
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+}
+
+.carousel-btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    padding: 12px 0 0;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    border: 0;
+    background: rgba(27, 60, 115, 0.25);
+    cursor: pointer;
+}
+
+.carousel-dot.is-active,
+.carousel-dot[aria-current="true"] {
+    background: rgba(27, 60, 115, 0.9);
+}
+
 @media (max-width: 768px) {
     .map-embed {
         min-height: 280px;
@@ -691,9 +775,25 @@ img {
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 60px;
+    gap: 40px;
     margin-bottom: 80px;
     text-align: center; /* Center footer items as requested */
+}
+
+.footer-column {
+    min-width: 0;
+}
+
+.footer-column a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
 }
 
 .footer-column h3 {

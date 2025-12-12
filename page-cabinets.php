@@ -35,6 +35,26 @@ get_header();
             <div class="mt-4 mb-4">
                 <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn btn-sm">Prendre RDV à Nyon</a>
             </div>
+
+            <div class="carousel" data-carousel tabindex="0" aria-label="Photos du cabinet de Nyon">
+                <div class="carousel-track" data-carousel-track>
+                    <div class="carousel-slide" data-carousel-slide aria-hidden="false">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/nyon-1.jpg' ); ?>" alt="Cabinet Nyon - photo 1">
+                    </div>
+                    <div class="carousel-slide" data-carousel-slide aria-hidden="true">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/nyon-2.jpg' ); ?>" alt="Cabinet Nyon - photo 2">
+                    </div>
+                    <div class="carousel-slide" data-carousel-slide aria-hidden="true">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/nyon-3.jpg' ); ?>" alt="Cabinet Nyon - photo 3">
+                    </div>
+                </div>
+                <div class="carousel-nav" aria-hidden="true">
+                    <button type="button" class="carousel-btn" data-carousel-prev aria-label="Photo précédente">‹</button>
+                    <button type="button" class="carousel-btn" data-carousel-next aria-label="Photo suivante">›</button>
+                </div>
+            </div>
+            <div class="carousel-dots" data-carousel-dots></div>
+
             <p>
                 <strong>Adresse :</strong><br>
                 Avenue Reverdil 2<br>
@@ -64,6 +84,26 @@ get_header();
             <div class="mt-4 mb-4">
                 <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn btn-sm">Prendre RDV à Bassins</a>
             </div>
+
+            <div class="carousel" data-carousel tabindex="0" aria-label="Photos du cabinet de Bassins">
+                <div class="carousel-track" data-carousel-track>
+                    <div class="carousel-slide" data-carousel-slide aria-hidden="false">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/bassins-1.jpg' ); ?>" alt="Cabinet Bassins - photo 1">
+                    </div>
+                    <div class="carousel-slide" data-carousel-slide aria-hidden="true">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/bassins-2.jpg' ); ?>" alt="Cabinet Bassins - photo 2">
+                    </div>
+                    <div class="carousel-slide" data-carousel-slide aria-hidden="true">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/bassins-3.jpg' ); ?>" alt="Cabinet Bassins - photo 3">
+                    </div>
+                </div>
+                <div class="carousel-nav" aria-hidden="true">
+                    <button type="button" class="carousel-btn" data-carousel-prev aria-label="Photo précédente">‹</button>
+                    <button type="button" class="carousel-btn" data-carousel-next aria-label="Photo suivante">›</button>
+                </div>
+            </div>
+            <div class="carousel-dots" data-carousel-dots></div>
+
             <p>
                 <strong>Adresse :</strong><br>
                 Ruelle de la Repentance 4<br>
