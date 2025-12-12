@@ -87,7 +87,7 @@ get_header();
     <section class="section-padding">
         <div class="container">
             <div class="text-center mb-5">
-                <h2><?php esc_html_e( 'À propos', 'dentiste-schmitt' ); ?></h2>
+                <h2>À propos'</h2>
             </div>
             <div class="alignwide" style="max-width: 900px; margin: 0 auto;">
                 <p class="mb-4">
