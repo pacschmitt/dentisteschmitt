@@ -48,8 +48,14 @@ get_header();
                 <strong>Email :</strong><br>
                 <a href="mailto:drschmitt.nyon@bluewin.ch">drschmitt.nyon@bluewin.ch</a>
             </p>
-            <!-- Map Placeholder -->
-            <div class="mt-4" style="background:#eee; height:300px; display:flex; align-items:center; justify-content:center; border-radius: 8px;">Google Maps Nyon</div>
+            <div class="map-embed mt-4" aria-label="Carte Google Maps - Cabinet Nyon">
+                <iframe
+                    title="Cabinet Nyon - Google Maps"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps?q=Avenue%20Reverdil%202%2C%201260%20Nyon&output=embed">
+                </iframe>
+            </div>
         </div>
 
         <div class="cabinet-bassins card">
@@ -70,8 +76,14 @@ get_header();
                 <strong>Email :</strong><br>
                 <a href="mailto:cabinetdentairebassins@gmail.com">cabinetdentairebassins@gmail.com</a>
             </p>
-            <!-- Map Placeholder -->
-            <div class="mt-4" style="background:#eee; height:300px; display:flex; align-items:center; justify-content:center; border-radius: 8px;">Google Maps Bassins</div>
+            <div class="map-embed mt-4" aria-label="Carte Google Maps - Cabinet Bassins">
+                <iframe
+                    title="Cabinet Bassins - Google Maps"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps?q=Ruelle%20de%20la%20Repentance%204%2C%201269%20Bassins&output=embed">
+                </iframe>
+            </div>
         </div>
     </div>
 
