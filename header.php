@@ -14,13 +14,11 @@
 <header id="masthead" class="site-header">
 	<div class="container header-inner">
 		<div class="site-branding">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <?php if ( has_custom_logo() ) : ?>
-                    <?php the_custom_logo(); ?>
-                <?php else : ?>
-                    Cabinet Dentaire Schmitt
-                <?php endif; ?>
-            </a>
+			<?php if ( has_custom_logo() ) : ?>
+				<?php the_custom_logo(); ?>
+			<?php else : ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Cabinet Dentaire Schmitt</a>
+			<?php endif; ?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Menu Principal', 'dentiste-schmitt' ); ?>">

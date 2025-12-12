@@ -38,6 +38,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     --shadow-lg: 0 20px 25px -5px rgba(27, 60, 115, 0.05), 0 10px 10px -5px rgba(27, 60, 115, 0.02);
 }
 
+@media (max-width: 768px) {
+    :root {
+        --header-height: 72px;
+    }
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -148,13 +154,23 @@ img {
 }
 
 /* Header logo */
+.site-branding {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
 .site-branding .custom-logo-link {
     display: inline-flex;
     align-items: center;
+    max-width: 220px;
+    overflow: hidden;
 }
 
 .site-branding img.custom-logo {
+    display: block;
     max-height: 32px !important;
+    max-width: 100% !important;
     width: auto !important;
     height: auto !important;
     border-radius: 0;
@@ -169,7 +185,11 @@ img {
 
 @media (max-width: 768px) {
     .site-branding img.custom-logo {
-        max-height: 28px !important;
+        max-height: 26px !important;
+    }
+
+    .site-branding .custom-logo-link {
+        max-width: 170px;
     }
 }
 
