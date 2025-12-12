@@ -50,11 +50,11 @@ get_header();
         <div class="container">
             <h2 class="text-center mb-5"><?php esc_html_e( 'Devenir un nouveau patient', 'dentiste-schmitt' ); ?></h2>
             <div class="two-columns-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-                <div class="text-content">
+                <div class="text-content mb-5">
                     <p>
                         <?php esc_html_e( 'C’est une première consultation de 45 minutes pour définir expliquer la ou les pathologies et proposer un plan de traitement validé par le patient à partir de données objectivables et dans un langage clair et compréhensible.', 'dentiste-schmitt' ); ?>
                     </p>
-                    <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn"><?php esc_html_e( 'Prendre rendez-vous', 'dentiste-schmitt' ); ?></a>
+                    <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn mt-5"><?php esc_html_e( 'Prendre rendez-vous', 'dentiste-schmitt' ); ?></a>
                 </div>
                 <div class="image-content">
                     <!-- Placeholder image -->
