@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = Array.from(carousel.querySelectorAll('[data-carousel-slide]'));
     const prevBtn = carousel.querySelector('[data-carousel-prev]');
     const nextBtn = carousel.querySelector('[data-carousel-next]');
-    const dotsContainer = carousel.querySelector('[data-carousel-dots]');
+    const dotsContainer =
+      carousel.querySelector('[data-carousel-dots]') ||
+      carousel.parentElement?.querySelector('[data-carousel-dots]') ||
+      carousel.closest('.card')?.querySelector('[data-carousel-dots]');
 
     if (!track || slides.length === 0) return;
 
