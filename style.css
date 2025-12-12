@@ -120,15 +120,22 @@ img {
 }
 
 .site-branding img.custom-logo {
-    max-height: 32px;
-    width: auto;
-    height: auto;
+    max-height: 32px !important;
+    width: auto !important;
+    height: auto !important;
     border-radius: 0;
+}
+
+/* Extra safety: prevent the logo container from overflowing the header */
+.site-header .site-branding,
+.site-header .site-branding .custom-logo-link {
+    max-height: calc(var(--header-height) - 20px);
+    overflow: hidden;
 }
 
 @media (max-width: 768px) {
     .site-branding img.custom-logo {
-        max-height: 28px;
+        max-height: 28px !important;
     }
 }
 
