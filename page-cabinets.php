@@ -29,7 +29,7 @@ get_header();
         </div>
     </div>
 
-    <div class="two-columns-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 60px;">
+    <div class="two-columns-grid" style="margin-top: 60px;">
         <div class="cabinet-nyon card">
             <h2 class="mb-4">Cabinet Nyon</h2>
             <div class="mt-4 mb-4">

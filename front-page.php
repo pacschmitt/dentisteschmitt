@@ -49,7 +49,7 @@ get_header();
     <section class="section-padding">
         <div class="container">
             <h2 class="text-center mb-5"><?php esc_html_e( 'Devenir un nouveau patient', 'dentiste-schmitt' ); ?></h2>
-            <div class="two-columns-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+            <div class="two-columns-grid" style="align-items: center;">
                 <div class="text-content mb-5">
                     <p>
                         <?php esc_html_e( 'C’est une première consultation de 45 minutes pour définir expliquer la ou les pathologies et proposer un plan de traitement validé par le patient à partir de données objectivables et dans un langage clair et compréhensible.', 'dentiste-schmitt' ); ?>
@@ -58,7 +58,7 @@ get_header();
                 </div>
                 <div class="image-content">
                     <!-- Placeholder image -->
-                    <div style="background-color: #f0f0f0; height: 300px; width: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                    <div style="background-color: #f0f0f0; width: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
                         <span style="color: #999;">Image Patient</span>
                     </div>
                 </div>
@@ -71,10 +71,10 @@ get_header();
         <div class="container">
             <h2 class="text-center mb-3"><?php esc_html_e( 'Dr. L. Schmitt', 'dentiste-schmitt' ); ?></h2>
             <h3 class="h5 text-center mb-5"><?php esc_html_e( 'Docteur en chirurgie dentaire – Pratique la dentisterie globale', 'dentiste-schmitt' ); ?></h3>
-            <div class="two-columns-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+            <div class="two-columns-grid" style="align-items: center;">
                 <div class="image-content">
                     <!-- Placeholder image -->
-                    <div style="background-color: #f0f0f0; height: 300px; width: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                    <div style="background-color: #f0f0f0; width: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
                         <span style="color: #999;">Photo Dr Schmitt</span>
                     </div>
                 </div>
