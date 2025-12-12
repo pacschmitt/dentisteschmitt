@@ -18,14 +18,14 @@ get_header();
                 <?php esc_html_e( 'Chirurgie – Orthodontie – Prothèses esthétiques – Soins pédiatriques – Parodontologie', 'dentiste-schmitt' ); ?>
             </p>
             <div class="hero-buttons">
-                <div class="hero-btn-wrapper mb-5">
-                    <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn btn-outline"><?php esc_html_e( 'RDV en ligne à Nyon', 'dentiste-schmitt' ); ?></a>
+                <div class="hero-btn-wrapper">
+                    <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn btn-outline mb-5"><?php esc_html_e( 'RDV en ligne à Nyon', 'dentiste-schmitt' ); ?></a>
                     <p class="hero-address">
                       <?php echo wp_kses_post( __( 'Avenue Reverdil 2,<br>1260 Nyon', 'dentiste-schmitt' ) );?>
                     </p>
                 </div>
-                <div class="hero-btn-wrapper mb-5">
-                    <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn btn-outline"><?php esc_html_e( 'RDV en ligne à Bassins', 'dentiste-schmitt' ); ?></a>
+                <div class="hero-btn-wrapper">
+                    <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn btn-outline mb-5"><?php esc_html_e( 'RDV en ligne à Bassins', 'dentiste-schmitt' ); ?></a>
                     <p class="hero-address">
                       <?php echo wp_kses_post( __( 'Ruelle de la Repentance 4,<br>1269 Bassins', 'dentiste-schmitt' ) ); ?>
                     </p>
