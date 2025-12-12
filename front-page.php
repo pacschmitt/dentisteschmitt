@@ -44,9 +44,9 @@ get_header();
     <!-- 3. Devenir un nouveau patient -->
     <section class="section-padding">
         <div class="container">
+            <h2 class="text-center mb-5"><?php esc_html_e( 'Devenir un nouveau patient', 'dentiste-schmitt' ); ?></h2>
             <div class="two-columns-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
                 <div class="text-content">
-                    <h2><?php esc_html_e( 'Devenir un nouveau patient', 'dentiste-schmitt' ); ?></h2>
                     <p>
                         <?php esc_html_e( 'C’est une première consultation de 45 minutes pour définir expliquer la ou les pathologies et proposer un plan de traitement validé par le patient à partir de données objectivables et dans un langage clair et compréhensible.', 'dentiste-schmitt' ); ?>
                     </p>
@@ -65,6 +65,7 @@ get_header();
     <!-- 4. Dr L. Schmitt -->
     <section class="section-padding bg-light">
         <div class="container">
+            <h2 class="text-center mb-5"><?php esc_html_e( 'Dr. L. Schmitt', 'dentiste-schmitt' ); ?></h2>
             <div class="two-columns-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
                 <div class="image-content">
                     <!-- Placeholder image -->
@@ -73,7 +74,6 @@ get_header();
                     </div>
                 </div>
                 <div class="text-content">
-                    <h2><?php esc_html_e( 'Dr. L. Schmitt', 'dentiste-schmitt' ); ?></h2>
                     <h3 class="h5 mb-3"><?php esc_html_e( 'Docteur en chirurgie dentaire – Pratique la dentisterie globale', 'dentiste-schmitt' ); ?></h3>
                     <p>
                         <?php esc_html_e( 'Merci de l’intérêt et de la confiance que vous placez en nous. L’expérience, la polyvalence et la mise en confiance sont les moyens mis à votre disposition pour résoudre tous les problèmes esthétiques et/ou fonctionnels auxquels vous pourriez être confrontés, dans tous les domaines dentaires : implantologie « PRF FELLOW » dentisterie régénérative depuis 2006, orthodontie, prothèses esthétiques, soins pédiatriques, parodontologie.', 'dentiste-schmitt' ); ?>

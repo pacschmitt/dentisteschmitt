@@ -69,7 +69,7 @@ get_header();
         </div>
 
         <div class="faq-section mt-5">
-            <h3>Questions Fréquentes</h3>
+            <h3 class="text-center mb-4">Questions Fréquentes</h3>
             <details>
                 <summary>Comment prendre rendez-vous ?</summary>
                 <p>Vous pouvez prendre rendez-vous par téléphone ou via notre formulaire en ligne sur Denteo.</p>
