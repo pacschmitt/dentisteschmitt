@@ -28,7 +28,7 @@ get_header();
         <?php esc_html_e( 'À l\'écoute de notre patientèle, nous prenons le temps de comprendre leur histoire, leur priorité et quelques fois leur peur du dentiste. Au cabinet Dentiste Schmitt, nous souhaitons changer les appréhensions sur notre métier et réussir a traiter les problèmes dentaire en douceur et sans douleur. Nous adaptons notre façon de réaliser nos soins en fonction de l’âge de nos patients.', 'dentiste-schmitt' ); ?>
       </p>
     </div>
-
+    <div class="separator"></div>
     <h2 class="text-center mb-5 mt-5"><?php esc_html_e( 'Découvrez nos pratiques et soins disponibles', 'dentiste-schmitt' ); ?></h2>
 
     <div class="soins-grid cards-grid">
