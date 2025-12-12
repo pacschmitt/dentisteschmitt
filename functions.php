@@ -143,10 +143,35 @@ function dentiste_schmitt_floating_cta() {
 
         @media (max-width: 768px) {
             .floating-cta-btn {
-                bottom: 20px;
-                right: 20px;
-                padding: 12px 24px;
-                font-size: 0.9rem;
+                bottom: 16px;
+                right: 16px;
+                width: 56px;
+                height: 56px;
+                padding: 0;
+                border-radius: 999px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.95rem;
+                letter-spacing: 0;
+                text-transform: uppercase;
+            }
+
+            /* Replace long label with compact “RDV” on mobile */
+            .floating-cta-btn {
+                font-size: 0; /* hide original text visually */
+            }
+            .floating-cta-btn::before {
+                content: 'RDV';
+                font-size: 0.95rem;
+                line-height: 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .floating-cta-btn {
+                width: 52px;
+                height: 52px;
             }
         }
     </style>
