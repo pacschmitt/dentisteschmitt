@@ -15,7 +15,7 @@ get_header();
     </header>
 
     <div class="alignwide mb-5" style="max-width: 900px; margin: 0 auto; text-align: left;">
-      <p class="lead">
+      <p class="lead mb-2">
         <?php esc_html_e( 'Chez Dentiste Schmitt, nos praticiens proposent leurs compétences et leurs savoir-faire en dentisterie globale, pour parfaire l\'esthétique et l\'hygiène de vos dents.', 'dentiste-schmitt' ); ?>
       </p>
       <p>

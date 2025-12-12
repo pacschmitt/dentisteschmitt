@@ -79,6 +79,10 @@ add_action( 'after_setup_theme', 'dentiste_schmitt_setup' );
 function dentiste_schmitt_scripts() {
 	wp_enqueue_style( 'dentiste-schmitt-style', get_stylesheet_uri(), array(), _S_VERSION );
 
+    // Extra safety: enforce centered headings (in case another stylesheet overrides).
+    $heading_css = 'h1,h2,h3,h4,h5,h6{ text-align:center !important; }';
+    wp_add_inline_style( 'dentiste-schmitt-style', $heading_css );
+
     // Google Fonts (Inter & Montserrat)
     wp_enqueue_style( 'dentiste-schmitt-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700&display=swap', array(), null );
 
