@@ -32,6 +32,9 @@ get_header();
     <div class="two-columns-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 60px;">
         <div class="cabinet-nyon card">
             <h2 class="mb-4">Cabinet Nyon</h2>
+            <div class="mt-4 mb-4">
+                <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn btn-sm">Prendre RDV à Nyon</a>
+            </div>
             <p>
                 <strong>Adresse :</strong><br>
                 Avenue Reverdil 2<br>
@@ -45,9 +48,6 @@ get_header();
                 <strong>Email :</strong><br>
                 <a href="mailto:drschmitt.nyon@bluewin.ch">drschmitt.nyon@bluewin.ch</a>
             </p>
-            <div class="mt-4">
-                <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn btn-sm">Prendre RDV à Nyon</a>
-            </div>
             <!-- Map Placeholder -->
             <div class="mt-4" style="background:#eee; height:300px; display:flex; align-items:center; justify-content:center; border-radius: 8px;">Google Maps Nyon</div>
         </div>
