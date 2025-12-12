@@ -145,12 +145,83 @@ add_action( 'wp_footer', 'dentiste_schmitt_floating_cta' );
  * Add Soins Modal to Footer
  */
 function dentiste_schmitt_soins_modal() {
-    if ( is_page_template( 'page-soins.php' ) ) {
+    // Check if we are on the Soins page (template or slug)
+    if ( is_page_template( 'page-soins.php' ) || is_page( 'soins' ) || is_page( 'nos-soins' ) ) {
         ?>
+        <!-- Modal Styles (Inline to ensure loading) -->
+        <style>
+            #soinModal {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+                z-index: 9999999; /* Max z-index to be on top of everything */
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                backdrop-filter: blur(5px);
+            }
+            #soinModal.active {
+                display: flex !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+            }
+            #soinModal .modal-content {
+                background-color: #ffffff;
+                padding: 40px;
+                border-radius: 16px;
+                max-width: 600px;
+                width: 90%;
+                position: relative;
+                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+                transform: scale(0.95);
+                transition: transform 0.3s ease;
+                text-align: center;
+                border-top: 5px solid #4D93CE;
+            }
+            #soinModal.active .modal-content {
+                transform: scale(1);
+            }
+            #soinModal .modal-close {
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                font-size: 2rem;
+                color: #9CA3AF;
+                cursor: pointer;
+                line-height: 1;
+                transition: color 0.2s;
+                background: none;
+                border: none;
+                padding: 0;
+            }
+            #soinModal .modal-close:hover {
+                color: #1B3C73;
+            }
+            #soinModal .modal-title {
+                color: #1B3C73;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                font-size: 1.8rem;
+                font-weight: 700;
+                font-family: 'Montserrat', sans-serif;
+            }
+            #soinModal .modal-body {
+                color: #4B5563;
+                font-size: 1.1rem;
+                line-height: 1.6;
+                font-family: 'Inter', sans-serif;
+            }
+        </style>
+
         <!-- Modal Structure -->
         <div id="soinModal" class="modal-overlay">
             <div class="modal-content">
-                <span class="modal-close">&times;</span>
+                <button class="modal-close" aria-label="Fermer">&times;</button>
                 <h3 class="modal-title"></h3>
                 <div class="modal-body"></div>
             </div>
@@ -162,7 +233,6 @@ function dentiste_schmitt_soins_modal() {
             const modalTitle = modal.querySelector('.modal-title');
             const modalBody = modal.querySelector('.modal-body');
             const closeBtn = modal.querySelector('.modal-close');
-            // Use event delegation for better reliability
             const grid = document.querySelector('.soins-grid');
 
             if (grid) {
@@ -177,7 +247,7 @@ function dentiste_schmitt_soins_modal() {
                             modalBody.textContent = desc;
 
                             modal.classList.add('active');
-                            document.body.style.overflow = 'hidden';
+                            document.body.style.overflow = 'hidden'; // Lock scroll
                         }
                     }
                 });
@@ -185,7 +255,7 @@ function dentiste_schmitt_soins_modal() {
 
             function closeModal() {
                 modal.classList.remove('active');
-                document.body.style.overflow = '';
+                document.body.style.overflow = ''; // Unlock scroll
             }
 
             if (closeBtn) {
