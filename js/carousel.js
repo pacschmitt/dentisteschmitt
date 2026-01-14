@@ -61,6 +61,42 @@ document.addEventListener('DOMContentLoaded', () => {
     if (prevBtn) prevBtn.addEventListener('click', goPrev);
     if (nextBtn) nextBtn.addEventListener('click', goNext);
 
+    // --- Touch Support for Mobile (Swipe) ---
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    // Use passive listeners for better scrolling performance
+    carousel.addEventListener(
+      'touchstart',
+      (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      },
+      { passive: true }
+    );
+
+    carousel.addEventListener(
+      'touchend',
+      (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      },
+      { passive: true }
+    );
+
+    function handleSwipe() {
+      // Swipe threshold in pixels
+      const threshold = 50;
+      if (touchEndX < touchStartX - threshold) {
+        // Swiped Left -> Next
+        goNext();
+      }
+      if (touchEndX > touchStartX + threshold) {
+        // Swiped Right -> Prev
+        goPrev();
+      }
+    }
+    // ---------------------------------------
+
     if (dotsContainer) {
       dotsContainer.innerHTML = '';
       slides.forEach((_, i) => {
