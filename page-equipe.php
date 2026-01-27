@@ -32,46 +32,46 @@ get_header();
         <div class="cards-grid">
             <!-- Docteurs -->
             <div class="card">
-                <div style="background:#f0f0f0; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
+                <div style="background:#f2efe9; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
                 <h3>Dr Sacha-Léo Schmitt</h3>
                 <p class="text-primary font-weight-bold">Docteur</p>
             </div>
             <div class="card">
-                <div style="background:#f0f0f0; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
+                <div style="background:#f2efe9; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
                 <h3>Dr Laurent Schmitt</h3>
                 <p class="text-primary font-weight-bold">Docteur</p>
             </div>
             <div class="card">
-                <div style="background:#f0f0f0; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
+                <div style="background:#f2efe9; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
                 <h3>Dr Aline Koring</h3>
                 <p class="text-primary font-weight-bold">Docteur</p>
             </div>
 
             <!-- Hygiénistes -->
             <div class="card">
-                <div style="background:#f0f0f0; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
+                <div style="background:#f2efe9; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
                 <h3>Saskia Naz Bjuhr</h3>
                 <p class="text-secondary font-weight-bold">Hygiéniste</p>
             </div>
             <div class="card">
-                <div style="background:#f0f0f0; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
+                <div style="background:#f2efe9; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
                 <h3>Neda Dolatshahi</h3>
                 <p class="text-secondary font-weight-bold">Hygiéniste</p>
             </div>
 
             <!-- Assistantes -->
             <div class="card">
-                <div style="background:#f0f0f0; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
+                <div style="background:#f2efe9; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
                 <h3>Céline Larouble</h3>
                 <p class="text-muted">Assistante</p>
             </div>
             <div class="card">
-                <div style="background:#f0f0f0; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
+                <div style="background:#f2efe9; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
                 <h3>Perrine Vinsonneau</h3>
                 <p class="text-muted">Assistante</p>
             </div>
             <div class="card">
-                <div style="background:#f0f0f0; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
+                <div style="background:#f2efe9; height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#999;">Photo</div>
                 <h3>Alexandra Alves Poget</h3>
                 <p class="text-muted">Assistante</p>
             </div>

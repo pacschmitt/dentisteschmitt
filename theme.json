@@ -10,18 +10,18 @@
             "palette": [
                 {
                     "slug": "primary",
-                    "color": "#1B3C73",
-                    "name": "Bleu Foncé"
+                    "color": "#2A5576",
+                    "name": "Bleu Océan"
                 },
                 {
                     "slug": "secondary",
-                    "color": "#4D93CE",
-                    "name": "Bleu Clair"
+                    "color": "#5DA6A8",
+                    "name": "Turquoise Doux"
                 },
                 {
                     "slug": "background",
-                    "color": "#F5F5F5",
-                    "name": "Gris Clair"
+                    "color": "#FDFBF7",
+                    "name": "Blanc Chaud"
                 },
                 {
                     "slug": "white",
@@ -30,7 +30,7 @@
                 },
                 {
                     "slug": "black",
-                    "color": "#333333",
+                    "color": "#2D3339",
                     "name": "Noir Texte"
                 }
             ]
