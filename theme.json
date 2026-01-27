@@ -10,18 +10,18 @@
             "palette": [
                 {
                     "slug": "primary",
-                    "color": "#3A5A40",
-                    "name": "Vert Forêt"
+                    "color": "#8A6E57",
+                    "name": "Taupe Chaleureux"
                 },
                 {
                     "slug": "secondary",
-                    "color": "#A3B18A",
-                    "name": "Sauge"
+                    "color": "#B4D4E3",
+                    "name": "Bleu Ciel Très Pâle"
                 },
                 {
                     "slug": "background",
-                    "color": "#FDFBF7",
-                    "name": "Blanc Chaud"
+                    "color": "#FAF8F5",
+                    "name": "Beige Clair"
                 },
                 {
                     "slug": "white",
@@ -30,8 +30,8 @@
                 },
                 {
                     "slug": "black",
-                    "color": "#2D3339",
-                    "name": "Noir Texte"
+                    "color": "#4A4238",
+                    "name": "Noir Chaud"
                 }
             ]
         },
