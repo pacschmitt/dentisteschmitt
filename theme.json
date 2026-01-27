@@ -10,13 +10,13 @@
             "palette": [
                 {
                     "slug": "primary",
-                    "color": "#206375",
-                    "name": "Bleu Pétrole"
+                    "color": "#3A5A40",
+                    "name": "Vert Forêt"
                 },
                 {
                     "slug": "secondary",
-                    "color": "#5DA6A8",
-                    "name": "Turquoise Doux"
+                    "color": "#A3B18A",
+                    "name": "Sauge"
                 },
                 {
                     "slug": "background",
