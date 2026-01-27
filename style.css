@@ -19,8 +19,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
    Variables & Reset
    ========================================================================== */
 :root {
-    --color-primary: #2A5576;
-    --color-primary-dark: #1D3E56;
+    --color-primary: #206375;
+    --color-primary-dark: #164653;
     --color-secondary: #5DA6A8;
     --color-secondary-light: #8DC7C9;
     --color-bg: #FDFBF7; /* Warm off-white/cream for a more welcoming field */
@@ -34,8 +34,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     --spacing-unit: 1rem;
     --border-radius: 16px; /* More rounded */
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(42, 85, 118, 0.06), 0 2px 4px -1px rgba(42, 85, 118, 0.04); /* Warm blue tinted shadow */
-    --shadow-lg: 0 20px 25px -5px rgba(42, 85, 118, 0.06), 0 10px 10px -5px rgba(42, 85, 118, 0.03);
+    --shadow-md: 0 4px 6px -1px rgba(32, 99, 117, 0.08), 0 2px 4px -1px rgba(32, 99, 117, 0.04); /* Warm teal tinted shadow */
+    --shadow-lg: 0 20px 25px -5px rgba(32, 99, 117, 0.08), 0 10px 10px -5px rgba(32, 99, 117, 0.03);
 }
 
 @media (max-width: 768px) {
