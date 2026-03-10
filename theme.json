@@ -10,42 +10,42 @@
             "palette": [
                 {
                     "slug": "primary",
-                    "color": "#BE7D65",
-                    "name": "Terracotta Chic"
+                    "color": "#C96F4A",
+                    "name": "Terracotta Intense"
                 },
                 {
                     "slug": "primary-dark",
-                    "color": "#A86851",
-                    "name": "Terracotta Foncé"
+                    "color": "#B85F3B",
+                    "name": "Terracotta Profond"
                 },
                 {
                     "slug": "accent",
-                    "color": "#D8B7AE",
-                    "name": "Rose Poudré"
+                    "color": "#8E4E34",
+                    "name": "Rouille Sombre"
                 },
                 {
-                    "slug": "accent-light",
-                    "color": "#EAD7D2",
-                    "name": "Beige Rosé Clair"
+                    "slug": "border",
+                    "color": "#D8C4B8",
+                    "name": "Taupe Clair"
                 },
                 {
                     "slug": "background",
-                    "color": "#FBF7F4",
-                    "name": "Ivoire Rosé"
+                    "color": "#FAF5F0",
+                    "name": "Ivoire Chaud"
                 },
                 {
                     "slug": "background-alt",
-                    "color": "#F1E4DB",
+                    "color": "#F1E5DB",
                     "name": "Beige Chaud"
                 },
                 {
                     "slug": "text-primary",
-                    "color": "#2E2927",
+                    "color": "#2E2724",
                     "name": "Brun Noir"
                 },
                 {
                     "slug": "text-secondary",
-                    "color": "#6D6662",
+                    "color": "#6B625D",
                     "name": "Brun Gris"
                 },
                 {

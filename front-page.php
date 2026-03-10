@@ -110,7 +110,7 @@ get_header();
     <!-- 6. Nos spécialités -->
     <section class="section-padding bg-light">
         <div class="container">
-            <h2 class="text-center mb-5"><?php esc_html_e( 'Nos spécialités', 'dentiste-schmitt' ); ?></h2>
+            <h2 class="text-center mb-5"><?php esc_html_e( 'Nos Compétences', 'dentiste-schmitt' ); ?></h2>
             <div class="cards-grid mb-5">
                 <div class="card">
                     <h3><?php esc_html_e( 'Dentisterie générale adulte', 'dentiste-schmitt' ); ?></h3>
