@@ -19,18 +19,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
    Variables & Reset
    ========================================================================== */
 :root {
-    /* New Palette - Terracotta & Warm Ivory */
-    --color-bg-primary: #FAF6F2;   /* Warm Ivory */
-    --color-bg-secondary: #F3E7DF; /* Warm Beige / Rose Beige */
+    /* New Palette - Chic Terracotta & Warm Ivory */
+    --color-bg-primary: #FBF7F4;   /* Warm Ivory */
+    --color-bg-secondary: #F1E4DB; /* Warm Beige / Rose Beige */
 
-    --color-primary: #C7866A;      /* Terracotta - Professional & Warm */
-    --color-primary-dark: #B06F55; /* Darker Terracotta */
+    --color-primary: #BE7D65;      /* Terracotta Chic */
+    --color-primary-dark: #A86851; /* Dark Terracotta hover */
 
-    --color-accent: #E7CFCB;       /* Soft Powder Pink (Subtle) */
-    --color-accent-strong: #D9B6AD; /* Slightly deeper pink-beige */
+    --color-accent: #D8B7AE;       /* Soft Pink/Beige Accent */
+    --color-accent-light: #EAD7D2; /* Very Light Pink Accent */
 
-    --color-text: #2F2A28;         /* Warm Dark Brown/Black */
-    --color-text-light: #6F6763;   /* Warm Grey */
+    --color-text: #2E2927;         /* Dark Brown/Black */
+    --color-text-light: #6D6662;   /* Grey/Brown */
 
     --color-white: #FFFFFF;        /* Pure White */
 
@@ -42,10 +42,20 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     --container-width: 1200px;
     --header-height: 90px;
     --spacing-unit: 1rem;
-    --border-radius: 12px;         /* Slightly less rounded for a more premium look */
-    --shadow-sm: 0 1px 3px rgba(47, 42, 40, 0.05);
-    --shadow-md: 0 4px 12px -2px rgba(47, 42, 40, 0.08); /* Softer, more diffuse shadows */
-    --shadow-lg: 0 20px 30px -5px rgba(47, 42, 40, 0.08);
+    --border-radius: 12px;
+    --shadow-sm: 0 1px 3px rgba(46, 41, 39, 0.05);
+    --shadow-md: 0 4px 12px -2px rgba(46, 41, 39, 0.08);
+    --shadow-lg: 0 20px 30px -5px rgba(46, 41, 39, 0.08);
+}
+
+@media (max-width: 768px) {
+    :root {
+        --header-height: 72px;
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -300,7 +310,7 @@ img {
     height: 44px;
     border-radius: 999px;
     border: 1px solid rgba(255,255,255,0.7);
-    background: rgba(138, 154, 142, 0.85); /* Sage */
+    background: rgba(190, 125, 101, 0.85); /* Terracotta */
     color: #fff;
     cursor: pointer;
     display: inline-flex;
@@ -326,7 +336,7 @@ img {
     height: 10px;
     border-radius: 999px;
     border: 0;
-    background: rgba(138, 154, 142, 0.4);
+    background: rgba(190, 125, 101, 0.4);
     cursor: pointer;
 }
 
