@@ -10,38 +10,38 @@
             "palette": [
                 {
                     "slug": "primary",
-                    "color": "#8A9A8E",
-                    "name": "Vert Sauge Doux"
-                },
-                {
-                    "slug": "primary-dark",
-                    "color": "#74857A",
-                    "name": "Vert Sauge Foncé"
-                },
-                {
-                    "slug": "accent",
-                    "color": "#B77B5C",
+                    "color": "#C7866A",
                     "name": "Terracotta"
                 },
                 {
+                    "slug": "primary-dark",
+                    "color": "#B06F55",
+                    "name": "Terracotta Foncé"
+                },
+                {
+                    "slug": "accent",
+                    "color": "#E7CFCB",
+                    "name": "Rose Poudré"
+                },
+                {
                     "slug": "background",
-                    "color": "#FAF7F3",
-                    "name": "Beige Très Clair"
+                    "color": "#FAF6F2",
+                    "name": "Ivoire Chaud"
                 },
                 {
                     "slug": "background-alt",
-                    "color": "#F1E8DE",
-                    "name": "Beige Chaud"
+                    "color": "#F3E7DF",
+                    "name": "Beige Rosé"
                 },
                 {
                     "slug": "text-primary",
-                    "color": "#2B2B2B",
-                    "name": "Noir Doux"
+                    "color": "#2F2A28",
+                    "name": "Brun Chaud"
                 },
                 {
                     "slug": "text-secondary",
-                    "color": "#6C675F",
-                    "name": "Gris Chaud"
+                    "color": "#6F6763",
+                    "name": "Gris Beige"
                 },
                 {
                     "slug": "white",
