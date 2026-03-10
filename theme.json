@@ -10,28 +10,43 @@
             "palette": [
                 {
                     "slug": "primary",
-                    "color": "#8A6E57",
-                    "name": "Taupe Chaleureux"
+                    "color": "#7E9C8C",
+                    "name": "Vert Sauge"
                 },
                 {
-                    "slug": "secondary",
-                    "color": "#B4D4E3",
-                    "name": "Bleu Ciel Très Pâle"
+                    "slug": "primary-dark",
+                    "color": "#6D897A",
+                    "name": "Vert Sauge Foncé"
+                },
+                {
+                    "slug": "accent",
+                    "color": "#C98B6B",
+                    "name": "Terracotta"
                 },
                 {
                     "slug": "background",
-                    "color": "#FAF8F5",
-                    "name": "Beige Clair"
+                    "color": "#F8F6F2",
+                    "name": "Ivoire Chaud"
+                },
+                {
+                    "slug": "background-alt",
+                    "color": "#EEE7DD",
+                    "name": "Beige Doux"
+                },
+                {
+                    "slug": "text-primary",
+                    "color": "#2F3A36",
+                    "name": "Vert Foncé Texte"
+                },
+                {
+                    "slug": "text-secondary",
+                    "color": "#6E746F",
+                    "name": "Gris Vert Texte"
                 },
                 {
                     "slug": "white",
                     "color": "#FFFFFF",
                     "name": "Blanc"
-                },
-                {
-                    "slug": "black",
-                    "color": "#4A4238",
-                    "name": "Noir Chaud"
                 }
             ]
         },

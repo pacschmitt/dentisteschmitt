@@ -19,23 +19,33 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
    Variables & Reset
    ========================================================================== */
 :root {
-    --color-primary: #8A6E57; /* Warm Taupe/Dark Beige */
-    --color-primary-dark: #6E5642;
-    --color-secondary: #B4D4E3; /* Very Light Blue (Duck Egg) */
-    --color-secondary-light: #E1EFF6;
-    --color-bg: #FAF8F5; /* Very light beige background */
-    --color-white: #FFFFFF;
-    --color-text: #4A4238; /* Warm dark grey */
-    --color-text-light: #756C64;
+    /* New Palette */
+    --color-bg-primary: #F8F6F2;   /* Warm Ivory */
+    --color-bg-secondary: #EEE7DD; /* Beige/Taupe */
+
+    --color-primary: #7E9C8C;      /* Sage Green */
+    --color-primary-dark: #6D897A; /* Sage Green Hover */
+
+    --color-accent: #C98B6B;       /* Terracotta */
+
+    --color-text: #2F3A36;         /* Dark Green/Grey */
+    --color-text-light: #6E746F;   /* Grey */
+
+    --color-white: #F8F6F2;        /* Warm Ivory (Replacing pure white) */
+    --color-pure-white: #FFFFFF;   /* Kept for strict needs */
+
+    /* Mappings & Config */
+    --color-bg: var(--color-bg-primary);
+
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --container-width: 1200px; /* Slightly narrower for better reading */
+    --container-width: 1200px;
     --header-height: 90px;
     --spacing-unit: 1rem;
-    --border-radius: 16px; /* More rounded */
-    --shadow-sm: 0 1px 3px rgba(138, 110, 87, 0.1);
-    --shadow-md: 0 4px 6px -1px rgba(138, 110, 87, 0.1), 0 2px 4px -1px rgba(138, 110, 87, 0.06); /* Taupe tinted shadow */
-    --shadow-lg: 0 20px 25px -5px rgba(138, 110, 87, 0.1), 0 10px 10px -5px rgba(138, 110, 87, 0.04);
+    --border-radius: 16px;
+    --shadow-sm: 0 1px 3px rgba(47, 58, 54, 0.08); /* Adjusted shadow color to match text */
+    --shadow-md: 0 4px 6px -1px rgba(47, 58, 54, 0.08), 0 2px 4px -1px rgba(47, 58, 54, 0.04);
+    --shadow-lg: 0 20px 25px -5px rgba(47, 58, 54, 0.08), 0 10px 10px -5px rgba(47, 58, 54, 0.03);
 }
 
 @media (max-width: 768px) {
@@ -97,7 +107,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    color: var(--color-primary);
+    color: var(--color-text);
     margin-bottom: 1.5rem;
     font-weight: 700;
     line-height: 1.2;
@@ -120,13 +130,13 @@ h2 { font-size: 2.25rem; }
 h3 { font-size: 1.75rem; }
 
 a {
-    color: var(--color-secondary);
+    color: var(--color-primary);
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 a:hover {
-    color: var(--color-primary);
+    color: var(--color-accent);
 }
 
 img {
@@ -290,7 +300,7 @@ img {
     height: 44px;
     border-radius: 999px;
     border: 1px solid rgba(255,255,255,0.7);
-    background: rgba(27, 60, 115, 0.75);
+    background: rgba(109, 137, 122, 0.85); /* Sage Dark */
     color: #fff;
     cursor: pointer;
     display: inline-flex;
@@ -316,13 +326,13 @@ img {
     height: 10px;
     border-radius: 999px;
     border: 0;
-    background: rgba(27, 60, 115, 0.25);
+    background: rgba(109, 137, 122, 0.4);
     cursor: pointer;
 }
 
 .carousel-dot.is-active,
 .carousel-dot[aria-current="true"] {
-    background: rgba(27, 60, 115, 0.9);
+    background: rgba(109, 137, 122, 1);
 }
 
 @media (max-width: 768px) {
@@ -334,12 +344,12 @@ img {
 .btn {
     display: inline-block;
     padding: 16px 32px;
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
     color: var(--color-white);
     border-radius: 20px;
     font-weight: 600;
     text-align: center;
-    border: 2px solid var(--color-secondary);
+    border: 2px solid var(--color-primary);
     cursor: pointer;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
@@ -348,8 +358,8 @@ img {
 }
 
 .btn:hover {
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
     color: var(--color-white);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
@@ -363,7 +373,7 @@ img {
 
 .btn-outline:hover {
     background-color: var(--color-white);
-    color: var(--color-primary);
+    color: var(--color-text);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -433,7 +443,7 @@ img {
 }
 
 .main-navigation a:hover {
-    color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
 .main-navigation a::after {
@@ -443,7 +453,7 @@ img {
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
     transition: width 0.3s ease;
 }
 
@@ -464,7 +474,7 @@ img {
     bottom: 30px;
     right: 30px;
     z-index: 2147483647; /* Max z-index */
-    background-color: var(--color-secondary);
+    background-color: var(--color-accent); /* Terracotta */
     color: var(--color-white) !important;
     padding: 16px 32px;
     border-radius: 50px;
@@ -481,7 +491,7 @@ img {
 }
 
 .floating-cta:hover {
-    background-color: var(--color-primary);
+    background-color: var(--color-primary); /* Sage */
     transform: translateY(-4px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.4);
     color: var(--color-white) !important;
@@ -626,7 +636,7 @@ img {
     transform: translateY(20px);
     transition: transform 0.3s ease;
     text-align: center;
-    border-top: 4px solid var(--color-secondary);
+    border-top: 4px solid var(--color-accent);
 }
 
 .modal-overlay.active .modal-content {
@@ -649,7 +659,7 @@ img {
 }
 
 .modal-title {
-    color: var(--color-primary);
+    color: var(--color-text);
     margin-bottom: 20px;
     font-size: 1.8rem;
 }
@@ -717,8 +727,8 @@ img {
     right: 20px;
     width: 30px;
     height: 30px;
-    background-color: var(--color-bg);
-    color: var(--color-secondary);
+    background-color: var(--color-bg-primary);
+    color: var(--color-accent);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -739,8 +749,8 @@ img {
 }
 
 .soins-grid .card:hover::after {
-    background-color: var(--color-secondary);
-    color: var(--color-white);
+    background-color: var(--color-accent);
+    color: var(--color-pure-white);
 }
 
 /* ==========================================================================
@@ -824,7 +834,7 @@ img {
 }
 
 .bg-light {
-    background-color: var(--color-bg);
+    background-color: var(--color-bg-secondary);
 }
 
 .lead {
@@ -854,14 +864,14 @@ img {
 }
 
 .card {
-    background: var(--color-white);
+    background: var(--color-pure-white);
     padding: 50px 40px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-md);
     text-align: center;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border: 1px solid rgba(255,255,255,0.5);
-    border-top: 4px solid var(--color-secondary); /* Medical accent */
+    border: 1px solid rgba(0,0,0,0.03);
+    border-top: 4px solid var(--color-accent); /* Terracotta */
     position: relative;
     top: 0;
     min-width: 0; /* Fix for grid item sizing */
@@ -979,7 +989,7 @@ img {
 }
 
 .footer-column h3 {
-    color: var(--color-secondary);
+    color: var(--color-white);
     font-size: 1.3rem;
     margin-bottom: 30px;
     font-weight: 700;
