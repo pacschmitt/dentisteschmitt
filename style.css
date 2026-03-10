@@ -20,37 +20,31 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
    ========================================================================== */
 :root {
     /* New Palette */
-    --color-bg-primary: #F8F6F2;   /* Warm Ivory */
-    --color-bg-secondary: #EEE7DD; /* Beige/Taupe */
-
-    --color-primary: #7E9C8C;      /* Sage Green */
-    --color-primary-dark: #6D897A; /* Sage Green Hover */
-
-    --color-accent: #C98B6B;       /* Terracotta */
-
-    --color-text: #2F3A36;         /* Dark Green/Grey */
-    --color-text-light: #6E746F;   /* Grey */
-
-    --color-white: #F8F6F2;        /* Warm Ivory (Replacing pure white) */
-    --color-pure-white: #FFFFFF;   /* Kept for strict needs */
+    --color-bg-primary: #FAF7F3;   /* Main background - Very Light Beige */
+    --color-bg-secondary: #F1E8DE; /* Secondary/Cards - Warm Beige */
+    
+    --color-primary: #8A9A8E;      /* Sage Green/Grey - Soft & Elegant */
+    --color-primary-dark: #74857A; /* Darker Sage */
+    
+    --color-accent: #B77B5C;       /* Soft Terracotta - Refined */
+    
+    --color-text: #2B2B2B;         /* Soft Black - Readable */
+    --color-text-light: #6C675F;   /* Warm Grey */
+    
+    --color-white: #FFFFFF;        /* Pure White (kept for contrast) */
 
     /* Mappings & Config */
-    --color-bg: var(--color-bg-primary);
-
+    --color-bg: var(--color-bg-primary); 
+    
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --container-width: 1200px;
     --header-height: 90px;
     --spacing-unit: 1rem;
-    --border-radius: 16px;
-    --shadow-sm: 0 1px 3px rgba(47, 58, 54, 0.08); /* Adjusted shadow color to match text */
-    --shadow-md: 0 4px 6px -1px rgba(47, 58, 54, 0.08), 0 2px 4px -1px rgba(47, 58, 54, 0.04);
-    --shadow-lg: 0 20px 25px -5px rgba(47, 58, 54, 0.08), 0 10px 10px -5px rgba(47, 58, 54, 0.03);
-}
-
-@media (max-width: 768px) {
-    :root {
-        --header-height: 72px;
+    --border-radius: 16px; 
+    --shadow-sm: 0 1px 3px rgba(43, 43, 43, 0.05); /* Very soft shadows */
+    --shadow-md: 0 4px 6px -1px rgba(43, 43, 43, 0.05), 0 2px 4px -1px rgba(43, 43, 43, 0.03);
+    --shadow-lg: 0 20px 25px -5px rgba(43, 43, 43, 0.05), 0 10px 10px -5px rgba(43, 43, 43, 0.02);
     }
 }
 
@@ -63,7 +57,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 body {
     font-family: var(--font-body);
     color: var(--color-text);
-    background-color: var(--color-white);
+    background-color: var(--color-bg);
     line-height: 1.8; /* Improved readability */
     font-size: 17px; /* Slightly larger */
     -webkit-font-smoothing: antialiased;
@@ -105,9 +99,19 @@ body {
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
     font-family: var(--font-heading);
     color: var(--color-text);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
     margin-bottom: 1.5rem;
     font-weight: 700;
     line-height: 1.2;
@@ -300,7 +304,7 @@ img {
     height: 44px;
     border-radius: 999px;
     border: 1px solid rgba(255,255,255,0.7);
-    background: rgba(109, 137, 122, 0.85); /* Sage Dark */
+    background: rgba(138, 154, 142, 0.85); /* Sage */
     color: #fff;
     cursor: pointer;
     display: inline-flex;
@@ -326,13 +330,13 @@ img {
     height: 10px;
     border-radius: 999px;
     border: 0;
-    background: rgba(109, 137, 122, 0.4);
+    background: rgba(138, 154, 142, 0.4);
     cursor: pointer;
 }
 
 .carousel-dot.is-active,
 .carousel-dot[aria-current="true"] {
-    background: rgba(109, 137, 122, 1);
+    background: var(--color-primary);
 }
 
 @media (max-width: 768px) {
@@ -367,13 +371,13 @@ img {
 
 .btn-outline {
     background-color: transparent;
-    color: var(--color-white);
-    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
 }
 
 .btn-outline:hover {
-    background-color: var(--color-white);
-    color: var(--color-text);
+    background-color: var(--color-primary);
+    color: var(--color-white);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -426,24 +430,25 @@ img {
 .site-branding .custom-logo-link {
     line-height: 1;
 }
-
-.main-navigation ul {
-    list-style: none;
-    display: flex;
-    gap: 32px;
-    margin: 0;
-    padding: 0;
-}
-
-.main-navigation a {
-    color: var(--color-text);
+primary);
     font-weight: 600;
     font-size: 0.95rem;
     position: relative;
+    transition: color 0.3s ease;
 }
 
 .main-navigation a:hover {
-    color: var(--color-primary);
+    color: var(--color-primary-dark);
+}
+
+.main-navigation a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--color-accent
 }
 
 .main-navigation a::after {
@@ -727,8 +732,8 @@ img {
     right: 20px;
     width: 30px;
     height: 30px;
-    background-color: var(--color-bg-primary);
-    color: var(--color-accent);
+    background-color: var(--color-white);
+    color: var(--color-primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -750,7 +755,7 @@ img {
 
 .soins-grid .card:hover::after {
     background-color: var(--color-accent);
-    color: var(--color-pure-white);
+    color: var(--color-white);
 }
 
 /* ==========================================================================
@@ -758,9 +763,9 @@ img {
    ========================================================================== */
 /* Hero */
 .hero-section {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-    color: var(--color-white);
-    padding: 160px 0 120px; /* More breathing room */
+    background-color: var(--color-bg-secondary); /* Soft Beige */
+    color: var(--color-text);
+    padding: 160px 0 120px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -769,12 +774,13 @@ img {
 .hero-section::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
-    opacity: 0.6;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 60%);
+    opacity: 0.4;
+    pointer-events: none;
 }
 
 .hero-content {
@@ -785,7 +791,7 @@ img {
 }
 
 .hero-content h1 {
-    color: var(--color-white);
+    color: var(--color-text);
     font-size: 4rem;
     margin-bottom: 1.5rem;
     line-height: 1.1;
@@ -796,8 +802,9 @@ img {
 .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 3.5rem;
-    opacity: 0.95;
+    opacity: 1;
     font-weight: 400;
+    color: var(--color-text-light);
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -806,10 +813,10 @@ img {
 
 .hero-buttons {
     display: flex;
-    gap: 40px; /* Increased gap for better separation of groups */
+    gap: 40px;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: flex-start; /* Align to top */
+    align-items: flex-start;
 }
 
 .hero-btn-wrapper {
@@ -820,11 +827,11 @@ img {
 }
 
 .hero-address {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--color-text-light);
     font-size: 0.95rem;
     margin: 0;
     font-weight: 500;
-    max-width: 250px; /* Prevent text from getting too wide */
+    max-width: 250px;
     line-height: 1.4;
 }
 
@@ -864,10 +871,10 @@ img {
 }
 
 .card {
-    background: var(--color-pure-white);
+    background: var(--color-bg-secondary);
     padding: 50px 40px;
     border-radius: var(--border-radius);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-sm);
     text-align: center;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     border: 1px solid rgba(0,0,0,0.03);
@@ -958,10 +965,11 @@ img {
 
 /* Footer */
 .site-footer {
-    background-color: var(--color-primary);
-    color: var(--color-white);
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-light);
     padding: 100px 0 40px;
     font-size: 1rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
 }
 
 .footer-grid {
@@ -989,7 +997,7 @@ img {
 }
 
 .footer-column h3 {
-    color: var(--color-white);
+    color: var(--color-primary);
     font-size: 1.3rem;
     margin-bottom: 30px;
     font-weight: 700;
@@ -1008,21 +1016,23 @@ img {
 }
 
 .footer-column a {
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--color-text);
     text-decoration: none;
     transition: color 0.2s;
+    font-weight: 500;
 }
 
 .footer-column a:hover {
-    color: var(--color-white);
+    color: var(--color-primary);
 }
 
 .site-info {
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(0,0,0,0.05);
     padding-top: 40px;
     text-align: center;
     font-size: 0.9rem;
-    opacity: 0.7;
+    opacity: 0.8;
+    color: var(--color-text-light);
 }
 
 /* ==========================================================================
