@@ -43,9 +43,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     --header-height: 90px;
     --spacing-unit: 1rem;
     --border-radius: 8px; /* Slightly more squared for premium feel */
-    --shadow-sm: 0 1px 3px rgba(44, 38, 35, 0.05);
-    --shadow-md: 0 4px 12px -2px rgba(44, 38, 35, 0.08);
-    --shadow-lg: 0 20px 30px -5px rgba(44, 38, 35, 0.08);
+    --shadow-sm: 0 1px 3px rgba(127, 70, 48, 0.15); /* Terracotta Shadow */
+    --shadow-md: 0 4px 12px -2px rgba(127, 70, 48, 0.2);
+    --shadow-lg: 0 20px 30px -5px rgba(127, 70, 48, 0.2);
         --header-height: 72px;
     }
 }
@@ -347,6 +347,12 @@ img {
     }
 }
 
+/* Generalized Button Styles to catch all buttons */
+button:not(.carousel-btn):not(.menu-toggle),
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.wp-block-button__link,
 .btn {
     display: inline-block;
     padding: 16px 32px;
@@ -361,8 +367,15 @@ img {
     transition: all 0.3s ease;
     font-size: 1rem;
     letter-spacing: 0.5px;
+    line-height: normal;
+    text-decoration: none !important;
 }
 
+button:not(.carousel-btn):not(.menu-toggle):hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+.wp-block-button__link:hover,
 .btn:hover {
     background-color: var(--color-primary-dark) !important;
     border-color: var(--color-primary-dark) !important;
@@ -487,7 +500,7 @@ img {
     padding: 16px 32px;
     border-radius: 50px;
     font-weight: 700;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 20px rgba(127, 70, 48, 0.2);
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -501,7 +514,7 @@ img {
 .floating-cta:hover {
     background-color: var(--color-primary-dark);
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    box-shadow: 0 8px 25px rgba(127, 70, 48, 0.3);
     color: var(--color-white) !important;
 }
 
@@ -554,7 +567,7 @@ img {
         right: 0;
         left: 0;
         background-color: var(--color-white);
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 6px rgba(127, 70, 48, 0.1);
         padding: 16px;
         border-top: 1px solid rgba(0,0,0,0.05);
         z-index: 1001;

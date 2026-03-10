@@ -122,7 +122,7 @@ function dentiste_schmitt_floating_cta() {
             padding: 16px 32px;
             border-radius: 10px;
             font-weight: 700;
-            box-shadow: 0 4px 20px rgba(44, 38, 35, 0.2);
+            box-shadow: 0 4px 20px rgba(127, 70, 48, 0.2);
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -137,7 +137,7 @@ function dentiste_schmitt_floating_cta() {
         .floating-cta-btn:hover {
             background-color: var(--color-primary-dark) !important; /* Terracotta Accent/Dark */
             transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(44, 38, 35, 0.3);
+            box-shadow: 0 8px 25px rgba(127, 70, 48, 0.3);
             color: var(--color-white) !important;
         }
 
