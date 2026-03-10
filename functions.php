@@ -117,8 +117,8 @@ function dentiste_schmitt_floating_cta() {
             bottom: 30px;
             right: 30px;
             z-index: 999999;
-            background-color: #C46A43; /* Terracotta Primary */
-            color: #FFFFFF !important;
+            background-color: var(--color-primary) !important; /* Terracotta Primary */
+            color: var(--color-white) !important;
             padding: 16px 32px;
             border-radius: 10px;
             font-weight: 700;
@@ -127,7 +127,7 @@ function dentiste_schmitt_floating_cta() {
             text-transform: uppercase;
             letter-spacing: 0.5px;
             font-size: 1rem;
-            border: 2px solid #FFFFFF;
+            border: 2px solid var(--color-white);
             text-decoration: none;
             font-family: 'DM Sans', sans-serif;
             cursor: pointer;
@@ -135,10 +135,10 @@ function dentiste_schmitt_floating_cta() {
         }
 
         .floating-cta-btn:hover {
-            background-color: #7F4630; /* Terracotta Accent/Dark */
+            background-color: var(--color-primary-dark) !important; /* Terracotta Accent/Dark */
             transform: translateY(-4px);
             box-shadow: 0 8px 25px rgba(44, 38, 35, 0.3);
-            color: #FFFFFF !important;
+            color: var(--color-white) !important;
         }
 
         @media (max-width: 768px) {

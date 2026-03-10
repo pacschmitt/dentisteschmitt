@@ -350,12 +350,12 @@ img {
 .btn {
     display: inline-block;
     padding: 16px 32px;
-    background-color: var(--color-primary);
-    color: var(--color-white);
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
     border-radius: 20px;
     font-weight: 600;
     text-align: center;
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--color-primary) !important;
     cursor: pointer;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
@@ -364,22 +364,22 @@ img {
 }
 
 .btn:hover {
-    background-color: var(--color-primary-dark);
-    border-color: var(--color-primary-dark);
-    color: var(--color-white);
+    background-color: var(--color-primary-dark) !important;
+    border-color: var(--color-primary-dark) !important;
+    color: var(--color-white) !important;
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
 
 .btn-outline {
-    background-color: transparent;
-    color: var(--color-primary);
-    border: 2px solid var(--color-primary);
+    background-color: transparent !important;
+    color: var(--color-primary) !important;
+    border: 2px solid var(--color-primary) !important;
 }
 
 .btn-outline:hover {
-    background-color: var(--color-primary);
-    color: var(--color-white);
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
