@@ -94,8 +94,8 @@ function dentiste_schmitt_scripts() {
     $heading_css = 'h1,h2,h3,h4,h5,h6{ text-align:center !important; }';
     wp_add_inline_style( 'dentiste-schmitt-style', $heading_css );
 
-    // Google Fonts (Inter & Montserrat)
-    wp_enqueue_style( 'dentiste-schmitt-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700&display=swap', array(), null );
+    // Google Fonts (DM Sans & Playfair Display)
+    wp_enqueue_style( 'dentiste-schmitt-fonts', 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap', array(), null );
 
     wp_enqueue_script( 'dentiste-schmitt-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
     wp_enqueue_script( 'dentiste-schmitt-carousel', get_template_directory_uri() . '/js/carousel.js', array(), _S_VERSION, true );
@@ -117,27 +117,27 @@ function dentiste_schmitt_floating_cta() {
             bottom: 30px;
             right: 30px;
             z-index: 999999;
-            background-color: #4D93CE;
+            background-color: #C46A43; /* Terracotta Primary */
             color: #FFFFFF !important;
             padding: 16px 32px;
             border-radius: 10px;
             font-weight: 700;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 20px rgba(44, 38, 35, 0.2);
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             font-size: 1rem;
             border: 2px solid #FFFFFF;
             text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'DM Sans', sans-serif;
             cursor: pointer;
             display: block;
         }
 
         .floating-cta-btn:hover {
-            background-color: #1B3C73;
+            background-color: #7F4630; /* Terracotta Accent/Dark */
             transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            box-shadow: 0 8px 25px rgba(44, 38, 35, 0.3);
             color: #FFFFFF !important;
         }
 
@@ -212,17 +212,18 @@ function dentiste_schmitt_soins_modal() {
                 visibility: visible !important;
             }
             #soinModal .modal-content {
-                background-color: #ffffff;
+                background-color: var(--color-bg-primary);
                 padding: 40px;
                 border-radius: 16px;
                 max-width: 600px;
                 width: 90%;
                 position: relative;
-                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+                box-shadow: 0 25px 50px -12px rgba(44, 38, 35, 0.15);
                 transform: scale(0.95);
                 transition: transform 0.3s ease;
                 text-align: center;
-                border-top: 5px solid #4D93CE;
+                border: 1px solid var(--color-border);
+                border-top: 5px solid var(--color-primary);
             }
             #soinModal.active .modal-content {
                 transform: scale(1);
@@ -232,7 +233,7 @@ function dentiste_schmitt_soins_modal() {
                 top: 15px;
                 right: 20px;
                 font-size: 2rem;
-                color: #9CA3AF;
+                color: var(--color-text-light);
                 cursor: pointer;
                 line-height: 1;
                 transition: color 0.2s;
@@ -241,21 +242,21 @@ function dentiste_schmitt_soins_modal() {
                 padding: 0;
             }
             #soinModal .modal-close:hover {
-                color: #1B3C73;
+                color: var(--color-primary);
             }
             #soinModal .modal-title {
-                color: #1B3C73;
+                color: var(--color-primary);
                 margin-top: 10px;
                 margin-bottom: 20px;
                 font-size: 1.8rem;
                 font-weight: 700;
-                font-family: 'Montserrat', sans-serif;
+                font-family: var(--font-heading);
             }
             #soinModal .modal-body {
-                color: #4B5563;
+                color: var(--color-text);
                 font-size: 1.1rem;
                 line-height: 1.6;
-                font-family: 'Inter', sans-serif;
+                font-family: var(--font-body);
             }
         </style>
 

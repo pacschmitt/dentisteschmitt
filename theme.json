@@ -10,43 +10,43 @@
             "palette": [
                 {
                     "slug": "primary",
-                    "color": "#C96F4A",
-                    "name": "Terracotta Intense"
+                    "color": "#C46A43",
+                    "name": "Terracotta Premium"
                 },
                 {
                     "slug": "primary-dark",
-                    "color": "#B85F3B",
-                    "name": "Terracotta Profond"
+                    "color": "#AE5835",
+                    "name": "Terracotta Intense"
                 },
                 {
                     "slug": "accent",
-                    "color": "#8E4E34",
-                    "name": "Rouille Sombre"
+                    "color": "#7F4630",
+                    "name": "Rouille Profonde"
                 },
                 {
                     "slug": "border",
-                    "color": "#D8C4B8",
-                    "name": "Taupe Clair"
+                    "color": "#D7C1B3",
+                    "name": "Beige Ligne"
                 },
                 {
                     "slug": "background",
-                    "color": "#FAF5F0",
-                    "name": "Ivoire Chaud"
+                    "color": "#FBF6F1",
+                    "name": "Ivoire Lumineux"
                 },
                 {
                     "slug": "background-alt",
-                    "color": "#F1E5DB",
-                    "name": "Beige Chaud"
+                    "color": "#EFE1D5",
+                    "name": "Beige Doux"
                 },
                 {
                     "slug": "text-primary",
-                    "color": "#2E2724",
-                    "name": "Brun Noir"
+                    "color": "#2C2623",
+                    "name": "Brun Noir Profond"
                 },
                 {
                     "slug": "text-secondary",
-                    "color": "#6B625D",
-                    "name": "Brun Gris"
+                    "color": "#655D58",
+                    "name": "Gris Brun"
                 },
                 {
                     "slug": "white",
@@ -58,14 +58,14 @@
         "typography": {
             "fontFamilies": [
                 {
-                    "fontFamily": "\"Inter\", sans-serif",
+                    "fontFamily": "\"DM Sans\", sans-serif",
                     "slug": "body",
-                    "name": "Inter"
+                    "name": "DM Sans"
                 },
                 {
-                    "fontFamily": "\"Montserrat\", sans-serif",
+                    "fontFamily": "\"Playfair Display\", serif",
                     "slug": "heading",
-                    "name": "Montserrat"
+                    "name": "Playfair Display"
                 }
             ]
         }

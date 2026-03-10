@@ -58,8 +58,9 @@ get_header();
                 </div>
                 <div class="image-content">
                     <!-- Placeholder image -->
-                    <div style="background-color: #EAE6DF; width: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
-                        <span style="color: #999;">Image Patient</span>
+                    <div style="background-color: var(--color-bg-secondary); width: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                    <!-- Placeholder -->
+                        <span style="color: var(--color-text-light);">Image Patient</span>
                     </div>
                 </div>
             </div>
@@ -74,8 +75,9 @@ get_header();
             <div class="two-columns-grid" style="align-items: center;">
                 <div class="image-content">
                     <!-- Placeholder image -->
-                    <div style="background-color: #EAE6DF; width: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
-                        <span style="color: #999;">Photo Dr Schmitt</span>
+                    <div style="background-color: var(--color-bg-secondary); width: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                     <!-- Placeholder -->
+                        <span style="color: var(--color-text-light);">Photo Dr Schmitt</span>
                     </div>
                 </div>
                 <div class="text-content">
