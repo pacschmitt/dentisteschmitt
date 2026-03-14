@@ -107,6 +107,11 @@ function dentiste_schmitt_scripts() {
 add_action( 'wp_enqueue_scripts', 'dentiste_schmitt_scripts' );
 
 /**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
+
+/**
  * Add Floating CTA Button to Footer
  */
 function dentiste_schmitt_floating_cta() {
@@ -321,3 +326,231 @@ function dentiste_schmitt_soins_modal() {
     }
 }
 add_action( 'wp_footer', 'dentiste_schmitt_soins_modal' );
+
+/**
+ * SEO Optimization: Meta Tags and Open Graph
+ *
+ * Adds meta description, Open Graph tags, and Twitter Card tags to the head.
+ */
+function dentiste_schmitt_seo_meta() {
+    global $post;
+
+    // 1. Meta Description
+    $description = '';
+    if ( is_front_page() || is_home() ) {
+        // Optimized for "Canton de Vaud", "Nyon", "Bassins", "La Côte"
+        $description = 'Bienvenue aux Cabinets Dentaire Schmitt à Nyon et Bassins (Canton de Vaud). Soins dentaires complets sur La Côte : urgences, implants, orthodontie, pédiatrie.';
+    } elseif ( is_single() || is_page() ) {
+        if ( has_excerpt() ) {
+            $description = get_the_excerpt();
+        } else {
+            $description = wp_trim_words( $post->post_content, 25 );
+        }
+    } elseif ( is_category() ) {
+        $description = category_description();
+    }
+
+    // Clean up description
+    $description = strip_tags( $description );
+    $description = trim( $description );
+    if ( empty( $description ) ) {
+        $description = get_bloginfo( 'description' );
+    }
+
+    echo '<meta name="description" content="' . esc_attr( $description ) . '" />' . "\n";
+    // Optional: Keywords meta tag (though less critical for Google, can help other engines)
+    echo '<meta name="keywords" content="Dentiste Nyon, Dentiste Bassins, Urgence dentaire Vaud, Implantologie La Côte, Orthodontiste Nyon, Hygiéniste dentaire Vaud" />' . "\n";
+
+    // 1.1 Geo Meta Tags (Crucial for Local SEO in Vaud)
+    echo '<meta name="geo.region" content="CH-VD" />' . "\n";
+    echo '<meta name="geo.placename" content="Nyon" />' . "\n"; // Default to primary location
+    echo '<meta name="geo.position" content="46.3833;6.2348" />' . "\n";
+    echo '<meta name="ICBM" content="46.3833, 6.2348" />' . "\n";
+
+    // 1.2 Robots (Ensure indexing)
+    echo '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />' . "\n";
+
+    // 2. Open Graph Tags
+    $og_title = get_the_title();
+    if ( is_front_page() || is_home() ) {
+        $og_title = get_bloginfo( 'name' ) . ' - ' . get_bloginfo( 'description' );
+    }
+
+    $og_url = get_permalink();
+    if ( is_front_page() || is_home() ) {
+        $og_url = home_url( '/' );
+    }
+
+    $og_type = is_single() ? 'article' : 'website';
+
+    // Image
+    $og_image = '';
+    if ( has_post_thumbnail() ) {
+        $og_image = get_the_post_thumbnail_url( null, 'large' );
+    } else {
+        // Fallback or generic logo
+        $custom_logo_id = get_theme_mod( 'custom_logo' );
+        if ( $custom_logo_id ) {
+            $image = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+            $og_image = $image[0];
+        }
+    }
+
+    echo '<meta property="og:title" content="' . esc_attr( $og_title ) . '" />' . "\n";
+    echo '<meta property="og:description" content="' . esc_attr( $description ) . '" />' . "\n";
+    echo '<meta property="og:type" content="' . esc_attr( $og_type ) . '" />' . "\n";
+    echo '<meta property="og:url" content="' . esc_attr( $og_url ) . '" />' . "\n";
+    echo '<meta property="og:site_name" content="' . esc_attr( get_bloginfo( 'name' ) ) . '" />' . "\n";
+    if ( $og_image ) {
+        echo '<meta property="og:image" content="' . esc_attr( $og_image ) . '" />' . "\n";
+    }
+    echo '<meta property="og:locale" content="' . esc_attr( get_locale() ) . '" />' . "\n";
+
+    // 3. Twitter Card
+    echo '<meta name="twitter:card" content="summary_large_image" />' . "\n";
+    echo '<meta name="twitter:title" content="' . esc_attr( $og_title ) . '" />' . "\n";
+    echo '<meta name="twitter:description" content="' . esc_attr( $description ) . '" />' . "\n";
+    if ( $og_image ) {
+        echo '<meta name="twitter:image" content="' . esc_attr( $og_image ) . '" />' . "\n";
+    }
+}
+add_action( 'wp_head', 'dentiste_schmitt_seo_meta', 5 );
+
+/**
+ * SEO Optimization: Schema.org JSON-LD
+ *
+ * Adds structured data for Dentist/LocalBusiness.
+ */
+function dentiste_schmitt_schema_markup() {
+    // Only output on front page or contact/cabinets page to avoid duplication,
+    // or output primarily on front page.
+    if ( ! is_front_page() && ! is_page_template('page-cabinets.php') ) {
+        return;
+    }
+
+    $schemas = array();
+
+    // Cabinet Nyon
+    $schemas[] = array(
+        '@context'      => 'https://schema.org',
+        '@type'         => 'Dentist',
+        'name'          => 'Cabinet Dentaire Schmitt - Nyon',
+        'image'         => get_home_url() . '/wp-content/themes/dentistes-schmitt/screenshot.png', // Fallback or logo
+        'url'           => home_url( '/' ),
+        'telephone'     => '+41223617844',
+        'email'         => 'drschmitt.nyon@bluewin.ch',
+        'address'       => array(
+            '@type'           => 'PostalAddress',
+            'streetAddress'   => 'Avenue Reverdil 2',
+            'addressLocality' => 'Nyon',
+            'postalCode'      => '1260',
+            'addressCountry'  => 'CH'
+        ),
+        'geo'           => array(
+            '@type'     => 'GeoCoordinates',
+            'latitude'  => 46.3833, // Approx Nyon
+            'longitude' => 6.2348
+        ),
+        'areaServed'    => array(
+            'Nyon',
+            'Prangins',
+            'Gland',
+            'Crans-près-Céligny',
+            'Canton de Vaud',
+            'La Côte'
+        ),
+        'openingHoursSpecification' => array(
+            array(
+                '@type'     => 'OpeningHoursSpecification',
+                'dayOfWeek' => array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'),
+                'opens'     => '08:00',
+                'closes'    => '18:00'
+            )
+        ),
+        'priceRange' => '$$',
+        'paymentAccepted' => 'Cash, Credit Card, Invoice',
+        'hasMap' => 'https://www.google.com/maps?q=Avenue+Reverdil+2,+1260+Nyon',
+        'medicalSpecialty' => array(
+            'General Dentistry',
+            'Oral Surgery',
+            'Orthodontics',
+            'Pediatric Dentistry'
+        )
+    );
+
+    // Cabinet Bassins
+    $schemas[] = array(
+        '@context'      => 'https://schema.org',
+        '@type'         => 'Dentist',
+        'name'          => 'Cabinet Dentaire Schmitt - Bassins',
+        'url'           => home_url( '/' ),
+        'telephone'     => '+41223652626',
+        'email'         => 'cabinetdentairebassins@gmail.com',
+        'address'       => array(
+            '@type'           => 'PostalAddress',
+            'streetAddress'   => 'Ruelle de la Repentance 4',
+            'addressLocality' => 'Bassins',
+            'postalCode'      => '1269',
+            'addressCountry'  => 'CH'
+        ),
+        'geo'           => array(
+            '@type'     => 'GeoCoordinates',
+            'latitude'  => 46.4667, // Approx Bassins
+            'longitude' => 6.2333
+        ),
+        'areaServed'    => array(
+            'Bassins',
+            'Le Vaud',
+            'Begnins',
+            'Arzier-Le Muids',
+            'Saint-Cergue',
+            'Genolier',
+            'Canton de Vaud'
+        ),
+        'openingHoursSpecification' => array(
+            array(
+                '@type'     => 'OpeningHoursSpecification',
+                'dayOfWeek' => array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'),
+                'opens'     => '08:00',
+                'closes'    => '18:00'
+            )
+        ),
+        'priceRange' => '$$',
+        'paymentAccepted' => 'Cash, Credit Card, Invoice',
+        'hasMap' => 'https://www.google.com/maps?q=Ruelle+de+la+Repentance+4,+1269+Bassins',
+        'medicalSpecialty' => array(
+            'General Dentistry',
+            'Oral Surgery',
+            'Orthodontics',
+            'Pediatric Dentistry'
+        )
+    );
+
+    foreach ( $schemas as $schema ) {
+        echo '<script type="application/ld+json">' . json_encode( $schema ) . '</script>' . "\n";
+    }
+}
+add_action( 'wp_head', 'dentiste_schmitt_schema_markup' );
+
+/**
+ * Performance Optimization for SEO
+ * Preconnect to external domains and key resources.
+ */
+function dentiste_schmitt_performance_hints() {
+    echo '<link rel="preconnect" href="https://fonts.googleapis.com">' . "\n";
+    echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
+    echo '<link rel="preconnect" href="https://booking.denteo.com">' . "\n"; // Improve loading speed of booking widget page
+}
+add_action( 'wp_head', 'dentiste_schmitt_performance_hints', 1 );
+
+/**
+ * Add lang attribute to html tag (Critical for SEO)
+ * Ensure it is set to fr-CH or fr-FR
+ */
+add_filter('language_attributes', function($output) {
+    // If language is default, ensure region is CH for better local targeting
+    if ( strpos($output, 'fr-FR') !== false ) {
+        $output = str_replace('fr-FR', 'fr-CH', $output);
+    }
+    return $output;
+});

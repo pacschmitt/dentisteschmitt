@@ -23,12 +23,6 @@ $fallback_img = 'https://via.placeholder.com/1200x800.png?text=Photo+cabinet';
         <p>
             <?php esc_html_e( 'Contactez le cabinet pour prendre rendez-vous avec nos chirurgiens-dentistes et nos hygiénistes de qualité.', 'dentiste-schmitt' ); ?>
         </p>
-        <div class="mt-4 p-4 bg-light text-center" style="border-radius: 8px; display: inline-block;">
-            <strong><?php esc_html_e( 'Tarifs', 'dentiste-schmitt' ); ?> :</strong>
-            <?php esc_html_e( 'Tout mode et facilité de paiement', 'dentiste-schmitt' ); ?><br>
-            <?php esc_html_e( 'Tarif hygiéniste : 150 CHF', 'dentiste-schmitt' ); ?> |
-            <?php esc_html_e( 'Tarif SSO : CHF 1.12', 'dentiste-schmitt' ); ?>
-        </div>
     </div>
 
     <div class="two-columns-grid" style="margin-top: 60px;">
@@ -40,15 +34,18 @@ $fallback_img = 'https://via.placeholder.com/1200x800.png?text=Photo+cabinet';
 
             <div class="carousel" data-carousel tabindex="0" aria-label="Photos du cabinet de Nyon">
                 <div class="carousel-track" data-carousel-track>
-                    <div class="carousel-slide" data-carousel-slide aria-hidden="false">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/1.webp' ); ?>" alt="Cabinet Nyon - photo 1" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
+                    <?php
+                    for ( $i = 1; $i <= 3; $i++ ) :
+                        $img_custom = get_theme_mod( "dentiste_schmitt_cabinet_nyon_{$i}" );
+                        // Fallbacks
+                        $exts = array( 1 => 'webp', 2 => 'jpg', 3 => 'png' );
+                        $img_fallback = get_template_directory_uri() . "/images/{$i}." . $exts[$i];
+                        $img_final = $img_custom ? $img_custom : $img_fallback;
+                    ?>
+                    <div class="carousel-slide" data-carousel-slide aria-hidden="<?php echo $i === 1 ? 'false' : 'true'; ?>">
+                        <img src="<?php echo esc_url( $img_final ); ?>" alt="<?php echo esc_attr( "Cabinet Nyon - photo $i" ); ?>" style="object-fit:cover; height:320px; width:100%;" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
                     </div>
-                    <div class="carousel-slide" data-carousel-slide aria-hidden="true">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/2.jpg' ); ?>" alt="Cabinet Nyon - photo 2" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
-                    </div>
-                    <div class="carousel-slide" data-carousel-slide aria-hidden="true">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/3.png' ); ?>" alt="Cabinet Nyon - photo 3" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
-                    </div>
+                    <?php endfor; ?>
                 </div>
                 <div class="carousel-nav" aria-hidden="true">
                     <button type="button" class="carousel-btn" data-carousel-prev aria-label="Photo précédente">‹</button>
@@ -58,16 +55,16 @@ $fallback_img = 'https://via.placeholder.com/1200x800.png?text=Photo+cabinet';
             <div class="carousel-dots" data-carousel-dots></div>
 
             <p>
-                <strong>Adresse :</strong><br>
+                <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Adresse :</strong><br>
                 Avenue Reverdil 2<br>
                 1260 Nyon
             </p>
             <p>
-                <strong>Téléphone :</strong><br>
+                <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> Téléphone :</strong><br>
                 <a href="tel:+41223617844">+41 22 361 78 44</a>
             </p>
             <p>
-                <strong>Email :</strong><br>
+                <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Email :</strong><br>
                 <a href="mailto:drschmitt.nyon@bluewin.ch">drschmitt.nyon@bluewin.ch</a>
             </p>
             <div class="map-embed mt-4" aria-label="Carte Google Maps - Cabinet Nyon">
@@ -89,15 +86,18 @@ $fallback_img = 'https://via.placeholder.com/1200x800.png?text=Photo+cabinet';
 
             <div class="carousel" data-carousel tabindex="0" aria-label="Photos du cabinet de Bassins">
                 <div class="carousel-track" data-carousel-track>
-                    <div class="carousel-slide" data-carousel-slide aria-hidden="false">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/1.webp' ); ?>" alt="Cabinet Bassins - photo 1" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
+                    <?php
+                    for ( $i = 1; $i <= 3; $i++ ) :
+                        $img_custom = get_theme_mod( "dentiste_schmitt_cabinet_bassins_{$i}" );
+                        // Fallbacks
+                        $exts = array( 1 => 'webp', 2 => 'jpg', 3 => 'png' );
+                        $img_fallback = get_template_directory_uri() . "/images/{$i}." . $exts[$i];
+                        $img_final = $img_custom ? $img_custom : $img_fallback;
+                    ?>
+                    <div class="carousel-slide" data-carousel-slide aria-hidden="<?php echo $i === 1 ? 'false' : 'true'; ?>">
+                        <img src="<?php echo esc_url( $img_final ); ?>" alt="<?php echo esc_attr("Cabinet Bassins - photo $i"); ?>" style="object-fit:cover; height:320px; width:100%;" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
                     </div>
-                    <div class="carousel-slide" data-carousel-slide aria-hidden="true">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/2.jpg' ); ?>" alt="Cabinet Bassins - photo 2" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
-                    </div>
-                    <div class="carousel-slide" data-carousel-slide aria-hidden="true">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/3.png' ); ?>" alt="Cabinet Bassins - photo 3" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
-                    </div>
+                    <?php endfor; ?>
                 </div>
                 <div class="carousel-nav" aria-hidden="true">
                     <button type="button" class="carousel-btn" data-carousel-prev aria-label="Photo précédente">‹</button>
@@ -107,16 +107,16 @@ $fallback_img = 'https://via.placeholder.com/1200x800.png?text=Photo+cabinet';
             <div class="carousel-dots" data-carousel-dots></div>
 
             <p>
-                <strong>Adresse :</strong><br>
+                <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Adresse :</strong><br>
                 Ruelle de la Repentance 4<br>
                 1269 Bassins
             </p>
             <p>
-                <strong>Téléphone :</strong><br>
+                <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> Téléphone :</strong><br>
                 <a href="tel:+41223652626">+41 22 365 26 26</a>
             </p>
             <p>
-                <strong>Email :</strong><br>
+                <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Email :</strong><br>
                 <a href="mailto:cabinetdentairebassins@gmail.com">cabinetdentairebassins@gmail.com</a>
             </p>
             <div class="map-embed mt-4" aria-label="Carte Google Maps - Cabinet Bassins">

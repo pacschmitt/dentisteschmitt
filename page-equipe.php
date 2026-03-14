@@ -20,7 +20,7 @@ get_header();
             <p class="lead">
                 <?php
                 echo wp_kses_post(
-                    __( 'Notre équipe se compose de nos trois chirurgiens-dentistes : <strong>Dr Laurent Schmitt</strong>, <strong>Dr Sacha Schmitt</strong> et <strong>Dr Aline Koring</strong>, de nos deux hygiénistes Mme Saskia Naz et Mme Néda Dolatshahi ainsi que nos deux chaleureuses assistantes Mme Céline Larouble, Mme Perrine Vinsonneau et Alexandra Alves Poget.', 'dentiste-schmitt' )
+                    __( 'Notre équipe se compose de nos trois chirurgiens-dentistes : <strong>Dr Laurent Schmitt</strong>, <strong>Dr Sacha Schmitt</strong> et <strong>Dr Aline Koring</strong>, de nos deux hygiénistes Mme Saskia Naz et Mme Néda Dolatshahi ainsi que nos chaleureuses assistantes Mme Céline Larouble, Mme Perrine Vinsonneau, Alexandra Alves Poget et Fleuriane Laurent.', 'dentiste-schmitt' )
                 );
                 ?>
             </p>
@@ -30,51 +30,32 @@ get_header();
         </div>
 
         <div class="cards-grid">
-            <!-- Docteurs -->
-            <div class="card">
-                <div style="background:var(--color-bg-secondary); height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:var(--color-text-light);">Photo</div>
-                <h3>Dr Sacha-Léo Schmitt</h3>
-                <p class="text-primary font-weight-bold">Docteur</p>
-            </div>
-            <div class="card">
-                <div style="background:var(--color-bg-secondary); height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:var(--color-text-light);">Photo</div>
-                <h3>Dr Laurent Schmitt</h3>
-                <p class="text-primary font-weight-bold">Docteur</p>
-            </div>
-            <div class="card">
-                <div style="background:var(--color-bg-secondary); height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:var(--color-text-light);">Photo</div>
-                <h3>Dr Aline Koring</h3>
-                <p class="text-primary font-weight-bold">Docteur</p>
-            </div>
+            <?php
+            $team = array(
+                'sacha'     => array( 'name' => 'Dr Sacha-Léo Schmitt', 'role' => 'Docteur', 'class' => 'text-primary font-weight-bold' ),
+                'laurent'   => array( 'name' => 'Dr Laurent Schmitt',   'role' => 'Docteur', 'class' => 'text-primary font-weight-bold' ),
+                'aline'     => array( 'name' => 'Dr Aline Koring',      'role' => 'Docteur', 'class' => 'text-primary font-weight-bold' ),
+                'saskia'    => array( 'name' => 'Saskia Naz Bjuhr',     'role' => 'Hygiéniste', 'class' => 'text-secondary font-weight-bold' ),
+                'neda'      => array( 'name' => 'Neda Dolatshahi',      'role' => 'Hygiéniste', 'class' => 'text-secondary font-weight-bold' ),
+                'celine'    => array( 'name' => 'Céline Larouble',      'role' => 'Assistante', 'class' => 'text-muted' ),
+                'perrine'   => array( 'name' => 'Perrine Vinsonneau',   'role' => 'Assistante', 'class' => 'text-muted' ),
+                'fleuriane' => array( 'name' => 'Fleuriane Laurent',    'role' => 'Assistante', 'class' => 'text-muted' ),
+                'alexandra' => array( 'name' => 'Alexandra Alves Poget','role' => 'Assistante', 'class' => 'text-muted' ),
+            );
 
-            <!-- Hygiénistes -->
+            foreach ( $team as $slug => $member ) :
+                $img = get_theme_mod( "dentiste_schmitt_team_{$slug}" );
+            ?>
             <div class="card">
-                <div style="background:var(--color-bg-secondary); height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:var(--color-text-light);">Photo</div>
-                <h3>Saskia Naz Bjuhr</h3>
-                <p class="text-secondary font-weight-bold">Hygiéniste</p>
+                <?php if ( $img ) : ?>
+                    <img src="<?php echo esc_url( $img ); ?>" alt="<?php echo esc_attr( $member['name'] ); ?>" style="height:250px; width:100%; object-fit:cover; margin-bottom:20px; border-radius:8px;">
+                <?php else : ?>
+                    <div style="background:var(--color-bg-secondary); height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:var(--color-text-light);">Photo</div>
+                <?php endif; ?>
+                <h3><?php echo esc_html( $member['name'] ); ?></h3>
+                <p class="<?php echo esc_attr( $member['class'] ); ?>"><?php echo esc_html( $member['role'] ); ?></p>
             </div>
-            <div class="card">
-                <div style="background:var(--color-bg-secondary); height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:var(--color-text-light);">Photo</div>
-                <h3>Neda Dolatshahi</h3>
-                <p class="text-secondary font-weight-bold">Hygiéniste</p>
-            </div>
-
-            <!-- Assistantes -->
-            <div class="card">
-                <div style="background:var(--color-bg-secondary); height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:var(--color-text-light);">Photo</div>
-                <h3>Céline Larouble</h3>
-                <p class="text-muted">Assistante</p>
-            </div>
-            <div class="card">
-                <div style="background:var(--color-bg-secondary); height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:var(--color-text-light);">Photo</div>
-                <h3>Perrine Vinsonneau</h3>
-                <p class="text-muted">Assistante</p>
-            </div>
-            <div class="card">
-                <div style="background:var(--color-bg-secondary); height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:var(--color-text-light);">Photo</div>
-                <h3>Alexandra Alves Poget</h3>
-                <p class="text-muted">Assistante</p>
-            </div>
+            <?php endforeach; ?>
         </div>
     </section></main><!-- #main -->
 
