@@ -473,8 +473,18 @@ input[type="submit"]:hover,
 
 .main-navigation {
     display: flex;
+    flex-wrap: nowrap !important;
     align-items: center;
+    justify-content: flex-end;
     gap: 30px;
+}
+
+/* Fix if WordPress adds a container div */
+.main-navigation > div {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: auto !important;
 }
 
 .main-navigation ul {
