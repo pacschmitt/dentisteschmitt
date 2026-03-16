@@ -482,7 +482,7 @@ input[type="submit"]:hover,
 .main-navigation a {
     color: var(--color-text);
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 1.1rem; /* Increased font size */
     position: relative;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -616,7 +616,7 @@ input[type="submit"]:hover,
     .main-navigation a {
         display: block;
         padding: 10px 0;
-        font-size: 1.1rem;
+        font-size: 1.25rem; /* Increased font size for mobile */
     }
 
     .lang-switcher {
