@@ -27,8 +27,23 @@
                 ☰
             </button>
             <div class="lang-switcher">
-                <!-- Placeholder for language switcher plugin like Polylang or WPML -->
-                <a href="#">FR</a> | <a href="#">EN</a>
+                <?php
+                if ( function_exists( 'pll_the_languages' ) ) {
+                    $langs = pll_the_languages( array( 'raw' => 1 ) );
+                    if ( $langs ) {
+                        $links = array();
+                        foreach ( $langs as $lang ) {
+                             $class = $lang['current_lang'] ? ' class="current-lang"' : '';
+                             $links[] = '<a href="' . esc_url( $lang['url'] ) . '"' . $class . '>' . esc_html( strtoupper( $lang['slug'] ) ) . '</a>';
+                        }
+                        echo implode( ' <span class="sep">|</span> ', $links );
+                    }
+                } else {
+                    ?>
+                    <a href="#">FR</a> <span class="sep">|</span> <a href="#">EN</a>
+                    <?php
+                }
+                ?>
             </div>
 			<?php
 			wp_nav_menu(
