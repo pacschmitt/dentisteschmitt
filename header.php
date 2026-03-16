@@ -66,6 +66,15 @@
                 <span class="screen-reader-text"><?php esc_html_e( 'Menu', 'dentiste-schmitt' ); ?></span>
                 ☰
             </button>
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+                    'container'      => false,
+				)
+			);
+			?>
             <div class="lang-switcher">
                 <?php
                 if ( function_exists( 'pll_the_languages' ) ) {
@@ -88,15 +97,6 @@
                 }
                 ?>
             </div>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-                    'container'      => false,
-				)
-			);
-			?>
 		</nav><!-- #site-navigation -->
 	</div>
 </header><!-- #masthead -->

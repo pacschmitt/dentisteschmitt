@@ -471,6 +471,12 @@ input[type="submit"]:hover,
     line-height: 1;
 }
 
+.main-navigation {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
 .main-navigation ul {
     list-style: none;
     display: flex;
@@ -516,9 +522,28 @@ input[type="submit"]:hover,
 }
 
 .lang-switcher {
-    margin-left: 30px;
-    font-size: 0.9rem;
+    margin-left: 0;
+    font-size: 0.95rem;
     font-weight: 600;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.lang-switcher a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.lang-switcher a:hover,
+.lang-switcher a.current-lang {
+    color: var(--color-primary);
+}
+
+.lang-switcher .sep {
+    color: var(--color-border);
+    font-weight: normal;
 }
 
 /* Floating CTA Button */
@@ -621,8 +646,14 @@ input[type="submit"]:hover,
 
     .lang-switcher {
         margin-left: 0;
-        margin-top: 15px;
-        text-align: center;
+        margin-top: 20px;
+        padding-top: 20px;
+        padding-left: 0;
+        border-left: none;
+        border-top: 2px solid var(--color-border);
+        justify-content: center;
+        width: 100%;
+        font-size: 1.1rem;
     }
 
     .floating-cta {
