@@ -94,8 +94,8 @@ function dentiste_schmitt_scripts() {
     $heading_css = 'h1,h2,h3,h4,h5,h6{ text-align:center !important; }';
     wp_add_inline_style( 'dentiste-schmitt-style', $heading_css );
 
-    // Google Fonts (DM Sans & Playfair Display)
-    wp_enqueue_style( 'dentiste-schmitt-fonts', 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap', array(), null );
+    // Google Fonts (Inter & Montserrat for better readability and a professional medical look)
+    wp_enqueue_style( 'dentiste-schmitt-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap', array(), null );
 
     wp_enqueue_script( 'dentiste-schmitt-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
     wp_enqueue_script( 'dentiste-schmitt-carousel', get_template_directory_uri() . '/js/carousel.js', array(), _S_VERSION, true );
