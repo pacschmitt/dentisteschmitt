@@ -32,15 +32,15 @@ get_header();
         <div class="cards-grid">
             <?php
             $team = array(
-                'sacha'     => array( 'name' => 'Dr Sacha-Léo Schmitt', 'role' => 'Docteur', 'class' => 'text-primary font-weight-bold' ),
-                'laurent'   => array( 'name' => 'Dr Laurent Schmitt',   'role' => 'Docteur', 'class' => 'text-primary font-weight-bold' ),
-                'aline'     => array( 'name' => 'Dr Aline Koring',      'role' => 'Docteur', 'class' => 'text-primary font-weight-bold' ),
-                'saskia'    => array( 'name' => 'Saskia Naz Bjuhr',     'role' => 'Hygiéniste', 'class' => 'text-secondary font-weight-bold' ),
-                'neda'      => array( 'name' => 'Neda Dolatshahi',      'role' => 'Hygiéniste', 'class' => 'text-secondary font-weight-bold' ),
-                'celine'    => array( 'name' => 'Céline Larouble',      'role' => 'Assistante', 'class' => 'text-muted' ),
-                'perrine'   => array( 'name' => 'Perrine Vinsonneau',   'role' => 'Assistante', 'class' => 'text-muted' ),
-                'fleuriane' => array( 'name' => 'Fleuriane Laurent',    'role' => 'Assistante', 'class' => 'text-muted' ),
-                'alexandra' => array( 'name' => 'Alexandra Alves Poget','role' => 'Assistante', 'class' => 'text-muted' ),
+                'sacha'     => array( 'name' => 'Dr Sacha-Léo Schmitt', 'role' => __( 'Docteur', 'dentiste-schmitt' ), 'class' => 'text-primary font-weight-bold' ),
+                'laurent'   => array( 'name' => 'Dr Laurent Schmitt',   'role' => __( 'Docteur', 'dentiste-schmitt' ), 'class' => 'text-primary font-weight-bold' ),
+                'aline'     => array( 'name' => 'Dr Aline Koring',      'role' => __( 'Docteur', 'dentiste-schmitt' ), 'class' => 'text-primary font-weight-bold' ),
+                'saskia'    => array( 'name' => 'Saskia Naz Bjuhr',     'role' => __( 'Hygiéniste', 'dentiste-schmitt' ), 'class' => 'text-secondary font-weight-bold' ),
+                'neda'      => array( 'name' => 'Neda Dolatshahi',      'role' => __( 'Hygiéniste', 'dentiste-schmitt' ), 'class' => 'text-secondary font-weight-bold' ),
+                'celine'    => array( 'name' => 'Céline Larouble',      'role' => __( 'Assistante', 'dentiste-schmitt' ), 'class' => 'text-muted' ),
+                'perrine'   => array( 'name' => 'Perrine Vinsonneau',   'role' => __( 'Assistante', 'dentiste-schmitt' ), 'class' => 'text-muted' ),
+                'fleuriane' => array( 'name' => 'Fleuriane Laurent',    'role' => __( 'Assistante', 'dentiste-schmitt' ), 'class' => 'text-muted' ),
+                'alexandra' => array( 'name' => 'Alexandra Alves Poget','role' => __( 'Assistante', 'dentiste-schmitt' ), 'class' => 'text-muted' ),
             );
 
             foreach ( $team as $slug => $member ) :
@@ -48,7 +48,7 @@ get_header();
             ?>
             <div class="card">
                 <?php if ( $img ) : ?>
-                    <img src="<?php echo esc_url( $img ); ?>" alt="<?php echo esc_attr( $member['name'] ); ?>" style="height:250px; width:100%; object-fit:cover; margin-bottom:20px; border-radius:8px;">
+                    <img src="<?php echo esc_url( $img ); ?>" alt="<?php echo esc_attr( sprintf( __( 'Portrait de %s, %s au Cabinet Dentaire Schmitt', 'dentiste-schmitt' ), $member['name'], $member['role'] ) ); ?>" style="height:250px; width:100%; object-fit:cover; margin-bottom:20px; border-radius:8px;" loading="lazy">
                 <?php else : ?>
                     <div style="background:var(--color-bg-secondary); height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:var(--color-text-light);">Photo</div>
                 <?php endif; ?>
