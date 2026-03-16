@@ -10,48 +10,53 @@
             "palette": [
                 {
                     "slug": "primary",
-                    "color": "#C46A43",
+                    "color": "#7C402B",
                     "name": "Terracotta Premium"
                 },
                 {
                     "slug": "primary-dark",
-                    "color": "#AE5835",
+                    "color": "#6B3524",
                     "name": "Terracotta Intense"
                 },
                 {
                     "slug": "accent",
-                    "color": "#7F4630",
+                    "color": "#5A2B1E",
                     "name": "Rouille Profonde"
                 },
                 {
                     "slug": "border",
-                    "color": "#D7C1B3",
+                    "color": "#D6C4B7",
                     "name": "Beige Ligne"
                 },
                 {
                     "slug": "background",
-                    "color": "#FBF6F1",
+                    "color": "#F7F1EB",
                     "name": "Ivoire Lumineux"
                 },
                 {
                     "slug": "background-alt",
-                    "color": "#EFE1D5",
+                    "color": "#EDE1D6",
                     "name": "Beige Doux"
                 },
                 {
+                    "slug": "card",
+                    "color": "#FFF9F4",
+                    "name": "Cartes Claires"
+                },
+                {
                     "slug": "text-primary",
-                    "color": "#2C2623",
+                    "color": "#2B2522",
                     "name": "Brun Noir Profond"
                 },
                 {
                     "slug": "text-secondary",
-                    "color": "#655D58",
+                    "color": "#6A605A",
                     "name": "Gris Brun"
                 },
                 {
                     "slug": "white",
-                    "color": "#FFFFFF",
-                    "name": "Blanc"
+                    "color": "#FFF9F4",
+                    "name": "Ivoire Clair"
                 }
             ]
         },

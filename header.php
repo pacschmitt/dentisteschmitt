@@ -1,14 +1,54 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<?php wp_head(); ?>
-</head>
+    <!-- 3. Preconnect for Google Fonts to improve Core Web Vitals (SEO) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<body <?php body_class(); ?>>
+    <!-- 1. Local Business Schema (SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalOrganization",
+      "name": "Cabinet Dentaire Schmitt",
+      "url": "<?php echo esc_url( home_url( '/' ) ); ?>",
+      "logo": "<?php echo esc_url( wp_get_attachment_image_url( get_theme_mod( 'custom_logo' ), 'full' ) ); ?>",
+      "department": [
+        {
+          "@type": "Dentist",
+          "name": "Cabinet Dentaire Schmitt - Nyon",
+          "telephone": "+41223617844",
+          "email": "drschmitt.nyon@bluewin.ch",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Avenue Reverdil 2",
+            "postalCode": "1260",
+            "addressLocality": "Nyon",
+            "addressCountry": "CH"
+          }
+        },
+        {
+          "@type": "Dentist",
+          "name": "Cabinet Dentaire Schmitt - Bassins",
+          "telephone": "+41223652626",
+          "email": "cabinetdentairebassins@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ruelle de la Repentance 4",
+            "postalCode": "1269",
+            "addressLocality": "Bassins",
+            "addressCountry": "CH"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <?php wp_head(); ?>
 <?php wp_body_open(); ?>
 
 <header id="masthead" class="site-header">
@@ -27,8 +67,26 @@
                 ☰
             </button>
             <div class="lang-switcher">
-                <!-- Placeholder for language switcher plugin like Polylang or WPML -->
-                <a href="#">FR</a> | <a href="#">EN</a>
+                <?php
+                if ( function_exists( 'pll_the_languages' ) ) {
+                    $langs = pll_the_languages( array(
+                        'raw'           => 1,
+                        'hide_if_empty' => 0,
+                    ) );
+                    if ( $langs ) {
+                        $links = array();
+                        foreach ( $langs as $lang ) {
+                             $class = $lang['current_lang'] ? ' class="current-lang"' : '';
+                             $links[] = '<a href="' . esc_url( $lang['url'] ) . '"' . $class . '>' . esc_html( strtoupper( $lang['slug'] ) ) . '</a>';
+                        }
+                        echo implode( ' <span class="sep">|</span> ', $links );
+                    }
+                } else {
+                    ?>
+                    <a href="#">FR</a> <span class="sep">|</span> <a href="#">EN</a>
+                    <?php
+                }
+                ?>
             </div>
 			<?php
 			wp_nav_menu(
