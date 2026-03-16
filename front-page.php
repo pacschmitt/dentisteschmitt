@@ -10,10 +10,22 @@ get_header();
 
 <main id="primary" class="site-main">
 
-    <!-- 1. Hero Section -->
-    <section class="hero-section">
+    <!-- 0. New Hero Section (Welcome) -->
+    <?php
+    $hero_bg = get_theme_mod( 'dentiste_schmitt_hero_background' );
+    $hero_style = $hero_bg ? 'style="background-image: url(' . esc_url( $hero_bg ) . ');"' : 'style="background-color: var(--color-primary);"';
+    ?>
+    <section class="welcome-hero" <?php echo $hero_style; ?>>
+        <div class="hero-overlay"></div>
+        <div class="container welcome-content">
+            <h1 class="welcome-title"><?php esc_html_e( 'Bienvenue aux Cabinets Dentaire Schmitt', 'dentiste-schmitt' ); ?></h1>
+        </div>
+    </section>
+
+    <!-- 1. Locations Section (Previously Hero) -->
+    <section class="hero-section locations-section">
         <div class="container hero-content">
-            <h1><?php esc_html_e( 'Votre cabinet dentaire à Nyon et Bassins', 'dentiste-schmitt' ); ?></h1>
+            <h2><?php esc_html_e( 'Vos cabinets dentaire à Nyon et Bassins (Vaud)', 'dentiste-schmitt' ); ?></h2>
             <p class="hero-subtitle">
                 <?php esc_html_e( 'Chirurgie – Orthodontie – Prothèses esthétiques – Soins pédiatriques – Parodontologie', 'dentiste-schmitt' ); ?>
             </p>
@@ -35,7 +47,7 @@ get_header();
     </section>
 
     <!-- 2. Cabinet Familial -->
-    <section class="section-padding bg-light">
+    <section class="section-padding">
         <div class="container">
             <div class="alignwide">
                 <p class="lead text-center">
@@ -46,39 +58,49 @@ get_header();
     </section>
 
     <!-- 3. Devenir un nouveau patient -->
-    <section class="section-padding">
+    <section class="section-padding bg-light">
         <div class="container">
             <h2 class="text-center mb-5"><?php esc_html_e( 'Devenir un nouveau patient', 'dentiste-schmitt' ); ?></h2>
             <div class="two-columns-grid" style="align-items: center;">
                 <div class="text-content mb-5">
-                    <p>
+                    <p class="mb-4">
                         <?php esc_html_e( 'C’est une première consultation de 45 minutes pour définir expliquer la ou les pathologies et proposer un plan de traitement validé par le patient à partir de données objectivables et dans un langage clair et compréhensible.', 'dentiste-schmitt' ); ?>
                     </p>
                     <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn mt-5"><?php esc_html_e( 'Prendre rendez-vous', 'dentiste-schmitt' ); ?></a>
                 </div>
                 <div class="image-content">
-                    <!-- Placeholder image -->
-                    <div style="background-color: var(--color-bg-secondary); width: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
-                    <!-- Placeholder -->
-                        <span style="color: var(--color-text-light);">Image Patient</span>
-                    </div>
+                    <?php
+                    $patient_image = get_theme_mod( 'dentiste_schmitt_patient_image' );
+                    if ( $patient_image ) : ?>
+                        <img src="<?php echo esc_url( $patient_image ); ?>" alt="<?php esc_attr_e( 'Nouveau patient', 'dentiste-schmitt' ); ?>">
+                    <?php else : ?>
+                        <!-- Placeholder image -->
+                        <div style="background-color: var(--color-bg-secondary); width: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                            <span style="color: var(--color-text-light);">Image Patient</span>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 4. Dr L. Schmitt -->
-    <section class="section-padding bg-light">
+    <section class="section-padding">
         <div class="container">
             <h2 class="text-center mb-3"><?php esc_html_e( 'Dr. L. Schmitt', 'dentiste-schmitt' ); ?></h2>
             <h3 class="h5 text-center mb-5"><?php esc_html_e( 'Docteur en chirurgie dentaire – Pratique la dentisterie globale', 'dentiste-schmitt' ); ?></h3>
             <div class="two-columns-grid" style="align-items: center;">
                 <div class="image-content">
-                    <!-- Placeholder image -->
-                    <div style="background-color: var(--color-bg-secondary); width: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
-                     <!-- Placeholder -->
-                        <span style="color: var(--color-text-light);">Photo Dr Schmitt</span>
-                    </div>
+                    <?php
+                    $doctor_image = get_theme_mod( 'dentiste_schmitt_doctor_image' );
+                    if ( $doctor_image ) : ?>
+                         <img src="<?php echo esc_url( $doctor_image ); ?>" alt="<?php esc_attr_e( 'Dr. Schmitt', 'dentiste-schmitt' ); ?>">
+                    <?php else : ?>
+                        <!-- Placeholder image -->
+                        <div style="background-color: var(--color-bg-secondary); width: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                            <span style="color: var(--color-text-light);">Photo Dr Schmitt</span>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="text-content">
                     <p>
@@ -90,14 +112,14 @@ get_header();
     </section>
 
     <!-- 5. À propos -->
-    <section class="section-padding">
+    <section class="section-padding bg-light">
         <div class="container">
             <div class="text-center mb-5">
                 <h2>À propos</h2>
             </div>
             <div class="alignwide" style="max-width: 900px; margin: 0 auto;">
                 <p class="mb-4">
-                    <?php esc_html_e( 'Nos dentistes et nos collaborateurs, spécialisés en santé bucco-dentaire, vous accueillent au cabinet du lundi au jeudi, pour vous prodiguer des soins de qualité dans une ambiance bienveillante et chaleureuse.', 'dentiste-schmitt' ); ?>
+                    <?php esc_html_e( 'Nos dentistes et nos collaborateurs, spécialisés en santé bucco-dentaire, vous accueillent au cabinet du lundi au vendredi, pour vous prodiguer des soins de qualité dans une ambiance bienveillante et chaleureuse.', 'dentiste-schmitt' ); ?>
                 </p>
                 <p class="mb-4">
                     <?php esc_html_e( 'Nos praticiens sont formés pour réaliser des soins sur les enfants et les adultes avec douceur et assurance. Nous voulons, à travers les générations, changer l\'appréhension que certaines personnes peuvent avoir à la vue d’un dentiste. Pour cela, nous créons une vraie relation de confiance avec chacun de nos patients. Nous nous adaptons à vos besoins et nous vous proposons un suivi personnalisé tout au long de votre prise en charge.', 'dentiste-schmitt' ); ?>
@@ -110,7 +132,7 @@ get_header();
     </section>
 
     <!-- 6. Nos spécialités -->
-    <section class="section-padding bg-light">
+    <section class="section-padding">
         <div class="container">
             <h2 class="text-center mb-5"><?php esc_html_e( 'Nos Compétences', 'dentiste-schmitt' ); ?></h2>
             <div class="cards-grid mb-5">
@@ -125,6 +147,12 @@ get_header();
                 </div>
                 <div class="card">
                     <h3><?php esc_html_e( 'Traumatologie', 'dentiste-schmitt' ); ?></h3>
+                </div>
+                <div class="card">
+                    <h3><?php esc_html_e( 'Soins pédiatriques', 'dentiste-schmitt' ); ?></h3>
+                </div>
+                <div class="card">
+                    <h3><?php esc_html_e( 'Prévention & hygiène dentaire', 'dentiste-schmitt' ); ?></h3>
                 </div>
             </div>
             <div class="text-center mt-5">

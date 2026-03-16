@@ -1,0 +1,787 @@
+# Copyright (C) 2026 Dentiste_Schmitt
+# This file is distributed under the same license as the Dentiste_Schmitt package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Dentiste_Schmitt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-16 11:33+0000\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../404.php:15
+msgid "Page non trouvée"
+msgstr ""
+
+#: ../404.php:19
+msgid "Il semble que rien n’ait été trouvé à cet endroit. Essayez de retourner à l’accueil."
+msgstr ""
+
+#: ../404.php:20
+msgid "Retour à l’accueil"
+msgstr ""
+
+#: ../footer.php:6, ../page-cabinets.php:30
+msgid "Cabinet Nyon"
+msgstr ""
+
+#: ../footer.php:8
+msgid "Avenue Reverdil 2, 1260 Nyon"
+msgstr ""
+
+#: ../footer.php:15, ../page-cabinets.php:81
+msgid "Cabinet Bassins"
+msgstr ""
+
+#: ../footer.php:17
+msgid "Ruelle de la Repentance 4, 1269 Bassins"
+msgstr ""
+
+#: ../footer.php:24
+msgid "Horaires"
+msgstr ""
+
+#: ../footer.php:26
+msgid "Lundi – Vendredi<br>08h00 – 18h00"
+msgstr ""
+
+#: ../footer.php:31, ../page-infos.php:14
+msgid "Informations"
+msgstr ""
+
+#: ../footer.php:33
+msgid "Tarifs"
+msgstr ""
+
+#: ../footer.php:34
+msgid "Mentions légales"
+msgstr ""
+
+#: ../footer.php:35, ../page-protection-des-donnees.php:3
+msgid "Protection des données"
+msgstr ""
+
+#: ../footer.php:42
+msgid "Cabinet Dentaire Schmitt – Nyon & Bassins (Canton de Vaud)."
+msgstr ""
+
+#: ../footer.php:43
+msgid "Tous droits réservés."
+msgstr ""
+
+#: ../front-page.php:21
+msgid "Bienvenue aux Cabinets Dentaire Schmitt"
+msgstr ""
+
+#: ../front-page.php:28
+msgid "Vos cabinets dentaire à Nyon et Bassins (Vaud)"
+msgstr ""
+
+#: ../front-page.php:30
+msgid "Chirurgie – Orthodontie – Prothèses esthétiques – Soins pédiatriques – Parodontologie"
+msgstr ""
+
+#: ../front-page.php:34
+msgid "RDV en ligne à Nyon"
+msgstr ""
+
+#: ../front-page.php:36
+msgid "Avenue Reverdil 2,<br>1260 Nyon"
+msgstr ""
+
+#: ../front-page.php:40
+msgid "RDV en ligne à Bassins"
+msgstr ""
+
+#: ../front-page.php:42
+msgid "Ruelle de la Repentance 4,<br>1269 Bassins"
+msgstr ""
+
+#: ../front-page.php:54
+msgid "Dentiste Schmitt, c'est un cabinet familial qui se transmet de père en fils, où la dentisterie globale est pratiquée. Le cabinet répond aux normes les plus sévères et les plus récentes en termes d’hygiène, de numérisation et de technologie. Nous sommes en partenariat avec un technicien dentaire installé à Nyon, au plus près du cabinet qui vous garantit un résultat esthétique et durable conforme à votre sensibilité."
+msgstr ""
+
+#: ../front-page.php:63
+msgid "Devenir un nouveau patient"
+msgstr ""
+
+#: ../front-page.php:67
+msgid "C’est une première consultation de 45 minutes pour définir expliquer la ou les pathologies et proposer un plan de traitement validé par le patient à partir de données objectivables et dans un langage clair et compréhensible."
+msgstr ""
+
+#: ../front-page.php:69
+msgid "Prendre rendez-vous"
+msgstr ""
+
+#: ../front-page.php:75
+msgid "Nouveau patient"
+msgstr ""
+
+#: ../front-page.php:90
+msgid "Dr. L. Schmitt"
+msgstr ""
+
+#: ../front-page.php:91
+msgid "Docteur en chirurgie dentaire – Pratique la dentisterie globale"
+msgstr ""
+
+#: ../front-page.php:97
+msgid "Dr. Schmitt"
+msgstr ""
+
+#: ../front-page.php:107
+msgid "Merci de l’intérêt et de la confiance que vous placez en nous. L’expérience, la polyvalence et la mise en confiance sont les moyens mis à votre disposition pour résoudre tous les problèmes esthétiques et/ou fonctionnels auxquels vous pourriez être confrontés, dans tous les domaines dentaires : implantologie « PRF FELLOW » dentisterie régénérative depuis 2006, orthodontie, prothèses esthétiques, soins pédiatriques, parodontologie."
+msgstr ""
+
+#: ../front-page.php:122
+msgid "Nos dentistes et nos collaborateurs, spécialisés en santé bucco-dentaire, vous accueillent au cabinet du lundi au vendredi, pour vous prodiguer des soins de qualité dans une ambiance bienveillante et chaleureuse."
+msgstr ""
+
+#: ../front-page.php:125
+msgid "Nos praticiens sont formés pour réaliser des soins sur les enfants et les adultes avec douceur et assurance. Nous voulons, à travers les générations, changer l'appréhension que certaines personnes peuvent avoir à la vue d’un dentiste. Pour cela, nous créons une vraie relation de confiance avec chacun de nos patients. Nous nous adaptons à vos besoins et nous vous proposons un suivi personnalisé tout au long de votre prise en charge."
+msgstr ""
+
+#: ../front-page.php:128
+msgid "Nos équipes d’experts sont à votre écoute pour discuter de votre situation et des potentielles solutions à mettre en place pour retrouver ou maintenir un sourire splendide. Du simple détartrage à la chirurgie, vous pouvez disposer des meilleurs soins dentaires, dans un cadre stérilisé, avec des équipements à la pointe de la technologie et une équipe aux petits soins pour vous."
+msgstr ""
+
+#: ../front-page.php:137
+msgid "Nos Compétences"
+msgstr ""
+
+#: ../front-page.php:140
+msgid "Dentisterie générale adulte"
+msgstr ""
+
+#: ../front-page.php:143
+msgid "Soins esthétiques dentaires"
+msgstr ""
+
+#: ../front-page.php:146
+msgid "Parodontologie"
+msgstr ""
+
+#: ../front-page.php:149
+msgid "Traumatologie"
+msgstr ""
+
+#: ../front-page.php:152
+msgid "Soins pédiatriques"
+msgstr ""
+
+#: ../front-page.php:155
+msgid "Prévention & hygiène dentaire"
+msgstr ""
+
+#: ../front-page.php:159
+msgid "En savoir plus sur nos soins"
+msgstr ""
+
+#: ../functions.php:55, ../header.php:24
+msgid "Menu Principal"
+msgstr ""
+
+#: ../functions.php:184
+msgid "Prendre RDV"
+msgstr ""
+
+#: ../header.php:26
+msgid "Menu"
+msgstr ""
+
+#: ../inc/customizer.php:21
+msgid "Page d'accueil"
+msgstr ""
+
+#: ../inc/customizer.php:23
+msgid "Configurer les images de la page d'accueil"
+msgstr ""
+
+#: ../inc/customizer.php:34
+msgid "Image Grande Hero (Haut de page)"
+msgstr ""
+
+#: ../inc/customizer.php:35
+msgid "Image de fond pour la section \"Bienvenue\""
+msgstr ""
+
+#: ../inc/customizer.php:48
+msgid "Image \"Nouveau Patient\""
+msgstr ""
+
+#: ../inc/customizer.php:49
+msgid "Section \"Devenir un nouveau patient\""
+msgstr ""
+
+#: ../inc/customizer.php:62
+msgid "Photo Dr Schmitt"
+msgstr ""
+
+#: ../inc/customizer.php:63
+msgid "Section \"Dr. L. Schmitt\""
+msgstr ""
+
+#: ../inc/customizer.php:72, ../page-cabinets.php:3
+msgid "Page Cabinets"
+msgstr ""
+
+#: ../inc/customizer.php:74
+msgid "Configurer les photos des carrousels (Nyon & Bassins)."
+msgstr ""
+
+#: ../inc/customizer.php:94
+msgid "%s - Photo %d"
+msgstr ""
+
+#: ../inc/customizer.php:105, ../page-equipe.php:3
+msgid "Page Équipe"
+msgstr ""
+
+#: ../inc/customizer.php:107
+msgid "Configurer les photos des membres de l'équipe."
+msgstr ""
+
+#: ../index.php:68
+msgid "Rien trouvé"
+msgstr ""
+
+#: ../index.php:72
+msgid "Il semble que nous ne trouvions pas ce que vous cherchez."
+msgstr ""
+
+#: ../index.php:45
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: ../page-cabinets.php:16
+msgid "Nos Cabinets"
+msgstr ""
+
+#: ../page-cabinets.php:21
+msgid "Nos deux cabinets dentaire et toute leurs équipes vous accueillent chaleureusement pour vous offrir les meilleurs soins bucco-dentaires. Nous mettons toutes nos compétences et notre expérience au service de nos patients, enfant ou adulte, pour prévenir et soigner leur dentition."
+msgstr ""
+
+#: ../page-cabinets.php:24
+msgid "Contactez le cabinet pour prendre rendez-vous avec nos chirurgiens-dentistes et nos hygiénistes de qualité."
+msgstr ""
+
+#: ../page-cabinets.php:32
+msgid "Prendre RDV à Nyon"
+msgstr ""
+
+#: ../page-cabinets.php:35
+msgid "Photos du cabinet de Nyon"
+msgstr ""
+
+#: ../page-cabinets.php:46
+msgid "Cabinet Nyon - photo %d"
+msgstr ""
+
+#: ../page-cabinets.php:51, ../page-cabinets.php:102
+msgid "Photo précédente"
+msgstr ""
+
+#: ../page-cabinets.php:52, ../page-cabinets.php:103
+msgid "Photo suivante"
+msgstr ""
+
+#: ../page-cabinets.php:58, ../page-cabinets.php:109
+msgid "Adresse :"
+msgstr ""
+
+#: ../page-cabinets.php:59
+msgid "Avenue Reverdil 2<br>1260 Nyon"
+msgstr ""
+
+#: ../page-cabinets.php:62, ../page-cabinets.php:113
+msgid "Téléphone :"
+msgstr ""
+
+#: ../page-cabinets.php:66, ../page-cabinets.php:117
+msgid "Email :"
+msgstr ""
+
+#: ../page-cabinets.php:69
+msgid "Carte Google Maps - Cabinet Nyon"
+msgstr ""
+
+#: ../page-cabinets.php:71
+msgid "Cabinet Nyon - Google Maps"
+msgstr ""
+
+#: ../page-cabinets.php:83
+msgid "Prendre RDV à Bassins"
+msgstr ""
+
+#: ../page-cabinets.php:86
+msgid "Photos du cabinet de Bassins"
+msgstr ""
+
+#: ../page-cabinets.php:97
+msgid "Cabinet Bassins - photo %d"
+msgstr ""
+
+#: ../page-cabinets.php:110
+msgid "Ruelle de la Repentance 4<br>1269 Bassins"
+msgstr ""
+
+#: ../page-cabinets.php:120
+msgid "Carte Google Maps - Cabinet Bassins"
+msgstr ""
+
+#: ../page-cabinets.php:122
+msgid "Cabinet Bassins - Google Maps"
+msgstr ""
+
+#: ../page-equipe.php:14
+msgid "Notre Équipe"
+msgstr ""
+
+#: ../page-equipe.php:23
+msgid "Notre équipe se compose de nos trois chirurgiens-dentistes : <strong>Dr Laurent Schmitt</strong>, <strong>Dr Sacha Schmitt</strong> et <strong>Dr Aline Koring</strong>, de nos deux hygiénistes Mme Saskia Naz et Mme Néda Dolatshahi ainsi que nos chaleureuses assistantes Mme Céline Larouble, Mme Perrine Vinsonneau, Alexandra Alves Poget et Fleuriane Laurent."
+msgstr ""
+
+#: ../page-equipe.php:28
+msgid "Nos spécialistes en soins bucco-dentaires vous accueillent avec bienveillance et professionnalisme dans notre cabinet dentaire. Ainsi, nous répondons aux normes imposées en termes d’hygiène et de technologie. Dans l’intention de toujours offrir un service de qualité à nos patients, nous collaborons également avec un prothésiste dentaire installé à Nyon, au plus près du cabinet. Nous pouvons ainsi garantir un résultat esthétique et durable conforme à vos attentes avec des produits de qualité."
+msgstr ""
+
+#: ../page-infos.php:3
+msgid "Page Infos"
+msgstr ""
+
+#: ../page-infos.php:20
+msgid "Contactez notre cabinet dentaire Dentiste Schmitt pour en savoir plus sur nos services en soins bucco-dentaires. Vous êtes un nouveau patient ? Prenez rendez-vous avec notre équipe, pour votre première consultation."
+msgstr ""
+
+#: ../page-infos.php:23
+msgid "Nos collaborateurs vous accueillent avec professionnalisme du lundi au jeudi. Nos praticiens s'engagent à vous offrir un service de qualité qui vous rendra votre beau sourire."
+msgstr ""
+
+#: ../page-infos.php:72
+msgid "Questions Fréquentes"
+msgstr ""
+
+#: ../page-infos.php:74
+msgid "Comment prendre rendez-vous ?"
+msgstr ""
+
+#: ../page-infos.php:75
+msgid "Vous pouvez prendre rendez-vous par téléphone ou via notre formulaire en ligne sur Denteo pour nos deux cabinets."
+msgstr ""
+
+#: ../page-infos.php:78
+msgid "Acceptez-vous les nouveaux patients ?"
+msgstr ""
+
+#: ../page-infos.php:79
+msgid "Oui, nous acceptons les nouveaux patients, petits et grands, dans nos deux cabinets."
+msgstr ""
+
+#: ../page-infos.php:82
+msgid "Que faire en cas d'urgence dentaire ?"
+msgstr ""
+
+#: ../page-infos.php:83
+msgid "En cas d'urgence sur nos heures d'ouverture, veuillez nous contacter immédiatement par téléphone. Nous ferons le maximum pour vous recevoir dans les plus brefs délais. En dehors de nos horaires, veuillez vous adresser au médecin-dentiste de garde de votre région."
+msgstr ""
+
+#: ../page-infos.php:86
+msgid "À quelle fréquence dois-je faire un contrôle et un détartrage ?"
+msgstr ""
+
+#: ../page-infos.php:87
+msgid "Nous recommandons une visite de contrôle accompagnée d'un détartrage chez l'hygiéniste au moins une à deux fois par an pour maintenir une santé bucco-dentaire optimale."
+msgstr ""
+
+#: ../page-infos.php:90
+msgid "Quels sont les moyens de paiement acceptés ?"
+msgstr ""
+
+#: ../page-infos.php:91
+msgid "Vous avez la possibilité de régler directement au cabinet par carte bancaire ou en espèces. De plus, grâce à notre partenariat avec la Caisse des Médecins-Dentistes, vous pouvez opter pour un paiement sur facture avec possibilité d'échelonnement."
+msgstr ""
+
+#: ../page-infos.php:94
+msgid "Les cabinets sont-ils accessibles aux personnes à mobilité réduite ?"
+msgstr ""
+
+#: ../page-infos.php:95
+msgid "Totalement. À Nyon, le cabinet est facilement accessible via les ascenseurs du centre commercial de La Combe. À Bassins, notre cabinet au rez-de-chaussée dispose de places de stationnement de plain-pied juste devant l'entrée."
+msgstr ""
+
+#: ../page-infos.php:98
+msgid "Dès quel âge mon enfant doit-il consulter pour la première fois ?"
+msgstr ""
+
+#: ../page-infos.php:99
+msgid "Il est conseillé de prendre un premier rendez-vous de contrôle vers l'âge de 2 à 3 ans. Cela permet de rassurer l'enfant, de l'habituer au cabinet et de vérifier que les premières dents se développent bien."
+msgstr ""
+
+#: ../page-mentions-legales.php:3, ../page-mentions-legales.php:14
+msgid "Mentions Légales"
+msgstr ""
+
+#: ../page-mentions-legales.php:19
+msgid "Éditeur du site"
+msgstr ""
+
+#: ../page-mentions-legales.php:34
+msgid "Responsable de la publication"
+msgstr ""
+
+#: ../page-mentions-legales.php:41
+msgid "Hébergement"
+msgstr ""
+
+#: ../page-mentions-legales.php:43
+msgid "Hostinger"
+msgstr ""
+
+#: ../page-mentions-legales.php:48
+msgid "Propriété intellectuelle"
+msgstr ""
+
+#: ../page-mentions-legales.php:50
+msgid "Le contenu de ce site (textes, images, graphismes, logo, icônes, etc.) est la propriété exclusive du Cabinet Dentaire Schmitt, à l'exception des marques, logos ou contenus appartenant à d'autres sociétés partenaires ou auteurs."
+msgstr ""
+
+#: ../page-mentions-legales.php:54
+msgid "Toute reproduction, distribution, modification, adaptation, retransmission ou publication, même partielle, de ces différents éléments est strictement interdite sans l'accord exprès par écrit du Cabinet Dentaire Schmitt."
+msgstr ""
+
+#: ../page-protection-des-donnees.php:14
+msgid "Politique de Confidentialité"
+msgstr ""
+
+#: ../page-protection-des-donnees.php:19
+msgid "Introduction"
+msgstr ""
+
+#: ../page-protection-des-donnees.php:21
+msgid "La protection de vos données personnelles est une priorité pour le Cabinet Dentaire Schmitt. Cette politique de confidentialité explique quelles informations nous collectons, comment nous les utilisons et les droits dont vous disposez."
+msgstr ""
+
+#: ../page-protection-des-donnees.php:24
+msgid "Nous traitons vos données conformément à la Loi fédérale sur la protection des données (LPD) en Suisse et aux réglementations applicables."
+msgstr ""
+
+#: ../page-protection-des-donnees.php:29
+msgid "Responsable du traitement"
+msgstr ""
+
+#: ../page-protection-des-donnees.php:40
+msgid "Données collectées"
+msgstr ""
+
+#: ../page-protection-des-donnees.php:42
+msgid "Nous collectons uniquement les données strictement nécessaires au traitement de votre dossier médical et à la gestion de nos rendez-vous :"
+msgstr ""
+
+#: ../page-protection-des-donnees.php:45
+msgid "Coordonnées (Nom, Prénom, Adresse, Téléphone, Email)"
+msgstr ""
+
+#: ../page-protection-des-donnees.php:46
+msgid "Informations médicales et antécédents de santé (dossier patient confidentiel)"
+msgstr ""
+
+#: ../page-protection-des-donnees.php:47
+msgid "Données de facturation et d'assurances"
+msgstr ""
+
+#: ../page-protection-des-donnees.php:52
+msgid "Finalité du traitement"
+msgstr ""
+
+#: ../page-protection-des-donnees.php:54
+msgid "Vos données sont collectées pour :"
+msgstr ""
+
+#: ../page-protection-des-donnees.php:57
+msgid "Assurer votre suivi médical et dentaire"
+msgstr ""
+
+#: ../page-protection-des-donnees.php:58
+msgid "Gérer les rendez-vous et le secrétariat"
+msgstr ""
+
+#: ../page-protection-des-donnees.php:59
+msgid "Établir la facturation et les relations avec les assurances"
+msgstr ""
+
+#: ../page-protection-des-donnees.php:60
+msgid "Respecter nos obligations légales de conservation des dossiers médicaux"
+msgstr ""
+
+#: ../page-protection-des-donnees.php:65
+msgid "Partage des données"
+msgstr ""
+
+#: ../page-protection-des-donnees.php:67
+msgid "Vos données médicales sont soumises au secret médical et ne sont transmises à des tiers (assurances, laboratoires, confrères spécialistes) qu'avec votre consentement ou si la loi l'exige."
+msgstr ""
+
+#: ../page-protection-des-donnees.php:70
+msgid "Les prestataires informatiques (hébergement, logiciel médical) qui traitent des données pour notre compte sont tenus à des obligations strictes de confidentialité et de sécurité."
+msgstr ""
+
+#: ../page-protection-des-donnees.php:75
+msgid "Vos droits"
+msgstr ""
+
+#: ../page-protection-des-donnees.php:77
+msgid "Vous disposez d'un droit d'accès, de rectification et d'effacement de vos données (dans les limites légales de conservation des dossiers médicaux). Pour exercer ces droits, vous pouvez nous contacter à l'adresse indiquée ci-dessus."
+msgstr ""
+
+#: ../page-protection-des-donnees.php:82
+msgid "Cookies et traceurs"
+msgstr ""
+
+#: ../page-protection-des-donnees.php:84
+msgid "Ce site peut utiliser des cookies techniques pour son fonctionnement. Aucune donnée personnelle n'est collectée à des fins publicitaires sans votre consentement préalable."
+msgstr ""
+
+#: ../page-protection-des-donnees.php:89
+msgid "Modification de la politique"
+msgstr ""
+
+#: ../page-protection-des-donnees.php:91
+msgid "Nous nous réservons le droit de modifier cette déclaration de protection des données à tout moment afin de garantir sa conformité avec les dispositions légales en vigueur."
+msgstr ""
+
+#: ../page-soins.php:3
+msgid "Page Soins"
+msgstr ""
+
+#: ../page-soins.php:14
+msgid "Nos Soins"
+msgstr ""
+
+#: ../page-soins.php:19
+msgid "Chez Dentiste Schmitt, nous savons qu’une bonne santé bucco-dentaire est indispensable à votre santé globale et à votre bien-être. C’est pourquoi notre équipe met tout en œuvre pour vous offrir un accompagnement personnalisé et un sourire éclatant !"
+msgstr ""
+
+#: ../page-soins.php:24
+msgid "Dentisterie globale et spécialisée pour enfants et adultes"
+msgstr ""
+
+#: ../page-soins.php:28, ../page-soins.php:29
+msgid "Soins Préventifs & Conservateurs"
+msgstr ""
+
+#: ../page-soins.php:28
+msgid "Nous assurons votre suivi à travers des examens de contrôle réguliers, les soins préventifs (dont les scellements de fissures), le traitement des caries et les traitements de racine."
+msgstr ""
+
+#: ../page-soins.php:30
+msgid "Contrôle, prévention, traitement des caries et traitements de racine."
+msgstr ""
+
+#: ../page-soins.php:33, ../page-soins.php:34
+msgid "Hygiène Dentaire"
+msgstr ""
+
+#: ../page-soins.php:33
+msgid "Un nettoyage complet comprenant le détartrage, le polissage et des conseils d'hygiène pour garantir la santé de vos gencives et la propreté de vos dents."
+msgstr ""
+
+#: ../page-soins.php:35
+msgid "Détartrage, polissage et conseils d'hygiène personnalisés."
+msgstr ""
+
+#: ../page-soins.php:38, ../page-soins.php:39
+msgid "Soins Prothétiques"
+msgstr ""
+
+#: ../page-soins.php:38
+msgid "Restauration de l'esthétique et de la fonction masticatoire grâce aux facettes, couronnes, inlays, onlays, ainsi que les appareils amovibles et fixés."
+msgstr ""
+
+#: ../page-soins.php:40
+msgid "Facettes, couronnes, inlays, onlays et appareils (fixes ou amovibles)."
+msgstr ""
+
+#: ../page-soins.php:43, ../page-soins.php:44
+msgid "Urgences Dentaires"
+msgstr ""
+
+#: ../page-soins.php:43
+msgid "Prise en charge rapide et efficace des douleurs intenses, des traumatismes (chocs), des abcès infectieux ou encore des dents cassées."
+msgstr ""
+
+#: ../page-soins.php:45
+msgid "Soulagement rapide des douleurs, traumas, abcès et dents cassées."
+msgstr ""
+
+#: ../page-soins.php:48, ../page-tarifs.php:69
+msgid "Orthodontie"
+msgstr ""
+
+#: ../page-soins.php:48
+msgid "Traitements visant à réaligner les dents, adaptés pour les problèmes d'occlusion complexes chez les enfants, adolescents et adultes."
+msgstr ""
+
+#: ../page-soins.php:49
+msgid "Orthodontie Classique"
+msgstr ""
+
+#: ../page-soins.php:50
+msgid "Traitements traditionnels pour corriger l'alignement à tout âge."
+msgstr ""
+
+#: ../page-soins.php:53, ../page-soins.php:54
+msgid "Smile Design & Orthodontie Invisible"
+msgstr ""
+
+#: ../page-soins.php:53
+msgid "Nous concevons numériquement le sourire de vos rêves. L'orthodontie invisible vous permet de visualiser le résultat final dès le début et de réaligner vos dents grâce à des gouttières transparentes, confortables et très discrètes."
+msgstr ""
+
+#: ../page-soins.php:55
+msgid "Conception numérique sur-mesure et réalignement 100% discret par gouttières."
+msgstr ""
+
+#: ../page-soins.php:58, ../page-soins.php:59
+msgid "Chirurgie Orale"
+msgstr ""
+
+#: ../page-soins.php:58
+msgid "Interventions sous anesthésie pour l'extraction de dents de sagesse complexes, la pose d'implants dentaires ou la correction gingivale."
+msgstr ""
+
+#: ../page-soins.php:60
+msgid "Implants, extractions de dents de sagesse et corrections gingivales."
+msgstr ""
+
+#: ../page-soins.php:63, ../page-soins.php:64
+msgid "Dentisterie Esthétique"
+msgstr ""
+
+#: ../page-soins.php:63
+msgid "Sublimez votre sourire de façon immédiate grâce à nos solutions de blanchiment dentaire au fauteuil ou avec la pose de facettes en céramique."
+msgstr ""
+
+#: ../page-soins.php:65
+msgid "Restaurer l'éclat avec le blanchiment au fauteuil et les facettes."
+msgstr ""
+
+#: ../page-soins.php:68
+msgid "Parodontologie & Apnée du sommeil"
+msgstr ""
+
+#: ../page-soins.php:68
+msgid "Prise en charge et traitement approfondi des maladies parodontales (déchaussement, inflammation des gencives) et accompagnement pour l'apnée du sommeil."
+msgstr ""
+
+#: ../page-soins.php:69
+msgid "Parodontologie & Apnée"
+msgstr ""
+
+#: ../page-soins.php:70
+msgid "Traitement des gencives et prise en charge de l'apnée du sommeil."
+msgstr ""
+
+#: ../page-tarifs.php:3
+msgid "Page Tarifs"
+msgstr ""
+
+#: ../page-tarifs.php:14
+msgid "Nos Tarifs"
+msgstr ""
+
+#: ../page-tarifs.php:19
+msgid "La confiance avec nos patients est essentielle. C’est pourquoi nous faisons le choix de la transparence totale sur nos tarifs."
+msgstr ""
+
+#: ../page-tarifs.php:22
+msgid "Avant chaque soin, nous sommes à votre disposition pour vous délivrer un devis clair et détaillé, afin que vous soyez pleinement informé et serein."
+msgstr ""
+
+#: ../page-tarifs.php:29
+msgid "Valeur du point"
+msgstr ""
+
+#: ../page-tarifs.php:30
+msgid "Nous travaillons selon l’actuelle tarification de la SSO. La valeur du point Dentotar appliquée pour les soins est de 1.12."
+msgstr ""
+
+#: ../page-tarifs.php:36
+msgid "Nos soins dentaires et d’hygiène les plus demandés :"
+msgstr ""
+
+#: ../page-tarifs.php:41
+msgid "Consultations & Prévention"
+msgstr ""
+
+#: ../page-tarifs.php:44
+msgid "1ère consultation avec radios"
+msgstr ""
+
+#: ../page-tarifs.php:49
+msgid "Détartrage adulte"
+msgstr ""
+
+#: ../page-tarifs.php:50
+msgid "+ polissage et conseils d'hygiène"
+msgstr ""
+
+#: ../page-tarifs.php:55
+msgid "Détartrage enfant"
+msgstr ""
+
+#: ../page-tarifs.php:56
+msgid "Sur demande"
+msgstr ""
+
+#: ../page-tarifs.php:59
+msgid "Blanchiment dentaire au fauteuil"
+msgstr ""
+
+#: ../page-tarifs.php:66
+msgid "Soins Spécifiques"
+msgstr ""
+
+#: ../page-tarifs.php:69
+msgid "1ère consultation"
+msgstr ""
+
+#: ../page-tarifs.php:73
+msgid "Couronne prothétique"
+msgstr ""
+
+#: ../page-tarifs.php:77
+msgid "Extraction de dent de sagesse"
+msgstr ""
+
+#: ../page-tarifs.php:78, ../page-tarifs.php:82
+msgid "Sur devis"
+msgstr ""
+
+#: ../page-tarifs.php:81
+msgid "Pose d'un implant avec sa couronne"
+msgstr ""
+
+#: ../page-tarifs.php:92
+msgid "Moyens et facilités de paiement"
+msgstr ""
+
+#: ../page-tarifs.php:96
+msgid "Nous collaborons avec la Caisse des Médecins-Dentistes, ce qui vous offre la possibilité d'échelonner le paiement de vos factures si vous le souhaitez."
+msgstr ""
+
+#: ../page-tarifs.php:98
+msgid "Pour le règlement, deux options s’offrent à vous :"
+msgstr ""
+
+#: ../page-tarifs.php:100
+msgid "Recevoir votre facture à domicile ou par e-mail afin d’effectuer un virement bancaire."
+msgstr ""
+
+#: ../page-tarifs.php:101
+msgid "Régler directement au cabinet par carte bancaire ou en espèces à l'issue de votre rendez-vous."
+msgstr ""
