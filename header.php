@@ -29,7 +29,10 @@
             <div class="lang-switcher">
                 <?php
                 if ( function_exists( 'pll_the_languages' ) ) {
-                    $langs = pll_the_languages( array( 'raw' => 1 ) );
+                    $langs = pll_the_languages( array(
+                        'raw'           => 1,
+                        'hide_if_empty' => 0,
+                    ) );
                     if ( $langs ) {
                         $links = array();
                         foreach ( $langs as $lang ) {
