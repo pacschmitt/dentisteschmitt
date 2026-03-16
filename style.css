@@ -63,8 +63,8 @@ body {
     font-family: var(--font-body);
     color: var(--color-text);
     background-color: var(--color-bg);
-    line-height: 1.8; /* Improved readability */
-    font-size: 17px; /* Slightly larger */
+    line-height: 1.6; /* Improved readability */
+    font-size: 16px; /* Slightly larger */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: left;
@@ -153,6 +153,23 @@ img {
     max-width: 100%;
     height: auto;
     border-radius: var(--border-radius);
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+ul, ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
 }
 
 /* ==========================================================================
