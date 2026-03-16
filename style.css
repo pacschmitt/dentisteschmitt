@@ -201,13 +201,13 @@ li {
 .site-branding .custom-logo-link {
     display: inline-flex;
     align-items: center;
-    max-width: 320px; /* Increased width */
+    max-width: 350px; /* Increased width */
     overflow: hidden;
 }
 
 .site-branding img.custom-logo {
     display: block;
-    max-height: 60px !important; /* Increased size */
+    max-height: 80px !important; /* Increased size */
     max-width: 100% !important;
     width: auto !important;
     height: auto !important;
@@ -223,11 +223,11 @@ li {
 
 @media (max-width: 768px) {
     .site-branding img.custom-logo {
-        max-height: 42px !important; /* Larger on mobile */
+        max-height: 55px !important; /* Larger on mobile */
     }
 
     .site-branding .custom-logo-link {
-        max-width: 200px;
+        max-width: 250px;
     }
 }
 
