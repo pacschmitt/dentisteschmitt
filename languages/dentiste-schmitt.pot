@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-03-16 11:33+0000\n"
+"POT-Creation-Date: 2026-03-16 12:46+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -182,7 +182,7 @@ msgstr ""
 msgid "En savoir plus sur nos soins"
 msgstr ""
 
-#: ../functions.php:55, ../header.php:24
+#: ../functions.php:55, ../header.php:64
 msgid "Menu Principal"
 msgstr ""
 
@@ -190,7 +190,7 @@ msgstr ""
 msgid "Prendre RDV"
 msgstr ""
 
-#: ../header.php:26
+#: ../header.php:66
 msgid "Menu"
 msgstr ""
 
@@ -348,6 +348,22 @@ msgstr ""
 
 #: ../page-equipe.php:28
 msgid "Nos spécialistes en soins bucco-dentaires vous accueillent avec bienveillance et professionnalisme dans notre cabinet dentaire. Ainsi, nous répondons aux normes imposées en termes d’hygiène et de technologie. Dans l’intention de toujours offrir un service de qualité à nos patients, nous collaborons également avec un prothésiste dentaire installé à Nyon, au plus près du cabinet. Nous pouvons ainsi garantir un résultat esthétique et durable conforme à vos attentes avec des produits de qualité."
+msgstr ""
+
+#: ../page-equipe.php:35, ../page-equipe.php:36, ../page-equipe.php:37
+msgid "Docteur"
+msgstr ""
+
+#: ../page-equipe.php:38, ../page-equipe.php:39
+msgid "Hygiéniste"
+msgstr ""
+
+#: ../page-equipe.php:40, ../page-equipe.php:41, ../page-equipe.php:42, ../page-equipe.php:43
+msgid "Assistante"
+msgstr ""
+
+#: ../page-equipe.php:51
+msgid "Portrait de %s, %s au Cabinet Dentaire Schmitt"
 msgstr ""
 
 #: ../page-infos.php:3
