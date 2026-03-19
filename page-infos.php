@@ -68,36 +68,77 @@ get_header();
             </div>
         </div>
 
-        <div class="faq-section mt-5">
-            <h3 class="text-center mb-4"><?php esc_html_e( 'Questions Fréquentes', 'dentiste-schmitt' ); ?></h3>
-            <details>
-                <summary><?php esc_html_e( 'Comment prendre rendez-vous ?', 'dentiste-schmitt' ); ?></summary>
-                <p><?php esc_html_e( 'Vous pouvez prendre rendez-vous par téléphone ou via notre formulaire en ligne sur Denteo pour nos deux cabinets.', 'dentiste-schmitt' ); ?></p>
-            </details>
-            <details>
-                <summary><?php esc_html_e( 'Acceptez-vous les nouveaux patients ?', 'dentiste-schmitt' ); ?></summary>
-                <p><?php esc_html_e( 'Oui, nous acceptons les nouveaux patients, petits et grands, dans nos deux cabinets.', 'dentiste-schmitt' ); ?></p>
-            </details>
-            <details>
-                <summary><?php esc_html_e( 'Que faire en cas d\'urgence dentaire ?', 'dentiste-schmitt' ); ?></summary>
-                <p><?php esc_html_e( 'En cas d\'urgence sur nos heures d\'ouverture, veuillez nous contacter immédiatement par téléphone. Nous ferons le maximum pour vous recevoir dans les plus brefs délais. En dehors de nos horaires, veuillez vous adresser au médecin-dentiste de garde de votre région.', 'dentiste-schmitt' ); ?></p>
-            </details>
-            <details>
-                <summary><?php esc_html_e( 'À quelle fréquence dois-je faire un contrôle et un détartrage ?', 'dentiste-schmitt' ); ?></summary>
-                <p><?php esc_html_e( 'Nous recommandons une visite de contrôle accompagnée d\'un détartrage chez l\'hygiéniste au moins une à deux fois par an pour maintenir une santé bucco-dentaire optimale.', 'dentiste-schmitt' ); ?></p>
-            </details>
-            <details>
-                <summary><?php esc_html_e( 'Quels sont les moyens de paiement acceptés ?', 'dentiste-schmitt' ); ?></summary>
-                <p><?php esc_html_e( 'Vous avez la possibilité de régler directement au cabinet par carte bancaire ou en espèces. De plus, grâce à notre partenariat avec la Caisse des Médecins-Dentistes, vous pouvez opter pour un paiement sur facture avec possibilité d\'échelonnement.', 'dentiste-schmitt' ); ?></p>
-            </details>
-            <details>
-                <summary><?php esc_html_e( 'Les cabinets sont-ils accessibles aux personnes à mobilité réduite ?', 'dentiste-schmitt' ); ?></summary>
-                <p><?php esc_html_e( 'Totalement. À Nyon, le cabinet est facilement accessible via les ascenseurs du centre commercial de La Combe. À Bassins, notre cabinet au rez-de-chaussée dispose de places de stationnement de plain-pied juste devant l\'entrée.', 'dentiste-schmitt' ); ?></p>
-            </details>
-            <details>
-                <summary><?php esc_html_e( 'Dès quel âge mon enfant doit-il consulter pour la première fois ?', 'dentiste-schmitt' ); ?></summary>
-                <p><?php esc_html_e( 'Il est conseillé de prendre un premier rendez-vous de contrôle vers l\'âge de 2 à 3 ans. Cela permet de rassurer l\'enfant, de l\'habituer au cabinet et de vérifier que les premières dents se développent bien.', 'dentiste-schmitt' ); ?></p>
-            </details>
+        <div class="faq-section mt-5 px-3 py-4 rounded" style="background-color: var(--color-bg-secondary, #fafafa); box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+            <div class="text-center mb-5">
+                <h2 class="h3 d-inline-flex align-items-center mb-3">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2" style="color:var(--color-primary); margin-right: 10px;"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    <?php esc_html_e( 'Questions Fréquentes', 'dentiste-schmitt' ); ?>
+                </h2>
+                <p class="text-muted"><?php esc_html_e( 'Retrouvez les réponses aux questions les plus couramment posées par nos patients.', 'dentiste-schmitt' ); ?></p>
+            </div>
+
+            <div class="faq-accordion" itemscope itemtype="https://schema.org/FAQPage">
+                <details class="mb-3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name" class="p-3 bg-white rounded shadow-sm"><?php esc_html_e( 'Comment prendre rendez-vous ?', 'dentiste-schmitt' ); ?></summary>
+                    <div class="faq-content p-3 bg-white border-top" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text" class="m-0"><?php esc_html_e( 'Vous pouvez prendre rendez-vous par téléphone ou via notre formulaire en ligne sur Denteo pour nos deux cabinets.', 'dentiste-schmitt' ); ?></p>
+                    </div>
+                </details>
+                <details class="mb-3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name" class="p-3 bg-white rounded shadow-sm"><?php esc_html_e( 'Acceptez-vous les nouveaux patients ?', 'dentiste-schmitt' ); ?></summary>
+                    <div class="faq-content p-3 bg-white border-top" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text" class="m-0"><?php esc_html_e( 'Oui, nous acceptons les nouveaux patients, petits et grands, dans nos deux cabinets.', 'dentiste-schmitt' ); ?></p>
+                    </div>
+                </details>
+                <details class="mb-3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name" class="p-3 bg-white rounded shadow-sm"><?php esc_html_e( 'Que faire en cas d\'urgence dentaire ?', 'dentiste-schmitt' ); ?></summary>
+                    <div class="faq-content p-3 bg-white border-top" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text" class="m-0"><?php esc_html_e( 'En cas d\'urgence sur nos heures d\'ouverture, veuillez nous contacter immédiatement par téléphone. Nous ferons le maximum pour vous recevoir dans les plus brefs délais. En dehors de nos horaires, veuillez vous adresser au médecin-dentiste de garde de votre région.', 'dentiste-schmitt' ); ?></p>
+                    </div>
+                </details>
+                <details class="mb-3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name" class="p-3 bg-white rounded shadow-sm"><?php esc_html_e( 'À quelle fréquence dois-je faire un contrôle et un détartrage ?', 'dentiste-schmitt' ); ?></summary>
+                    <div class="faq-content p-3 bg-white border-top" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text" class="m-0"><?php esc_html_e( 'Nous recommandons une visite de contrôle accompagnée d\'un détartrage chez l\'hygiéniste au moins une à deux fois par an pour maintenir une santé bucco-dentaire optimale.', 'dentiste-schmitt' ); ?></p>
+                    </div>
+                </details>
+                <details class="mb-3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name" class="p-3 bg-white rounded shadow-sm"><?php esc_html_e( 'Quels sont les moyens de paiement acceptés ?', 'dentiste-schmitt' ); ?></summary>
+                    <div class="faq-content p-3 bg-white border-top" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text" class="m-0"><?php esc_html_e( 'Vous avez la possibilité de régler directement au cabinet par carte bancaire ou en espèces. De plus, grâce à notre partenariat avec la Caisse des Médecins-Dentistes, vous pouvez opter pour un paiement sur facture avec possibilité d\'échelonnement.', 'dentiste-schmitt' ); ?></p>
+                    </div>
+                </details>
+                <details class="mb-3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name" class="p-3 bg-white rounded shadow-sm"><?php esc_html_e( 'Les cabinets sont-ils accessibles aux personnes à mobilité réduite ?', 'dentiste-schmitt' ); ?></summary>
+                    <div class="faq-content p-3 bg-white border-top" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text" class="m-0"><?php esc_html_e( 'Totalement. À Nyon, le cabinet est facilement accessible via les ascenseurs du centre commercial de La Combe. À Bassins, notre cabinet au rez-de-chaussée dispose de places de stationnement de plain-pied juste devant l\'entrée.', 'dentiste-schmitt' ); ?></p>
+                    </div>
+                </details>
+                <details class="mb-3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name" class="p-3 bg-white rounded shadow-sm"><?php esc_html_e( 'Dès quel âge mon enfant doit-il consulter pour la première fois ?', 'dentiste-schmitt' ); ?></summary>
+                    <div class="faq-content p-3 bg-white border-top" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text" class="m-0"><?php esc_html_e( 'Il est conseillé de prendre un premier rendez-vous de contrôle vers l\'âge de 2 à 3 ans. Cela permet de rassurer l\'enfant, de l\'habituer au cabinet et de vérifier que les premières dents se développent bien.', 'dentiste-schmitt' ); ?></p>
+                    </div>
+                </details>
+                <details class="mb-3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name" class="p-3 bg-white rounded shadow-sm"><?php esc_html_e( 'J\'ai peur du dentiste, comment gérez-vous l\'anxiété des patients ?', 'dentiste-schmitt' ); ?></summary>
+                    <div class="faq-content p-3 bg-white border-top" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text" class="m-0"><?php esc_html_e( 'Notre équipe est formée pour accompagner les patients craintifs. Nous prenons le temps de vous écouter, de vous expliquer chaque étape du traitement et de procéder avec douceur pour que votre visite se déroule le plus sereinement possible.', 'dentiste-schmitt' ); ?></p>
+                    </div>
+                </details>
+                <details class="mb-3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name" class="p-3 bg-white rounded shadow-sm"><?php esc_html_e( 'Que dois-je préparer ou apporter lors de ma première consultation ?', 'dentiste-schmitt' ); ?></summary>
+                    <div class="faq-content p-3 bg-white border-top" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text" class="m-0"><?php esc_html_e( 'Pensez à vous munir de votre carte d\'assurance maladie, de la liste de vos médicaments éventuels, et de vos anciennes radiographies dentaires si vous en possédez.', 'dentiste-schmitt' ); ?></p>
+                    </div>
+                </details>
+                <details class="mb-3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name" class="p-3 bg-white rounded shadow-sm"><?php esc_html_e( 'Proposez-vous du blanchiment dentaire et des soins esthétiques ?', 'dentiste-schmitt' ); ?></summary>
+                    <div class="faq-content p-3 bg-white border-top" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text" class="m-0"><?php esc_html_e( 'Absolument. Nous proposons diverses solutions esthétiques, dont le blanchiment dentaire sécurisé et des facettes, pour redonner de l\'éclat à votre sourire. Un bilan préalable est toujours effectué.', 'dentiste-schmitt' ); ?></p>
+                    </div>
+                </details>
+            </div>
         </div>
     </div></main><!-- #main -->
 

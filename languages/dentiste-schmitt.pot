@@ -382,6 +382,10 @@ msgstr ""
 msgid "Questions Fréquentes"
 msgstr ""
 
+#: ../page-infos.php:73
+msgid "Retrouvez les réponses aux questions les plus couramment posées par nos patients."
+msgstr ""
+
 #: ../page-infos.php:74
 msgid "Comment prendre rendez-vous ?"
 msgstr ""
@@ -436,6 +440,30 @@ msgstr ""
 
 #: ../page-infos.php:99
 msgid "Il est conseillé de prendre un premier rendez-vous de contrôle vers l'âge de 2 à 3 ans. Cela permet de rassurer l'enfant, de l'habituer au cabinet et de vérifier que les premières dents se développent bien."
+msgstr ""
+
+#: ../page-infos.php:102
+msgid "J'ai peur du dentiste, comment gérez-vous l'anxiété des patients ?"
+msgstr ""
+
+#: ../page-infos.php:104
+msgid "Notre équipe est formée pour accompagner les patients craintifs. Nous prenons le temps de vous écouter, de vous expliquer chaque étape du traitement et de procéder avec douceur pour que votre visite se déroule le plus sereinement possible."
+msgstr ""
+
+#: ../page-infos.php:108
+msgid "Que dois-je préparer ou apporter lors de ma première consultation ?"
+msgstr ""
+
+#: ../page-infos.php:110
+msgid "Pensez à vous munir de votre carte d'assurance maladie, de la liste de vos médicaments éventuels, et de vos anciennes radiographies dentaires si vous en possédez."
+msgstr ""
+
+#: ../page-infos.php:114
+msgid "Proposez-vous du blanchiment dentaire et des soins esthétiques ?"
+msgstr ""
+
+#: ../page-infos.php:116
+msgid "Absolument. Nous proposons diverses solutions esthétiques, dont le blanchiment dentaire sécurisé et des facettes, pour redonner de l'éclat à votre sourire. Un bilan préalable est toujours effectué."
 msgstr ""
 
 #: ../page-mentions-legales.php:3, ../page-mentions-legales.php:14
