@@ -751,7 +751,7 @@ msgid "Valeur du point"
 msgstr ""
 
 #: ../page-tarifs.php:30
-msgid "Nous travaillons selon l’actuelle tarification de la SSO. La valeur du point Dentotar appliquée pour les soins est de 1.12."
+msgid "Nous travaillons selon l’actuelle tarification de la SSO. La valeur du point Dentotar appliquée pour les soins est de 1.20."
 msgstr ""
 
 #: ../page-tarifs.php:36
@@ -775,11 +775,7 @@ msgid "+ polissage et conseils d'hygiène"
 msgstr ""
 
 #: ../page-tarifs.php:55
-msgid "Détartrage enfant"
-msgstr ""
-
-#: ../page-tarifs.php:56
-msgid "Sur demande"
+msgid "Détartrage enfant / Adolescent"
 msgstr ""
 
 #: ../page-tarifs.php:59
