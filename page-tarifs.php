@@ -27,7 +27,7 @@ get_header();
     <div class="mt-4 mb-5 p-4 bg-light text-center" style="border-radius: 8px; max-width: 800px; margin: 0 auto;">
         <p class="mb-0">
             <strong><?php esc_html_e( 'Valeur du point', 'dentiste-schmitt' ); ?> :</strong>
-            <?php esc_html_e( 'Nous travaillons selon l’actuelle tarification de la SSO. La valeur du point Dentotar appliquée pour les soins est de 1.12.', 'dentiste-schmitt' ); ?>
+            <?php esc_html_e( 'Nous travaillons selon l’actuelle tarification de la SSO. La valeur du point Dentotar appliquée pour les soins est de 1.20.', 'dentiste-schmitt' ); ?>
         </p>
     </div>
 
@@ -42,22 +42,22 @@ get_header();
                 <ul style="list-style: none; padding: 0; margin: 0;">
                     <li style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px dashed var(--color-border, #ccc);">
                         <span><?php esc_html_e( '1ère consultation avec radios', 'dentiste-schmitt' ); ?></span>
-                        <strong style="white-space: nowrap; margin-left: 15px;">160 CHF</strong>
+                        <strong style="white-space: nowrap; margin-left: 15px;">176 CHF</strong>
                     </li>
                     <li style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px dashed var(--color-border, #ccc);">
                         <span>
                             <?php esc_html_e( 'Détartrage adulte', 'dentiste-schmitt' ); ?><br>
                             <small class="text-muted"><?php esc_html_e( '+ polissage et conseils d\'hygiène', 'dentiste-schmitt' ); ?></small>
                         </span>
-                        <strong style="white-space: nowrap; margin-left: 15px;">150 CHF</strong>
+                        <strong style="white-space: nowrap; margin-left: 15px;">160 CHF</strong>
                     </li>
                     <li style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px dashed var(--color-border, #ccc);">
-                        <span><?php esc_html_e( 'Détartrage enfant', 'dentiste-schmitt' ); ?></span>
-                        <strong style="white-space: nowrap; margin-left:15px; font-weight:normal; font-style:italic;"><?php esc_html_e( 'Sur demande', 'dentiste-schmitt' ); ?></strong>
+                        <span><?php esc_html_e( 'Détartrage enfant / Adolescent', 'dentiste-schmitt' ); ?></span>
+                        <strong style="white-space: nowrap; margin-left: 15px;">100 / 120 CHF</strong>
                     </li>
                     <li style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px dashed var(--color-border, #ccc);">
                         <span><?php esc_html_e( 'Blanchiment dentaire au fauteuil', 'dentiste-schmitt' ); ?></span>
-                        <strong style="white-space: nowrap; margin-left: 15px;">560 CHF</strong>
+                        <strong style="white-space: nowrap; margin-left: 15px;">585 CHF</strong>
                     </li>
                 </ul>
             </div>
@@ -67,11 +67,11 @@ get_header();
                 <ul style="list-style: none; padding: 0; margin: 0;">
                     <li style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px dashed var(--color-border, #ccc);">
                         <span><?php esc_html_e( 'Orthodontie', 'dentiste-schmitt' ); ?><br><small class="text-muted"><?php esc_html_e( '1ère consultation', 'dentiste-schmitt' ); ?></small></span>
-                        <strong style="white-space: nowrap; margin-left: 15px;">117 CHF</strong>
+                        <strong style="white-space: nowrap; margin-left: 15px;">126 CHF</strong>
                     </li>
                     <li style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px dashed var(--color-border, #ccc);">
                         <span><?php esc_html_e( 'Couronne prothétique', 'dentiste-schmitt' ); ?></span>
-                        <strong style="white-space: nowrap; margin-left: 15px;">1500 CHF</strong>
+                        <strong style="white-space: nowrap; margin-left: 15px;">1600 CHF</strong>
                     </li>
                     <li style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px dashed var(--color-border, #ccc);">
                         <span><?php esc_html_e( 'Extraction de dent de sagesse', 'dentiste-schmitt' ); ?></span>
