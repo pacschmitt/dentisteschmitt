@@ -1,5 +1,6 @@
 <?php
 /**
+ * Template Name: Accueil
  * The template for displaying the front page
  *
  * @package Dentiste_Schmitt
