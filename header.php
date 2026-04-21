@@ -86,8 +86,7 @@
                         $links = array();
                         foreach ( $langs as $lang ) {
                              $class = $lang['current_lang'] ? ' class="current-lang"' : '';
-                             $url   = is_front_page() ? pll_home_url( $lang['slug'] ) : $lang['url'];
-                             $links[] = '<a href="' . esc_url( $url ) . '"' . $class . '>' . esc_html( strtoupper( $lang['slug'] ) ) . '</a>';
+                             $links[] = '<a href="' . esc_url( $lang['url'] ) . '"' . $class . '>' . esc_html( strtoupper( $lang['slug'] ) ) . '</a>';
                         }
                         echo implode( ' <span class="sep">|</span> ', $links );
                     }
