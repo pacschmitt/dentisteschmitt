@@ -44,13 +44,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --container-width: 1200px;
-    --header-height: 90px;
+    --header-height: 120px;
     --spacing-unit: 1rem;
     --border-radius: 8px; /* Slightly more squared for premium feel */
     --shadow-sm: 0 1px 3px rgba(var(--color-primary-rgb), 0.15);
     --shadow-md: 0 4px 12px -2px rgba(var(--color-primary-rgb), 0.2);
     --shadow-lg: 0 20px 30px -5px rgba(var(--color-primary-rgb), 0.2);
-        --header-height: 72px;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --header-height: 90px;
     }
 }
 
@@ -207,7 +211,7 @@ li {
 
 .site-branding img.custom-logo {
     display: block;
-    max-height: 80px !important; /* Increased size */
+    max-height: 110px !important; /* Increased size */
     max-width: 100% !important;
     width: auto !important;
     height: auto !important;
@@ -223,7 +227,7 @@ li {
 
 @media (max-width: 768px) {
     .site-branding img.custom-logo {
-        max-height: 55px !important; /* Larger on mobile */
+        max-height: 80px !important; /* Larger on mobile */
     }
 
     .site-branding .custom-logo-link {
