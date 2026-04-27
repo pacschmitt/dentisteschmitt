@@ -33,7 +33,7 @@ get_header();
 
     <!-- Prices Grid -->
     <div class="tarifs-grid mb-5" style="max-width: 900px; margin: 0 auto;">
-        <h2 class="text-center mb-5"><?php esc_html_e( 'Nos soins dentaires et d’hygiène les plus demandés :', 'dentiste-schmitt' ); ?></h2>
+        <h2 class="text-center mb-5 mt-5 pt-3"><?php esc_html_e( 'Nos soins dentaires et d’hygiène les plus demandés :', 'dentiste-schmitt' ); ?></h2>
 
         <div class="cards-grid">
 
@@ -96,7 +96,7 @@ get_header();
                 <?php esc_html_e( 'Nous collaborons avec la Caisse des Médecins-Dentistes, ce qui vous offre la possibilité d\'échelonner le paiement de vos factures si vous le souhaitez.', 'dentiste-schmitt' ); ?>
             </p>
             <p class="mb-2"><strong><?php esc_html_e( 'Pour le règlement, deux options s’offrent à vous :', 'dentiste-schmitt' ); ?></strong></p>
-            <ul style="padding-left: 20px;">
+            <ul style="margin-left: 20px; padding-left: 20px;">
                 <li class="mb-2"><?php esc_html_e( 'Recevoir votre facture à domicile ou par e-mail afin d’effectuer un virement bancaire.', 'dentiste-schmitt' ); ?></li>
                 <li><?php esc_html_e( 'Régler directement au cabinet par carte bancaire ou en espèces à l\'issue de votre rendez-vous.', 'dentiste-schmitt' ); ?></li>
             </ul>
