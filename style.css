@@ -229,7 +229,7 @@ main .lead {
 
 .site-branding img.custom-logo {
     display: block;
-    max-height: 110px !important; /* Increased size */
+    max-height: 95px !important; /* Slightly decreased size */
     max-width: 100% !important;
     width: auto !important;
     height: auto !important;
@@ -561,12 +561,19 @@ input[type="submit"]:hover,
     display: flex;
     gap: 8px;
     align-items: center;
+    line-height: 1; /* Fix vertical alignment */
 }
 
 .lang-switcher a {
     color: var(--color-text-light);
     text-decoration: none;
     transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.lang-switcher a::after {
+    display: none; /* Enlève la barre de soulignement qui peut décaler */
 }
 
 .lang-switcher a:hover,
@@ -577,6 +584,8 @@ input[type="submit"]:hover,
 .lang-switcher .sep {
     color: var(--color-border);
     font-weight: normal;
+    display: inline-flex;
+    align-items: center;
 }
 
 /* Floating CTA Button */
