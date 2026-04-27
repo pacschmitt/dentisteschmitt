@@ -1306,7 +1306,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 .faq-section details[open] summary {
-    background-color: rgba(var(--color-primary-rgb), 0.08);
+    background-color: #f5f5f5; /* Gris clair pour la question ouverte */
     color: var(--color-primary);
 }
 
@@ -1342,17 +1342,8 @@ input:focus, textarea:focus, select:focus {
 
 .faq-section details .faq-content {
     animation: fadeInDown 0.3s ease-in-out;
-<<<<<<< Updated upstream
-    padding: 16px 20px 20px;
-    background: linear-gradient(
-        180deg,
-        rgba(var(--color-primary-rgb), 0.05) 0%,
-        rgba(var(--color-primary-rgb), 0.01) 100%
-    );
-    border-top: 1px solid rgba(var(--color-primary-rgb), 0.15);
-=======
-    padding: 1.5rem 2rem !important; /* Ajout d'important pour écraser p-3 */
->>>>>>> Stashed changes
+    padding: 1.5rem 2rem !important;
+    background-color: var(--color-white-pure, #ffffff);
 }
 
 @keyframes fadeInDown {
