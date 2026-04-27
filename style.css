@@ -1342,6 +1342,7 @@ input:focus, textarea:focus, select:focus {
 
 .faq-section details .faq-content {
     animation: fadeInDown 0.3s ease-in-out;
+<<<<<<< Updated upstream
     padding: 16px 20px 20px;
     background: linear-gradient(
         180deg,
