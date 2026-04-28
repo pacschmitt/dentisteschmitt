@@ -509,7 +509,7 @@ function dentiste_schmitt_seo_meta() {
     $description = '';
     if ( is_front_page() || is_home() ) {
         // Optimized for "Canton de Vaud", "Nyon", "Bassins", "La Côte"
-        $description = 'Bienvenue aux Cabinets Dentaire Schmitt à Nyon et Bassins (Canton de Vaud). Soins dentaires complets sur La Côte : urgences, implants, orthodontie, pédiatrie.';
+        $description = 'Bienvenue aux Cabinets Dentaires Schmitt à Nyon et Bassins (Canton de Vaud). Soins dentaires complets sur La Côte : urgences, implants, orthodontie, pédiatrie.';
     } elseif ( is_single() || is_page() ) {
         if ( has_excerpt() ) {
             $description = get_the_excerpt();

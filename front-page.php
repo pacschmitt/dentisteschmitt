@@ -19,14 +19,14 @@ get_header();
     <section class="welcome-hero" <?php echo $hero_style; ?>>
         <div class="hero-overlay"></div>
         <div class="container welcome-content">
-            <h1 class="welcome-title"><?php esc_html_e( 'Bienvenue aux Cabinets Dentaire Schmitt', 'dentiste-schmitt' ); ?></h1>
+            <h1 class="welcome-title"><?php esc_html_e( 'Bienvenue aux Cabinets Dentaires Schmitt', 'dentiste-schmitt' ); ?></h1>
         </div>
     </section>
 
     <!-- 1. Locations Section (Previously Hero) -->
     <section class="hero-section locations-section">
         <div class="container hero-content">
-            <h2><?php esc_html_e( 'Vos cabinets dentaire à Nyon et Bassins (Vaud)', 'dentiste-schmitt' ); ?></h2>
+            <h2><?php esc_html_e( 'Vos cabinets dentaires à Nyon et Bassins (Vaud)', 'dentiste-schmitt' ); ?></h2>
             <p class="hero-subtitle">
                 <?php esc_html_e( 'Chirurgie – Orthodontie – Prothèses esthétiques – Soins pédiatriques – Parodontologie', 'dentiste-schmitt' ); ?>
             </p>

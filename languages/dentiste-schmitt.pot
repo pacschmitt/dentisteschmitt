@@ -75,11 +75,11 @@ msgid "Tous droits réservés."
 msgstr ""
 
 #: ../front-page.php:21
-msgid "Bienvenue aux Cabinets Dentaire Schmitt"
+msgid "Bienvenue aux Cabinets Dentaires Schmitt"
 msgstr ""
 
 #: ../front-page.php:28
-msgid "Vos cabinets dentaire à Nyon et Bassins (Vaud)"
+msgid "Vos cabinets dentaires à Nyon et Bassins (Vaud)"
 msgstr ""
 
 #: ../front-page.php:30
@@ -263,7 +263,7 @@ msgid "Nos Cabinets"
 msgstr ""
 
 #: ../page-cabinets.php:21
-msgid "Nos deux cabinets dentaire et toute leurs équipes vous accueillent chaleureusement pour vous offrir les meilleurs soins bucco-dentaires. Nous mettons toutes nos compétences et notre expérience au service de nos patients, enfant ou adulte, pour prévenir et soigner leur dentition."
+msgid "Nos deux cabinets dentaires et toute leurs équipes vous accueillent chaleureusement pour vous offrir les meilleurs soins bucco-dentaires. Nous mettons toutes nos compétences et notre expérience au service de nos patients, enfant ou adulte, pour prévenir et soigner leur dentition."
 msgstr ""
 
 #: ../page-cabinets.php:24
@@ -376,6 +376,70 @@ msgstr ""
 
 #: ../page-infos.php:23
 msgid "Nos collaborateurs vous accueillent avec professionnalisme du lundi au jeudi. Nos praticiens s'engagent à vous offrir un service de qualité qui vous rendra votre beau sourire."
+msgstr ""
+
+#: ../page-infos.php:29
+msgid "Nyon"
+msgstr ""
+
+#: ../page-infos.php:31
+msgid "Adresse"
+msgstr ""
+
+#: ../page-infos.php:31
+msgid "Avenue Reverdil 2, 1260 Nyon"
+msgstr ""
+
+#: ../page-infos.php:32
+msgid "Téléphone"
+msgstr ""
+
+#: ../page-infos.php:33
+msgid "Email"
+msgstr ""
+
+#: ../page-infos.php:36
+msgid "Horaires"
+msgstr ""
+
+#: ../page-infos.php:37
+msgid "Lundi au Vendredi : 8h00 - 18h00 (sur rendez-vous)"
+msgstr ""
+
+#: ../page-infos.php:41
+msgid "Situation"
+msgstr ""
+
+#: ../page-infos.php:42
+msgid "Le cabinet est situé en plein centre de Nyon à 100m de la gare au-dessus du centre commercial de La Combe (3ème étage avec ascenseurs)."
+msgstr ""
+
+#: ../page-infos.php:46
+msgid "Parking"
+msgstr ""
+
+#: ../page-infos.php:47
+msgid "Parking P1 et P2 de la Combe (accès direct avec les ascenseurs)."
+msgstr ""
+
+#: ../page-infos.php:52
+msgid "Bassins"
+msgstr ""
+
+#: ../page-infos.php:54
+msgid "Ruelle de la Repentance 4, 1269 Bassins"
+msgstr ""
+
+#: ../page-infos.php:59
+msgid "Mardi au Jeudi : 8h30 - 18h00 (sur rendez-vous)"
+msgstr ""
+
+#: ../page-infos.php:63
+msgid "Le cabinet est situé au rez-de-chaussée à 50m de la boulangerie de Bassins."
+msgstr ""
+
+#: ../page-infos.php:67
+msgid "Places de parking directement devant le cabinet."
 msgstr ""
 
 #: ../page-infos.php:72

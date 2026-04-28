@@ -26,44 +26,44 @@ get_header();
 
         <div class="cards-grid mb-5">
             <div class="card">
-                <h3>Nyon</h3>
+                <h3><?php esc_html_e( 'Nyon', 'dentiste-schmitt' ); ?></h3>
                 <p>
-                    <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Adresse :</strong> Avenue Reverdil 2, 1260 Nyon<br>
-                    <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> Téléphone :</strong> <a href="tel:+41223617844">+41 22 361 78 44</a><br>
-                    <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Email :</strong> <a href="mailto:drschmitt.nyon@bluewin.ch">drschmitt.nyon@bluewin.ch</a>
+                    <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> <?php esc_html_e( 'Adresse', 'dentiste-schmitt' ); ?> :</strong> <?php esc_html_e( 'Avenue Reverdil 2, 1260 Nyon', 'dentiste-schmitt' ); ?><br>
+                    <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> <?php esc_html_e( 'Téléphone', 'dentiste-schmitt' ); ?> :</strong> <a href="tel:+41223617844">+41 22 361 78 44</a><br>
+                    <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> <?php esc_html_e( 'Email', 'dentiste-schmitt' ); ?> :</strong> <a href="mailto:drschmitt.nyon@bluewin.ch">drschmitt.nyon@bluewin.ch</a>
                 </p>
                 <p class="mt-5">
-                    <strong>Horaires :</strong><br>
-                    Lundi au Vendredi : 8h00 - 18h00 (sur rendez-vous)
+                    <strong><?php esc_html_e( 'Horaires', 'dentiste-schmitt' ); ?> :</strong><br>
+                    <?php esc_html_e( 'Lundi au Vendredi : 8h00 - 18h00 (sur rendez-vous)', 'dentiste-schmitt' ); ?>
                 </p>
                 <p class="mt-5">
-                    <strong>Situation :</strong><br>
-                    Le cabinet est situé en plein centre de Nyon à 100m de la gare au-dessus du centre commercial de La Combe (3ème étage avec ascenseurs).
+                    <strong><?php esc_html_e( 'Situation', 'dentiste-schmitt' ); ?> :</strong><br>
+                    <?php esc_html_e( 'Le cabinet est situé en plein centre de Nyon à 100m de la gare au-dessus du centre commercial de La Combe (3ème étage avec ascenseurs).', 'dentiste-schmitt' ); ?>
                 </p>
                 <p class="mt-5">
-                    <strong>Parking :</strong><br>
-                    Parking P1 et P2 de la Combe (accès direct avec les ascenseurs).
+                    <strong><?php esc_html_e( 'Parking', 'dentiste-schmitt' ); ?> :</strong><br>
+                    <?php esc_html_e( 'Parking P1 et P2 de la Combe (accès direct avec les ascenseurs).', 'dentiste-schmitt' ); ?>
                 </p>
             </div>
 
             <div class="card">
-                <h3>Bassins</h3>
+                <h3><?php esc_html_e( 'Bassins', 'dentiste-schmitt' ); ?></h3>
                 <p>
-                    <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Adresse :</strong> Ruelle de la Repentance 4, 1269 Bassins<br>
-                    <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> Téléphone :</strong> <a href="tel:+41223652626">+41 22 365 26 26</a><br>
-                    <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Email :</strong> <a href="mailto:cabinetdentairebassins@gmail.com">cabinetdentairebassins@gmail.com</a>
+                    <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> <?php esc_html_e( 'Adresse', 'dentiste-schmitt' ); ?> :</strong> <?php esc_html_e( 'Ruelle de la Repentance 4, 1269 Bassins', 'dentiste-schmitt' ); ?><br>
+                    <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> <?php esc_html_e( 'Téléphone', 'dentiste-schmitt' ); ?> :</strong> <a href="tel:+41223652626">+41 22 365 26 26</a><br>
+                    <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> <?php esc_html_e( 'Email', 'dentiste-schmitt' ); ?> :</strong> <a href="mailto:cabinetdentairebassins@gmail.com">cabinetdentairebassins@gmail.com</a>
                 </p>
                 <p class="mt-3">
-                    <strong>Horaires :</strong><br>
-                    Mardi au Jeudi : 8h30 - 18h00 (sur rendez-vous)
+                    <strong><?php esc_html_e( 'Horaires', 'dentiste-schmitt' ); ?> :</strong><br>
+                    <?php esc_html_e( 'Mardi au Jeudi : 8h30 - 18h00 (sur rendez-vous)', 'dentiste-schmitt' ); ?>
                 </p>
                 <p class="mt-3">
-                    <strong>Situation :</strong><br>
-                    Le cabinet est situé au rez-de-chaussée à 50m de la boulangerie de Bassins.
+                    <strong><?php esc_html_e( 'Situation', 'dentiste-schmitt' ); ?> :</strong><br>
+                    <?php esc_html_e( 'Le cabinet est situé au rez-de-chaussée à 50m de la boulangerie de Bassins.', 'dentiste-schmitt' ); ?>
                 </p>
                 <p class="mt-3">
-                    <strong>Parking :</strong><br>
-                    Places de parking directement devant le cabinet.
+                    <strong><?php esc_html_e( 'Parking', 'dentiste-schmitt' ); ?> :</strong><br>
+                    <?php esc_html_e( 'Places de parking directement devant le cabinet.', 'dentiste-schmitt' ); ?>
                 </p>
             </div>
         </div>
