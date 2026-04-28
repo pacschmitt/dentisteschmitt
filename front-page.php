@@ -32,13 +32,13 @@ get_header();
             </p>
             <div class="hero-buttons">
                 <div class="hero-btn-wrapper">
-                    <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn btn-outline mb-5"><?php esc_html_e( 'RDV en ligne à Nyon', 'dentiste-schmitt' ); ?></a>
+                    <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" rel="noopener noreferrer" class="btn btn-outline mb-5"><?php esc_html_e( 'RDV en ligne à Nyon', 'dentiste-schmitt' ); ?></a>
                     <p class="hero-address">
                       <?php echo wp_kses_post( __( 'Avenue Reverdil 2,<br>1260 Nyon', 'dentiste-schmitt' ) );?>
                     </p>
                 </div>
                 <div class="hero-btn-wrapper">
-                    <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn btn-outline mb-5"><?php esc_html_e( 'RDV en ligne à Bassins', 'dentiste-schmitt' ); ?></a>
+                    <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" rel="noopener noreferrer" class="btn btn-outline mb-5"><?php esc_html_e( 'RDV en ligne à Bassins', 'dentiste-schmitt' ); ?></a>
                     <p class="hero-address">
                       <?php echo wp_kses_post( __( 'Ruelle de la Repentance 4,<br>1269 Bassins', 'dentiste-schmitt' ) ); ?>
                     </p>
@@ -67,7 +67,7 @@ get_header();
                     <p class="mb-4">
                         <?php esc_html_e( 'C’est une première consultation de 45 minutes pour définir expliquer la ou les pathologies et proposer un plan de traitement validé par le patient à partir de données objectivables et dans un langage clair et compréhensible.', 'dentiste-schmitt' ); ?>
                     </p>
-                    <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn mt-5"><?php esc_html_e( 'Prendre rendez-vous', 'dentiste-schmitt' ); ?></a>
+                    <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" rel="noopener noreferrer" class="btn mt-5"><?php esc_html_e( 'Prendre rendez-vous', 'dentiste-schmitt' ); ?></a>
                 </div>
                 <div class="image-content">
                     <?php
@@ -157,43 +157,16 @@ get_header();
                 </div>
             </div>
             <div class="text-center mt-5">
-                 <a href="<?php echo esc_url( home_url( '/page-soins' ) ); ?>" class="btn"><?php esc_html_e( 'En savoir plus sur nos soins', 'dentiste-schmitt' ); ?></a>
+                 <?php
+                 $soins_page = get_page_by_path( 'soins' );
+                 $soins_url  = $soins_page ? get_permalink( $soins_page ) : home_url( '/soins/' );
+                 ?>
+                 <a href="<?php echo esc_url( $soins_url ); ?>" class="btn"><?php esc_html_e( 'En savoir plus sur nos soins', 'dentiste-schmitt' ); ?></a>
             </div>
         </div>
     </section>
 
 </main><!-- #main -->
-
-<!-- Schema.org JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Dentist",
-  "name": "Cabinet Dentaire Schmitt",
-  "image": "",
-  "@id": "",
-  "url": "<?php echo esc_url( home_url( '/' ) ); ?>",
-  "telephone": "+41223610000",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Rue de la Gare 12",
-    "addressLocality": "Nyon",
-    "postalCode": "1260",
-    "addressCountry": "CH"
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday"
-    ],
-    "opens": "08:00",
-    "closes": "18:00"
-  }
-}
-</script>
 
 <?php
 get_footer();

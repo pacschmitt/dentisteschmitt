@@ -107,6 +107,176 @@ function dentiste_schmitt_scripts() {
 add_action( 'wp_enqueue_scripts', 'dentiste_schmitt_scripts' );
 
 /**
+ * Build a context-aware meta description.
+ *
+ * @return string
+ */
+function dentiste_schmitt_get_meta_description() {
+    if ( is_singular() ) {
+        $excerpt = has_excerpt() ? get_the_excerpt() : wp_strip_all_tags( get_the_content( null, false ) );
+        $excerpt = preg_replace( '/\s+/', ' ', $excerpt );
+        $excerpt = trim( $excerpt );
+
+        if ( ! empty( $excerpt ) ) {
+            return wp_trim_words( $excerpt, 30, '…' );
+        }
+    }
+
+    $description = get_bloginfo( 'description', 'display' );
+    if ( ! empty( $description ) ) {
+        return $description;
+    }
+
+    return __( 'Cabinet dentaire à Nyon et Bassins: soins dentaires adultes et enfants, orthodontie, esthétique et prévention.', 'dentiste-schmitt' );
+}
+
+/**
+ * Output core SEO meta tags and social metadata.
+ */
+function dentiste_schmitt_output_seo_meta() {
+    $description = dentiste_schmitt_get_meta_description();
+    $title       = wp_get_document_title();
+    $site_name   = get_bloginfo( 'name', 'display' );
+    $canonical   = wp_get_canonical_url();
+    $locale      = str_replace( '_', '-', get_locale() );
+    $type        = is_singular() ? 'article' : 'website';
+
+    if ( ! $canonical ) {
+        global $wp;
+        $request   = isset( $wp->request ) ? $wp->request : '';
+        $canonical = is_front_page() ? home_url( '/' ) : home_url( add_query_arg( array(), $request ) );
+    }
+
+    $image_url = '';
+    if ( is_singular() && has_post_thumbnail() ) {
+        $image_url = get_the_post_thumbnail_url( get_queried_object_id(), 'full' );
+    } elseif ( has_custom_logo() ) {
+        $logo_id   = get_theme_mod( 'custom_logo' );
+        $image_url = $logo_id ? wp_get_attachment_image_url( $logo_id, 'full' ) : '';
+    }
+
+    echo "\n" . '<meta name="description" content="' . esc_attr( $description ) . '">' . "\n";
+    echo '<meta property="og:locale" content="' . esc_attr( $locale ) . '">' . "\n";
+    echo '<meta property="og:type" content="' . esc_attr( $type ) . '">' . "\n";
+    echo '<meta property="og:title" content="' . esc_attr( $title ) . '">' . "\n";
+    echo '<meta property="og:description" content="' . esc_attr( $description ) . '">' . "\n";
+    echo '<meta property="og:url" content="' . esc_url( $canonical ) . '">' . "\n";
+    echo '<meta property="og:site_name" content="' . esc_attr( $site_name ) . '">' . "\n";
+    echo '<meta name="twitter:card" content="' . esc_attr( $image_url ? 'summary_large_image' : 'summary' ) . '">' . "\n";
+    echo '<meta name="twitter:title" content="' . esc_attr( $title ) . '">' . "\n";
+    echo '<meta name="twitter:description" content="' . esc_attr( $description ) . '">' . "\n";
+    echo '<link rel="canonical" href="' . esc_url( $canonical ) . '">' . "\n";
+
+    if ( ! empty( $image_url ) ) {
+        echo '<meta property="og:image" content="' . esc_url( $image_url ) . '">' . "\n";
+        echo '<meta name="twitter:image" content="' . esc_url( $image_url ) . '">' . "\n";
+    }
+
+    if ( function_exists( 'pll_the_languages' ) ) {
+        $langs = pll_the_languages(
+            array(
+                'raw'           => 1,
+                'hide_if_empty' => 0,
+            )
+        );
+
+        if ( is_array( $langs ) ) {
+            foreach ( $langs as $lang ) {
+                if ( empty( $lang['url'] ) || empty( $lang['locale'] ) ) {
+                    continue;
+                }
+                echo '<link rel="alternate" hreflang="' . esc_attr( str_replace( '_', '-', $lang['locale'] ) ) . '" href="' . esc_url( $lang['url'] ) . '">' . "\n";
+            }
+        }
+    }
+}
+add_action( 'wp_head', 'dentiste_schmitt_output_seo_meta', 1 );
+
+/**
+ * Improve robots directives for search and error pages.
+ *
+ * @param array $robots Array of robots directives.
+ * @return array
+ */
+function dentiste_schmitt_robots_directives( $robots ) {
+    if ( is_search() || is_404() ) {
+        $robots['noindex'] = true;
+        $robots['nofollow'] = true;
+    }
+
+    return $robots;
+}
+add_filter( 'wp_robots', 'dentiste_schmitt_robots_directives' );
+
+/**
+ * Output structured data for the business.
+ */
+function dentiste_schmitt_output_business_schema() {
+    $logo_id  = get_theme_mod( 'custom_logo' );
+    $logo_url = $logo_id ? wp_get_attachment_image_url( $logo_id, 'full' ) : '';
+
+    $schema = array(
+        '@context'    => 'https://schema.org',
+        '@graph'      => array(
+            array(
+                '@type'     => 'WebSite',
+                '@id'       => trailingslashit( home_url() ) . '#website',
+                'url'       => home_url( '/' ),
+                'name'      => get_bloginfo( 'name', 'display' ),
+                'inLanguage'=> get_locale(),
+            ),
+            array(
+                '@type'       => 'Dentist',
+                '@id'         => trailingslashit( home_url() ) . '#organization',
+                'name'        => 'Cabinet Dentaire Schmitt',
+                'url'         => home_url( '/' ),
+                'logo'        => $logo_url,
+                'telephone'   => '+41 22 361 78 44',
+                'email'       => 'drschmitt.nyon@bluewin.ch',
+                'address'     => array(
+                    '@type'           => 'PostalAddress',
+                    'streetAddress'   => 'Avenue Reverdil 2',
+                    'postalCode'      => '1260',
+                    'addressLocality' => 'Nyon',
+                    'addressCountry'  => 'CH',
+                ),
+                'areaServed'   => array( 'Nyon', 'Bassins', 'Vaud' ),
+                'department'   => array(
+                    array(
+                        '@type'     => 'Dentist',
+                        'name'      => 'Cabinet Dentaire Schmitt - Nyon',
+                        'telephone' => '+41 22 361 78 44',
+                        'address'   => array(
+                            '@type'           => 'PostalAddress',
+                            'streetAddress'   => 'Avenue Reverdil 2',
+                            'postalCode'      => '1260',
+                            'addressLocality' => 'Nyon',
+                            'addressCountry'  => 'CH',
+                        ),
+                    ),
+                    array(
+                        '@type'     => 'Dentist',
+                        'name'      => 'Cabinet Dentaire Schmitt - Bassins',
+                        'telephone' => '+41 22 365 26 26',
+                        'address'   => array(
+                            '@type'           => 'PostalAddress',
+                            'streetAddress'   => 'Ruelle de la Repentance 4',
+                            'postalCode'      => '1269',
+                            'addressLocality' => 'Bassins',
+                            'addressCountry'  => 'CH',
+                        ),
+                    ),
+                ),
+                'mainEntityOfPage' => trailingslashit( home_url() ),
+            ),
+        ),
+    );
+
+    echo '<script type="application/ld+json">' . wp_json_encode( $schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ) . '</script>' . "\n";
+}
+add_action( 'wp_head', 'dentiste_schmitt_output_business_schema', 20 );
+
+/**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
@@ -180,7 +350,7 @@ function dentiste_schmitt_floating_cta() {
             }
         }
     </style>
-    <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="floating-cta-btn">
+    <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" rel="noopener noreferrer" class="floating-cta-btn">
         <?php esc_html_e( 'Prendre RDV', 'dentiste-schmitt' ); ?>
     </a>
     <?php

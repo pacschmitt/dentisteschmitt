@@ -9,45 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- 1. Local Business Schema (SEO) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalOrganization",
-      "name": "Cabinet Dentaire Schmitt",
-      "url": "<?php echo esc_url( home_url( '/' ) ); ?>",
-      "logo": "<?php echo esc_url( wp_get_attachment_image_url( get_theme_mod( 'custom_logo' ), 'full' ) ); ?>",
-      "department": [
-        {
-          "@type": "Dentist",
-          "name": "Cabinet Dentaire Schmitt - Nyon",
-          "telephone": "+41223617844",
-          "email": "drschmitt.nyon@bluewin.ch",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Avenue Reverdil 2",
-            "postalCode": "1260",
-            "addressLocality": "Nyon",
-            "addressCountry": "CH"
-          }
-        },
-        {
-          "@type": "Dentist",
-          "name": "Cabinet Dentaire Schmitt - Bassins",
-          "telephone": "+41223652626",
-          "email": "cabinetdentairebassins@gmail.com",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Ruelle de la Repentance 4",
-            "postalCode": "1269",
-            "addressLocality": "Bassins",
-            "addressCountry": "CH"
-          }
-        }
-      ]
-    }
-    </script>
-
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
