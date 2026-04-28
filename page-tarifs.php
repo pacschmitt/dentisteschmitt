@@ -24,7 +24,7 @@ get_header();
     </div>
 
     <!-- SSO Info -->
-    <div class="mt-4 mb-5 p-4 bg-light text-center" style="border-radius: 8px; max-width: 800px; margin: 0 auto;">
+    <div class="p-4 bg-light text-center" style="border-radius: 8px; max-width: 800px; margin: 60px auto;">
         <p class="mb-0">
             <strong><?php esc_html_e( 'Valeur du point', 'dentiste-schmitt' ); ?> :</strong>
             <?php esc_html_e( 'Nous travaillons selon l’actuelle tarification de la SSO. La valeur du point Dentotar appliquée pour les soins est de 1.20.', 'dentiste-schmitt' ); ?>
@@ -32,7 +32,7 @@ get_header();
     </div>
 
     <!-- Prices Grid -->
-    <div class="tarifs-grid mb-5" style="max-width: 900px; margin: 0 auto;">
+    <div class="tarifs-grid mb-5" style="max-width: 900px; margin: 60px auto;">
         <h2 class="text-center mb-5 mt-5 pt-3"><?php esc_html_e( 'Nos soins dentaires et d’hygiène les plus demandés :', 'dentiste-schmitt' ); ?></h2>
 
         <div class="cards-grid">
