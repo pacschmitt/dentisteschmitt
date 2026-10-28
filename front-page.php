@@ -13,13 +13,13 @@ get_header();
 
     <!-- 0. New Hero Section (Welcome) -->
     <?php
-    $hero_bg = get_theme_mod( 'dentiste_schmitt_hero_background' );
+    $hero_bg = dentiste_schmitt_hero_image();
     $hero_style = $hero_bg ? 'style="background-image: url(' . esc_url( $hero_bg ) . ');"' : 'style="background-color: var(--color-primary);"';
     ?>
     <section class="welcome-hero" <?php echo $hero_style; ?>>
         <div class="hero-overlay"></div>
         <div class="container welcome-content">
-            <h1 class="welcome-title"><?php esc_html_e( 'Bienvenue aux Cabinets Dentaires Schmitt', 'dentiste-schmitt' ); ?></h1>
+            <h1 class="welcome-title"><?php echo esc_html( dentiste_schmitt_text( 'Dentistes à Nyon et Bassins – Cabinets Schmitt', 'Dentists in Nyon and Bassins – Schmitt Dental Practices' ) ); ?></h1>
         </div>
     </section>
 
@@ -35,12 +35,16 @@ get_header();
                     <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" rel="noopener noreferrer" class="btn btn-outline mb-5"><?php esc_html_e( 'RDV en ligne à Nyon', 'dentiste-schmitt' ); ?></a>
                     <p class="hero-address">
                       <?php echo wp_kses_post( __( 'Avenue Reverdil 2,<br>1260 Nyon', 'dentiste-schmitt' ) );?>
+                      <br><a href="tel:+41223617844">+41 22 361 78 44</a>
+                      <br><a href="<?php echo esc_url( dentiste_schmitt_location_url( 'nyon' ) ); ?>"><?php echo esc_html( dentiste_schmitt_text( 'Découvrir le cabinet de Nyon', 'Discover our Nyon practice' ) ); ?></a>
                     </p>
                 </div>
                 <div class="hero-btn-wrapper">
                     <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" rel="noopener noreferrer" class="btn btn-outline mb-5"><?php esc_html_e( 'RDV en ligne à Bassins', 'dentiste-schmitt' ); ?></a>
                     <p class="hero-address">
                       <?php echo wp_kses_post( __( 'Ruelle de la Repentance 4,<br>1269 Bassins', 'dentiste-schmitt' ) ); ?>
+                      <br><a href="tel:+41223652626">+41 22 365 26 26</a>
+                      <br><a href="<?php echo esc_url( dentiste_schmitt_location_url( 'bassins' ) ); ?>"><?php echo esc_html( dentiste_schmitt_text( 'Découvrir le cabinet de Bassins', 'Discover our Bassins practice' ) ); ?></a>
                     </p>
                 </div>
             </div>
@@ -73,7 +77,7 @@ get_header();
                     <?php
                     $patient_image = get_theme_mod( 'dentiste_schmitt_patient_image' );
                     if ( $patient_image ) : ?>
-                        <img src="<?php echo esc_url( $patient_image ); ?>" alt="<?php esc_attr_e( 'Nouveau patient', 'dentiste-schmitt' ); ?>">
+                        <?php echo dentiste_schmitt_image( $patient_image, __( 'Nouveau patient', 'dentiste-schmitt' ), array( 'sizes' => '(max-width: 768px) 100vw, 50vw' ) ); ?>
                     <?php else : ?>
                         <!-- Placeholder image -->
                         <div style="background-color: var(--color-bg-secondary); width: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
@@ -95,7 +99,7 @@ get_header();
                     <?php
                     $doctor_image = get_theme_mod( 'dentiste_schmitt_doctor_image' );
                     if ( $doctor_image ) : ?>
-                         <img src="<?php echo esc_url( $doctor_image ); ?>" alt="<?php esc_attr_e( 'Dr. Schmitt', 'dentiste-schmitt' ); ?>">
+                         <?php echo dentiste_schmitt_image( $doctor_image, __( 'Dr. Schmitt', 'dentiste-schmitt' ), array( 'sizes' => '(max-width: 768px) 100vw, 50vw' ) ); ?>
                     <?php else : ?>
                         <!-- Placeholder image -->
                         <div style="background-color: var(--color-bg-secondary); width: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
@@ -158,8 +162,7 @@ get_header();
             </div>
             <div class="text-center mt-5">
                  <?php
-                 $soins_page = get_page_by_path( 'soins' );
-                 $soins_url  = $soins_page ? get_permalink( $soins_page ) : home_url( '/soins/' );
+                 $soins_url = dentiste_schmitt_page_url( 'page-soins.php', '/page-soins/' );
                  ?>
                  <a href="<?php echo esc_url( $soins_url ); ?>" class="btn"><?php esc_html_e( 'En savoir plus sur nos soins', 'dentiste-schmitt' ); ?></a>
             </div>

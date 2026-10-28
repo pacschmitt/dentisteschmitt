@@ -1,0 +1,395 @@
+[
+  {
+    "url": "https://dentisteschmittnyon.ch/",
+    "final": "https://dentisteschmittnyon.ch/",
+    "status": 200,
+    "seconds": 0.11,
+    "file": "0.html",
+    "title": [
+      "Accueil - dentisteschmittnyon.ch"
+    ],
+    "descriptions": [
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\">",
+      "<meta name=\"description\" content=\"Bienvenue aux Cabinets Dentaires Schmitt à Nyon et Bassins (Canton de Vaud). Soins dentaires complets sur La Côte : urgences, implants, orthodontie, pédiatrie.\" />"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/\" />",
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/\">"
+    ],
+    "robots": [
+      "<meta name=\"robots\" content=\"max-image-preview:large\" />",
+      "<meta name=\"robots\" content=\"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1\" />"
+    ],
+    "h1": [
+      "Bienvenue aux Cabinets Dentaires Schmitt"
+    ],
+    "jsonld_count": 4
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/audit-inexistante-20261028/",
+    "final": "https://dentisteschmittnyon.ch/audit-inexistante-20261028/",
+    "status": 404,
+    "seconds": 0.27,
+    "file": "1.html",
+    "title": [
+      "Page non trouvée &#8211; dentisteschmittnyon.ch"
+    ],
+    "descriptions": [
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\">",
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\" />"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/audit-inexistante-20261028\">"
+    ],
+    "robots": [
+      "<meta name=\"robots\" content=\"noindex\" />",
+      "<meta name=\"robots\" content=\"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1\" />"
+    ],
+    "h1": [
+      "Page non trouvée"
+    ],
+    "jsonld_count": 2
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/cabinets/",
+    "final": "https://dentisteschmittnyon.ch/cabinets/",
+    "status": 200,
+    "seconds": 0.32,
+    "file": "2.html",
+    "title": [
+      "Page Cabinets - dentisteschmittnyon.ch"
+    ],
+    "descriptions": [
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\">",
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\" />"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/cabinets/\" />",
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/cabinets/\">"
+    ],
+    "robots": [
+      "<meta name=\"robots\" content=\"max-image-preview:large\" />",
+      "<meta name=\"robots\" content=\"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1\" />"
+    ],
+    "h1": [
+      "Nos Cabinets"
+    ],
+    "jsonld_count": 4
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/comments/feed/",
+    "final": "https://dentisteschmittnyon.ch/comments/feed/",
+    "status": 200,
+    "seconds": 0.22,
+    "file": "3.html",
+    "title": [
+      "\n\tCommentaires pour dentisteschmittnyon.ch\t"
+    ],
+    "descriptions": [],
+    "canonical": [],
+    "robots": [],
+    "h1": [],
+    "jsonld_count": 0
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/en/",
+    "final": "https://dentisteschmittnyon.ch/en/",
+    "status": 200,
+    "seconds": 0.29,
+    "file": "4.html",
+    "title": [
+      "Home - dentisteschmittnyon.ch"
+    ],
+    "descriptions": [
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\">",
+      "<meta name=\"description\" content=\"Bienvenue aux Cabinets Dentaires Schmitt à Nyon et Bassins (Canton de Vaud). Soins dentaires complets sur La Côte : urgences, implants, orthodontie, pédiatrie.\" />"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/en/\" />",
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/en/\">"
+    ],
+    "robots": [
+      "<meta name=\"robots\" content=\"max-image-preview:large\" />",
+      "<meta name=\"robots\" content=\"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1\" />"
+    ],
+    "h1": [
+      "Welcome to Schmitt Dental Practices"
+    ],
+    "jsonld_count": 4
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/feed/",
+    "final": "https://dentisteschmittnyon.ch/feed/",
+    "status": 200,
+    "seconds": 0.21,
+    "file": "5.html",
+    "title": [
+      "dentisteschmittnyon.ch",
+      "dentisteschmittnyon.ch",
+      "Hello world!"
+    ],
+    "descriptions": [],
+    "canonical": [],
+    "robots": [],
+    "h1": [],
+    "jsonld_count": 0
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/mention-legales/",
+    "final": "https://dentisteschmittnyon.ch/mention-legales/",
+    "status": 404,
+    "seconds": 0.24,
+    "file": "6.html",
+    "title": [
+      "Page non trouvée &#8211; dentisteschmittnyon.ch"
+    ],
+    "descriptions": [
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\">",
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\" />"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/mention-legales\">"
+    ],
+    "robots": [
+      "<meta name=\"robots\" content=\"noindex\" />",
+      "<meta name=\"robots\" content=\"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1\" />"
+    ],
+    "h1": [
+      "Page non trouvée"
+    ],
+    "jsonld_count": 2
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/page-equipe/",
+    "final": "https://dentisteschmittnyon.ch/page-equipe/",
+    "status": 200,
+    "seconds": 0.22,
+    "file": "7.html",
+    "title": [
+      "Page Equipe - dentisteschmittnyon.ch"
+    ],
+    "descriptions": [
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\">",
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\" />"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/page-equipe/\" />",
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/page-equipe/\">"
+    ],
+    "robots": [
+      "<meta name=\"robots\" content=\"max-image-preview:large\" />",
+      "<meta name=\"robots\" content=\"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1\" />"
+    ],
+    "h1": [
+      "Notre Équipe"
+    ],
+    "jsonld_count": 2
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/page-infos/",
+    "final": "https://dentisteschmittnyon.ch/page-infos/",
+    "status": 200,
+    "seconds": 0.33,
+    "file": "8.html",
+    "title": [
+      "Page Infos - dentisteschmittnyon.ch"
+    ],
+    "descriptions": [
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\">",
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\" />"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/page-infos/\" />",
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/page-infos/\">"
+    ],
+    "robots": [
+      "<meta name=\"robots\" content=\"max-image-preview:large\" />",
+      "<meta name=\"robots\" content=\"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1\" />"
+    ],
+    "h1": [
+      "Informations"
+    ],
+    "jsonld_count": 2
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/page-soins/",
+    "final": "https://dentisteschmittnyon.ch/page-soins/",
+    "status": 200,
+    "seconds": 0.33,
+    "file": "9.html",
+    "title": [
+      "Page Soins - dentisteschmittnyon.ch"
+    ],
+    "descriptions": [
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\">",
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\" />"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/page-soins/\" />",
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/page-soins/\">"
+    ],
+    "robots": [
+      "<meta name=\"robots\" content=\"max-image-preview:large\" />",
+      "<meta name=\"robots\" content=\"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1\" />"
+    ],
+    "h1": [
+      "Nos Soins"
+    ],
+    "jsonld_count": 2
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/protection-des-donnees",
+    "final": "https://dentisteschmittnyon.ch/protection-des-donnees/",
+    "status": 200,
+    "seconds": 0.43,
+    "file": "10.html",
+    "title": [
+      "Protection des données - dentisteschmittnyon.ch"
+    ],
+    "descriptions": [
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\">",
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\" />"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/protection-des-donnees/\" />",
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/protection-des-donnees/\">"
+    ],
+    "robots": [
+      "<meta name=\"robots\" content=\"max-image-preview:large\" />",
+      "<meta name=\"robots\" content=\"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1\" />"
+    ],
+    "h1": [
+      "Politique de Confidentialité"
+    ],
+    "jsonld_count": 2
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/robots.txt",
+    "final": "https://dentisteschmittnyon.ch/robots.txt",
+    "status": 200,
+    "seconds": 0.18,
+    "file": "11.html",
+    "title": [],
+    "descriptions": [],
+    "canonical": [],
+    "robots": [],
+    "h1": [],
+    "jsonld_count": 0
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/sitemap_index.xml",
+    "final": "https://dentisteschmittnyon.ch/sitemap.xml",
+    "status": 200,
+    "seconds": 0.32,
+    "file": "12.html",
+    "title": [],
+    "descriptions": [],
+    "canonical": [],
+    "robots": [],
+    "h1": [],
+    "jsonld_count": 0
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/soins/",
+    "final": "https://dentisteschmittnyon.ch/soins/",
+    "status": 404,
+    "seconds": 0.21,
+    "file": "13.html",
+    "title": [
+      "Page non trouvée &#8211; dentisteschmittnyon.ch"
+    ],
+    "descriptions": [
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\">",
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\" />"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/soins\">"
+    ],
+    "robots": [
+      "<meta name=\"robots\" content=\"noindex\" />",
+      "<meta name=\"robots\" content=\"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1\" />"
+    ],
+    "h1": [
+      "Page non trouvée"
+    ],
+    "jsonld_count": 2
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/tarifs",
+    "final": "https://dentisteschmittnyon.ch/tarifs/",
+    "status": 200,
+    "seconds": 0.43,
+    "file": "14.html",
+    "title": [
+      "Tarifs - dentisteschmittnyon.ch"
+    ],
+    "descriptions": [
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\">",
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\" />"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/tarifs/\" />",
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/tarifs/\">"
+    ],
+    "robots": [
+      "<meta name=\"robots\" content=\"max-image-preview:large\" />",
+      "<meta name=\"robots\" content=\"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1\" />"
+    ],
+    "h1": [
+      "Nos Tarifs"
+    ],
+    "jsonld_count": 2
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/tarifs/",
+    "final": "https://dentisteschmittnyon.ch/tarifs/",
+    "status": 200,
+    "seconds": 0.31,
+    "file": "15.html",
+    "title": [
+      "Tarifs - dentisteschmittnyon.ch"
+    ],
+    "descriptions": [
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\">",
+      "<meta name=\"description\" content=\"Cabinet Dentaire Schmitt\" />"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/tarifs/\" />",
+      "<link rel=\"canonical\" href=\"https://dentisteschmittnyon.ch/tarifs/\">"
+    ],
+    "robots": [
+      "<meta name=\"robots\" content=\"max-image-preview:large\" />",
+      "<meta name=\"robots\" content=\"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1\" />"
+    ],
+    "h1": [
+      "Nos Tarifs"
+    ],
+    "jsonld_count": 2
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/wp-sitemap.xml",
+    "final": "https://dentisteschmittnyon.ch/sitemap.xml",
+    "status": 200,
+    "seconds": 0.34,
+    "file": "16.html",
+    "title": [],
+    "descriptions": [],
+    "canonical": [],
+    "robots": [],
+    "h1": [],
+    "jsonld_count": 0
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/xmlrpc.php",
+    "final": "https://dentisteschmittnyon.ch/xmlrpc.php",
+    "status": 405,
+    "seconds": 0.28,
+    "file": "17.html",
+    "title": [],
+    "descriptions": [],
+    "canonical": [],
+    "robots": [],
+    "h1": [],
+    "jsonld_count": 0
+  }
+]

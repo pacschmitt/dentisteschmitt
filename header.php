@@ -13,6 +13,7 @@
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<a class="skip-link screen-reader-text" href="#primary"><?php echo esc_html( dentiste_schmitt_text( 'Aller au contenu', 'Skip to content' ) ); ?></a>
 
 <header id="masthead" class="site-header">
 	<div class="container header-inner">
@@ -25,7 +26,7 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Menu Principal', 'dentiste-schmitt' ); ?>">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+			<button type="button" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
                 <span class="screen-reader-text"><?php esc_html_e( 'Menu', 'dentiste-schmitt' ); ?></span>
                 ☰
             </button>
@@ -43,7 +44,8 @@
                 if ( function_exists( 'pll_the_languages' ) ) {
                     $langs = pll_the_languages( array(
                         'raw'           => 1,
-                        'hide_if_empty' => 0,
+                        'hide_if_empty' => 1,
+                        'hide_if_no_translation' => 1,
                     ) );
                     if ( $langs ) {
                         $links = array();
@@ -55,7 +57,7 @@
                     }
                 } else {
                     ?>
-                    <a href="#">FR</a> <span class="sep">|</span> <a href="#">EN</a>
+                    <span aria-current="page"><?php echo esc_html( strtoupper( substr( get_locale(), 0, 2 ) ) ); ?></span>
                     <?php
                 }
                 ?>

@@ -1,0 +1,24 @@
+PASS /: metadata, canonical, links, headings, schema
+PASS cabinets/: metadata, canonical, links, headings, schema
+PASS page-equipe/: metadata, canonical, links, headings, schema
+PASS page-infos/: metadata, canonical, links, headings, schema
+PASS page-soins/: metadata, canonical, links, headings, schema
+PASS tarifs/: metadata, canonical, links, headings, schema
+PASS mentions-legales/: metadata, canonical, links, headings, schema
+PASS protection-des-donnees/: metadata, canonical, links, headings, schema
+PASS en/: metadata, canonical, links, headings, schema
+PASS en/clinics/: metadata, canonical, links, headings, schema
+PASS en/team/: metadata, canonical, links, headings, schema
+PASS en/informations/: metadata, canonical, links, headings, schema
+PASS en/treatments/: metadata, canonical, links, headings, schema
+PASS en/prices/: metadata, canonical, links, headings, schema
+PASS en/legal-notice/: metadata, canonical, links, headings, schema
+PASS en/privacy-policy/: metadata, canonical, links, headings, schema
+PASS dentiste-nyon/: metadata, canonical, links, headings, schema
+PASS dentiste-bassins/: metadata, canonical, links, headings, schema
+PASS legacy links: 301 redirects to published pages
+PASS 404 + search: HTTP status and noindex; 18 public pages checked
+
+PASS sitemap: 18 pages including Nyon/Bassins; no demonstration post sitemap
+PASS /hello-world/: HTTP 404 after reverting demonstration article to draft
+PASS mobile: 390px viewport, no horizontal overflow; menu opens and closes with Escape
