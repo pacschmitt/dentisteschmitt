@@ -24,16 +24,16 @@
                 <div class="sub-column" style="flex: 1; min-width: 150px;">
                     <h3><?php esc_html_e( 'Horaires', 'dentiste-schmitt' ); ?></h3>
                     <p>
-                        <?php echo wp_kses_post( __( 'Lundi – Vendredi<br>08h00 – 18h00', 'dentiste-schmitt' ) ); ?>
+                        <?php echo wp_kses_post( dentiste_schmitt_text( 'Nyon : lundi – vendredi, 8h00 – 18h00<br>Bassins : mardi – jeudi, 8h30 – 18h00', 'Nyon: Monday – Friday, 08:00 – 18:00<br>Bassins: Tuesday – Thursday, 08:30 – 18:00' ) ); ?>
                     </p>
                 </div>
 
                 <div class="sub-column" style="flex: 1; min-width: 150px;">
                     <h3><?php esc_html_e( 'Informations', 'dentiste-schmitt' ); ?></h3>
                     <ul>
-                        <li><a href="<?php echo esc_url( home_url( '/tarifs' ) ); ?>"><?php esc_html_e( 'Tarifs', 'dentiste-schmitt' ); ?></a></li>
-                        <li><a href="<?php echo esc_url( home_url( '/mention-legales/' ) ); ?>"><?php esc_html_e( 'Mentions légales', 'dentiste-schmitt' ); ?></a></li>
-                        <li><a href="<?php echo esc_url( home_url( '/protection-des-donnees' ) ); ?>"><?php esc_html_e( 'Protection des données', 'dentiste-schmitt' ); ?></a></li>
+                        <li><a href="<?php echo esc_url( dentiste_schmitt_page_url( 'page-tarifs.php', '/tarifs/' ) ); ?>"><?php esc_html_e( 'Tarifs', 'dentiste-schmitt' ); ?></a></li>
+                        <li><a href="<?php echo esc_url( dentiste_schmitt_page_url( 'page-mentions-legales.php', '/mentions-legales/' ) ); ?>"><?php esc_html_e( 'Mentions légales', 'dentiste-schmitt' ); ?></a></li>
+                        <li><a href="<?php echo esc_url( dentiste_schmitt_page_url( 'page-protection-des-donnees.php', '/protection-des-donnees/' ) ); ?>"><?php esc_html_e( 'Protection des données', 'dentiste-schmitt' ); ?></a></li>
                     </ul>
                 </div>
             </div>
@@ -41,7 +41,7 @@
 
         <div class="site-info">
             <p>
-                &copy; <?php echo date( 'Y' ); ?> <?php esc_html_e( 'Cabinet Dentaire Schmitt – Nyon & Bassins (Canton de Vaud).', 'dentiste-schmitt' ); ?>
+                &copy; <?php echo wp_date( 'Y' ); ?> <?php esc_html_e( 'Cabinet Dentaire Schmitt – Nyon & Bassins (Canton de Vaud).', 'dentiste-schmitt' ); ?>
                 <?php esc_html_e( 'Tous droits réservés.', 'dentiste-schmitt' ); ?>
             </p>
         </div><!-- .site-info -->

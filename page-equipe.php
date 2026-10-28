@@ -48,7 +48,7 @@ get_header();
             ?>
             <div class="card">
                 <?php if ( $img ) : ?>
-                    <img src="<?php echo esc_url( $img ); ?>" alt="<?php echo esc_attr( sprintf( __( 'Portrait de %s, %s au Cabinet Dentaire Schmitt', 'dentiste-schmitt' ), $member['name'], $member['role'] ) ); ?>" style="height:250px; width:100%; object-fit:cover; margin-bottom:20px; border-radius:8px;" loading="lazy">
+                    <?php echo dentiste_schmitt_image( $img, sprintf( __( 'Portrait de %s, %s au Cabinet Dentaire Schmitt', 'dentiste-schmitt' ), $member['name'], $member['role'] ), array( 'style' => 'height:250px; width:100%; object-fit:cover; margin-bottom:20px; border-radius:8px;', 'sizes' => '(max-width: 768px) 100vw, 33vw' ) ); ?>
                 <?php else : ?>
                     <div style="background:var(--color-bg-secondary); height:250px; margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:var(--color-text-light);">Photo</div>
                 <?php endif; ?>

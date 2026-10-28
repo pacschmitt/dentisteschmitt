@@ -1,0 +1,97 @@
+[
+  {
+    "url": "https://dentisteschmittnyon.ch/en/",
+    "status": 200,
+    "final": "https://dentisteschmittnyon.ch/en/"
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/",
+    "status": 200,
+    "final": "https://dentisteschmittnyon.ch/"
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/en/prices/",
+    "status": 200,
+    "final": "https://dentisteschmittnyon.ch/en/prices/"
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/en/legal-notice/",
+    "status": 200,
+    "final": "https://dentisteschmittnyon.ch/en/legal-notice/"
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/en/privacy-policy/",
+    "status": 200,
+    "final": "https://dentisteschmittnyon.ch/en/privacy-policy/"
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/en/treatments/",
+    "status": 200,
+    "final": "https://dentisteschmittnyon.ch/en/treatments/"
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/en/informations/",
+    "status": 200,
+    "final": "https://dentisteschmittnyon.ch/en/informations/"
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/en/team/",
+    "status": 200,
+    "final": "https://dentisteschmittnyon.ch/en/team/"
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/en/clinics/",
+    "status": 200,
+    "final": "https://dentisteschmittnyon.ch/en/clinics/"
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/protection-des-donnees/",
+    "status": 200,
+    "final": "https://dentisteschmittnyon.ch/protection-des-donnees/"
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/mentions-legales/",
+    "status": 200,
+    "final": "https://dentisteschmittnyon.ch/mentions-legales/"
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/tarifs/",
+    "status": 200,
+    "final": "https://dentisteschmittnyon.ch/tarifs/"
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/page-soins/",
+    "status": 200,
+    "final": "https://dentisteschmittnyon.ch/page-soins/"
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/page-infos/",
+    "status": 200,
+    "final": "https://dentisteschmittnyon.ch/page-infos/"
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/cabinets/",
+    "status": 200,
+    "final": "https://dentisteschmittnyon.ch/cabinets/"
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/page-equipe/",
+    "status": 200,
+    "final": "https://dentisteschmittnyon.ch/page-equipe/"
+  },
+  {
+    "url": "http://dentisteschmittnyon.ch/",
+    "status": 200,
+    "final": "https://dentisteschmittnyon.ch/"
+  },
+  {
+    "url": "https://www.dentisteschmittnyon.ch/",
+    "status": 200,
+    "final": "https://dentisteschmittnyon.ch/"
+  },
+  {
+    "url": "https://dentisteschmittnyon.ch/hello-world/",
+    "status": 200,
+    "final": "https://dentisteschmittnyon.ch/hello-world/"
+  }
+]

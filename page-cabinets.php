@@ -7,18 +7,18 @@
 
 get_header();
 
-$fallback_img = 'https://via.placeholder.com/1200x800.png?text=Photo+cabinet';
+$fallback_img = get_template_directory_uri() . '/images/cabinet-placeholder.svg';
 ?>
 
 <main id="primary" class="site-main container section-padding">
 
     <header class="entry-header text-center mb-5">
-        <h1 class="entry-title"><?php esc_html_e( 'Nos Cabinets', 'dentiste-schmitt' ); ?></h1>
+        <h1 class="entry-title"><?php echo esc_html( dentiste_schmitt_text( 'Nos cabinets dentaires à Nyon et Bassins', 'Our dental practices in Nyon and Bassins' ) ); ?></h1>
     </header>
 
     <div class="alignwide text-center mb-5" style="max-width: 900px; margin: 0 auto;">
         <p class="lead">
-            <?php esc_html_e( 'Nos deux cabinets dentaires et toute leurs équipes vous accueillent chaleureusement pour vous offrir les meilleurs soins bucco-dentaires. Nous mettons toutes nos compétences et notre expérience au service de nos patients, enfant ou adulte, pour prévenir et soigner leur dentition.', 'dentiste-schmitt' ); ?>
+            <?php echo esc_html( dentiste_schmitt_text( 'Nos deux cabinets dentaires et toutes leurs équipes vous accueillent chaleureusement pour vous offrir les meilleurs soins bucco-dentaires. Nous mettons toutes nos compétences et notre expérience au service de nos patients, enfant ou adulte, pour prévenir et soigner leur dentition.', 'Our teams welcome you to our two dental practices. We provide dental care for adults and children, with a focus on prevention and treatment tailored to each patient.' ) ); ?>
         </p>
         <p>
             <?php esc_html_e( 'Contactez le cabinet pour prendre rendez-vous avec nos chirurgiens-dentistes et nos hygiénistes de qualité.', 'dentiste-schmitt' ); ?>
@@ -26,10 +26,10 @@ $fallback_img = 'https://via.placeholder.com/1200x800.png?text=Photo+cabinet';
     </div>
 
     <div class="two-columns-grid" style="margin-top: 60px;">
-        <div class="cabinet-nyon card">
+        <div id="cabinet-nyon" class="cabinet-nyon card">
             <h2 class="mb-4"><?php esc_html_e( 'Cabinet Nyon', 'dentiste-schmitt' ); ?></h2>
             <div class="mt-4 mb-4">
-                <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn btn-sm"><?php esc_html_e( 'Prendre RDV à Nyon', 'dentiste-schmitt' ); ?></a>
+                <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" rel="noopener noreferrer" class="btn btn-sm"><?php esc_html_e( 'Prendre RDV à Nyon', 'dentiste-schmitt' ); ?></a>
             </div>
 
             <div class="carousel" data-carousel tabindex="0" aria-label="<?php esc_attr_e( 'Photos du cabinet de Nyon', 'dentiste-schmitt' ); ?>">
@@ -38,16 +38,16 @@ $fallback_img = 'https://via.placeholder.com/1200x800.png?text=Photo+cabinet';
                     for ( $i = 1; $i <= 3; $i++ ) :
                         $img_custom = get_theme_mod( "dentiste_schmitt_cabinet_nyon_{$i}" );
                         // Fallbacks
-                        $exts = array( 1 => 'webp', 2 => 'jpg', 3 => 'png' );
+                        $exts = array( 1 => 'webp', 2 => 'jpg', 3 => 'webp' );
                         $img_fallback = get_template_directory_uri() . "/images/{$i}." . $exts[$i];
                         $img_final = $img_custom ? $img_custom : $img_fallback;
                     ?>
                     <div class="carousel-slide" data-carousel-slide aria-hidden="<?php echo $i === 1 ? 'false' : 'true'; ?>">
-                        <img src="<?php echo esc_url( $img_final ); ?>" alt="<?php echo esc_attr( sprintf( __( 'Cabinet Nyon - photo %d', 'dentiste-schmitt' ), $i ) ); ?>" style="object-fit:cover; height:320px; width:100%;" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
+                        <?php echo dentiste_schmitt_image( $img_final, sprintf( __( 'Cabinet Nyon - photo %d', 'dentiste-schmitt' ), $i ), array( 'style' => 'object-fit:cover; height:320px; width:100%;', 'sizes' => '(max-width: 768px) 100vw, 50vw', 'onerror' => "this.onerror=null;this.removeAttribute('srcset');this.src='" . esc_url( $fallback_img ) . "';" ) ); ?>
                     </div>
                     <?php endfor; ?>
                 </div>
-                <div class="carousel-nav" aria-hidden="true">
+                <div class="carousel-nav">
                     <button type="button" class="carousel-btn" data-carousel-prev aria-label="<?php esc_attr_e( 'Photo précédente', 'dentiste-schmitt' ); ?>">‹</button>
                     <button type="button" class="carousel-btn" data-carousel-next aria-label="<?php esc_attr_e( 'Photo suivante', 'dentiste-schmitt' ); ?>">›</button>
                 </div>
@@ -77,10 +77,10 @@ $fallback_img = 'https://via.placeholder.com/1200x800.png?text=Photo+cabinet';
             </div>
         </div>
 
-        <div class="cabinet-bassins card">
+        <div id="cabinet-bassins" class="cabinet-bassins card">
             <h2 class="mb-4"><?php esc_html_e( 'Cabinet Bassins', 'dentiste-schmitt' ); ?></h2>
             <div class="mt-4 mb-4">
-                <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" class="btn btn-sm"><?php esc_html_e( 'Prendre RDV à Bassins', 'dentiste-schmitt' ); ?></a>
+                <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" rel="noopener noreferrer" class="btn btn-sm"><?php esc_html_e( 'Prendre RDV à Bassins', 'dentiste-schmitt' ); ?></a>
             </div>
 
             <div class="carousel" data-carousel tabindex="0" aria-label="<?php esc_attr_e( 'Photos du cabinet de Bassins', 'dentiste-schmitt' ); ?>">
@@ -89,16 +89,16 @@ $fallback_img = 'https://via.placeholder.com/1200x800.png?text=Photo+cabinet';
                     for ( $i = 1; $i <= 3; $i++ ) :
                         $img_custom = get_theme_mod( "dentiste_schmitt_cabinet_bassins_{$i}" );
                         // Fallbacks
-                        $exts = array( 1 => 'webp', 2 => 'jpg', 3 => 'png' );
+                        $exts = array( 1 => 'webp', 2 => 'jpg', 3 => 'webp' );
                         $img_fallback = get_template_directory_uri() . "/images/{$i}." . $exts[$i];
                         $img_final = $img_custom ? $img_custom : $img_fallback;
                     ?>
                     <div class="carousel-slide" data-carousel-slide aria-hidden="<?php echo $i === 1 ? 'false' : 'true'; ?>">
-                        <img src="<?php echo esc_url( $img_final ); ?>" alt="<?php echo esc_attr( sprintf( __( 'Cabinet Bassins - photo %d', 'dentiste-schmitt' ), $i ) ); ?>" style="object-fit:cover; height:320px; width:100%;" onerror="this.onerror=null;this.src='<?php echo esc_url( $fallback_img ); ?>';">
+                        <?php echo dentiste_schmitt_image( $img_final, sprintf( __( 'Cabinet Bassins - photo %d', 'dentiste-schmitt' ), $i ), array( 'style' => 'object-fit:cover; height:320px; width:100%;', 'sizes' => '(max-width: 768px) 100vw, 50vw', 'onerror' => "this.onerror=null;this.removeAttribute('srcset');this.src='" . esc_url( $fallback_img ) . "';" ) ); ?>
                     </div>
                     <?php endfor; ?>
                 </div>
-                <div class="carousel-nav" aria-hidden="true">
+                <div class="carousel-nav">
                     <button type="button" class="carousel-btn" data-carousel-prev aria-label="<?php esc_attr_e( 'Photo précédente', 'dentiste-schmitt' ); ?>">‹</button>
                     <button type="button" class="carousel-btn" data-carousel-next aria-label="<?php esc_attr_e( 'Photo suivante', 'dentiste-schmitt' ); ?>">›</button>
                 </div>

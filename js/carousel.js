@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
 
-      if (prevBtn) prevBtn.disabled = slides.length <= 1;
-      if (nextBtn) nextBtn.disabled = slides.length <= 1;
+      if (prevBtn) prevBtn.disabled = index === 0;
+      if (nextBtn) nextBtn.disabled = index === slides.length - 1;
     }
 
     function goTo(newIndex) {

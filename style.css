@@ -4,7 +4,7 @@ Theme URI:
 Author: pacschmitt
 Author URI:
 Description: Thème sur mesure pour le Cabinet Dentaire Schmitt (Nyon & Bassins).
-Version: 1.0.0
+Version: 1.1.0
 Requires at least: 6.9
 Tested up to: 6.9
 Requires PHP: 8.3
@@ -1497,4 +1497,100 @@ input:focus, textarea:focus, select:focus {
     .faq-section details .faq-content {
         padding: 14px 16px 16px;
     }
+}
+
+/* Accessible interactions and compact mobile navigation. */
+:where(a, button, summary, input, select, textarea):focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 4px;
+}
+.skip-link:focus {
+    clip: auto;
+    clip-path: none;
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 1000000;
+    padding: 12px 20px;
+    background: var(--color-bg-surface);
+    color: var(--color-primary);
+}
+.soin-details { align-self: start; }
+.soins-grid .soin-details::after { content: none; }
+.soin-details summary { cursor: pointer; list-style: none; }
+.soin-details summary::-webkit-details-marker { display: none; }
+.soin-details summary::after {
+    content: '+';
+    display: block;
+    margin-top: 16px;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.soin-details[open] summary::after { content: '−'; }
+.soin-preview { display: block; }
+.soin-description { margin-top: 16px; border-top: 1px solid var(--color-border); padding-top: 16px; }
+.footer-column a { overflow-wrap: anywhere; }
+[id^="cabinet-"] { scroll-margin-top: 100px; }
+.carousel-btn:disabled { opacity: 0.4; cursor: default; }
+@media (max-width: 992px) {
+    .menu-toggle { min-width: 44px; min-height: 44px; }
+    .main-navigation.toggled {
+        position: static;
+        display: flex;
+        padding: 0;
+        background: none;
+        border: 0;
+        box-shadow: none;
+        animation: none;
+    }
+    .main-navigation.toggled .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        max-height: calc(100dvh - 80px);
+        overflow-y: auto;
+        margin: 0;
+        padding: 16px;
+        gap: 4px;
+        background: var(--color-bg-surface);
+        border-top: 1px solid var(--color-border);
+        box-shadow: 0 8px 16px rgba(43, 37, 34, 0.12);
+    }
+    .main-navigation .lang-switcher,
+    .main-navigation.toggled .lang-switcher {
+        display: flex;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: var(--font-size-small);
+    }
+    .main-navigation .lang-switcher a { min-width: 32px; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+.header-inner { gap: 16px; }
+.main-navigation li { flex-shrink: 0; }
+.site-branding > a:not(.custom-logo-link) {
+    max-width: 260px;
+    font-size: clamp(1rem, 1.8vw, 1.5rem);
+    line-height: 1.2;
+}
+.soins-grid .soin-details { height: auto; }
+@media (max-width: 768px) {
+    .welcome-hero {
+        height: 40svh;
+        min-height: 260px;
+        max-height: 350px;
+        align-items: center;
+        padding: 32px 0;
+    }
+    .locations-section { padding: 48px 0; }
+    .locations-section .hero-buttons .btn { margin-bottom: 16px; }
 }

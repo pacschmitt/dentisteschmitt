@@ -51,6 +51,24 @@
 		}
 	} );
 
+	// Keep the mobile menu state in sync with keyboard and navigation actions.
+	function closeMenu() {
+		siteNavigation.classList.remove( 'toggled' );
+		button.setAttribute( 'aria-expanded', 'false' );
+	}
+	siteNavigation.addEventListener( 'keydown', function( event ) {
+		if ( event.key === 'Escape' && siteNavigation.classList.contains( 'toggled' ) ) {
+			closeMenu();
+			button.focus();
+		}
+	} );
+	menu.addEventListener( 'click', function( event ) {
+		if ( event.target.closest( 'a' ) ) closeMenu();
+	} );
+	window.matchMedia( '(min-width: 993px)' ).addEventListener( 'change', function( event ) {
+		if ( event.matches ) closeMenu();
+	} );
+
 	// Get all the link elements within the menu.
 	const links = menu.getElementsByTagName( 'a' );
 

@@ -20,7 +20,7 @@ get_header();
                 <?php esc_html_e( 'Contactez notre cabinet dentaire Dentiste Schmitt pour en savoir plus sur nos services en soins bucco-dentaires. Vous êtes un nouveau patient ? Prenez rendez-vous avec notre équipe, pour votre première consultation.', 'dentiste-schmitt' ); ?>
             </p>
             <p>
-                <?php esc_html_e( 'Nos collaborateurs vous accueillent avec professionnalisme du lundi au jeudi. Nos praticiens s\'engagent à vous offrir un service de qualité qui vous rendra votre beau sourire.', 'dentiste-schmitt' ); ?>
+                <?php echo esc_html( dentiste_schmitt_text( 'Nos collaborateurs vous accueillent sur rendez-vous à Nyon du lundi au vendredi et à Bassins du mardi au jeudi. Retrouvez ci-dessous les horaires et les coordonnées de chaque cabinet.', 'Our team welcomes you by appointment in Nyon from Monday to Friday and in Bassins from Tuesday to Thursday. Find opening hours and contact details for each practice below.' ) ); ?>
             </p>
         </div>
 
