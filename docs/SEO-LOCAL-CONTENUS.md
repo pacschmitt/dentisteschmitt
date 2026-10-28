@@ -1,13 +1,13 @@
-# Contenus locaux prêts à intégrer dans WordPress
+# Contenus locaux publiés dans WordPress
 
-Rédigés le 28 octobre 2026 à partir des informations du site et des horaires confirmés par le propriétaire. Ces deux pages sont des propositions éditoriales, pas des pages déjà publiées. Elles doivent apporter des informations propres à chaque adresse. Les pages actuelles restent en place ; aucun changement de leurs URL n’est nécessaire.
+Rédigés le 28 octobre 2026 à partir des informations du site et des horaires confirmés par le propriétaire. Ces deux pages ont été publiées le même jour sur le site public, avec les informations propres à chaque adresse. Les pages actuelles restent en place ; aucun changement de leurs URL n’est nécessaire.
 
 ## Page « Dentiste à Nyon »
 
-- URL proposée : `/dentiste-nyon/`
+- URL publiée : `/dentiste-nyon/`
 - Titre SEO : `Dentiste à Nyon | Cabinet Dentaire Schmitt`
-- Description : `Cabinet dentaire Schmitt à Nyon, avenue Reverdil 2, près de la gare et du centre La Combe. Soins adultes et enfants. Rendez-vous en ligne ou au 022 361 78 44.`
-- H1 : `Votre cabinet dentaire Schmitt à Nyon`
+- Description : `Cabinet dentaire Schmitt à Nyon, avenue Reverdil 2, près de la gare et de La Combe. Soins adultes et enfants. Rendez-vous au 022 361 78 44 ou en ligne.`
+- H1 : `Dentiste Nyon`
 
 Le Cabinet Dentaire Schmitt vous accueille à l’avenue Reverdil 2, au centre de Nyon. Notre équipe accompagne les adultes et les enfants pour leurs soins dentaires et leur suivi d’hygiène bucco-dentaire. Les consultations ont lieu sur rendez-vous, du lundi au vendredi, de 8h00 à 18h00.
 
@@ -33,10 +33,10 @@ Nous disposons également d’un [cabinet à Bassins](/dentiste-bassins/), avec 
 
 ## Page « Dentiste à Bassins »
 
-- URL proposée : `/dentiste-bassins/`
+- URL publiée : `/dentiste-bassins/`
 - Titre SEO : `Dentiste à Bassins | Cabinet Dentaire Schmitt`
 - Description : `Cabinet dentaire Schmitt à Bassins, ruelle de la Repentance 4. Accès de plain-pied et parking devant le cabinet. Rendez-vous au 022 365 26 26 ou en ligne.`
-- H1 : `Votre cabinet dentaire Schmitt à Bassins`
+- H1 : `Dentiste Bassins`
 
 Le Cabinet Dentaire Schmitt de Bassins vous accueille à la ruelle de la Repentance 4. Notre équipe reçoit les enfants et les adultes sur rendez-vous, du mardi au jeudi, de 8h30 à 18h00.
 
@@ -62,7 +62,7 @@ Notre [cabinet de Nyon](/dentiste-nyon/) vous accueille également, du lundi au 
 
 ## Intégration et maillage
 
-Créer les deux pages ensemble pour que les liens réciproques fonctionnent. Ajouter un lien depuis chaque adresse de l’accueil et chaque section de `/cabinets/`. Conserver cette dernière comme page de comparaison des deux sites. Renseigner les titres/descriptions dans AIOSEO, définir la canonique propre de chaque nouvelle page, mettre à jour l’URL de chaque entité Dentist, puis vérifier le sitemap.
+Les deux pages sont publiées avec des liens réciproques et reliées depuis chaque adresse de l’accueil et chaque section de `/cabinets/`. Cette dernière reste la page de présentation des deux sites. Le thème fournit les titres et descriptions SEO par défaut à AIOSEO, chaque page dispose de sa propre canonique et son entité Dentist pointe vers sa page locale. Les deux URL sont présentes dans le sitemap public.
 
 Prévoir une véritable traduction anglaise reliée par Polylang avant d’afficher un lien EN. Les liens anglais doivent pointer vers les traductions existantes, pas vers les URL françaises.
 

@@ -16,6 +16,7 @@ function dentiste_schmitt_seo_profile() {
     if ( ! $template || 'default' === $template ) {
         $slug = get_post_field( 'post_name', get_queried_object_id() );
         $aliases = array(
+            'dentiste-nyon' => 'local-nyon', 'dentiste-bassins' => 'local-bassins',
             'cabinets' => 'page-cabinets.php', 'page-equipe' => 'page-equipe.php',
             'page-infos' => 'page-infos.php', 'page-soins' => 'page-soins.php',
             'soins' => 'page-soins.php', 'tarifs' => 'page-tarifs.php',
@@ -44,6 +45,8 @@ function dentiste_schmitt_seo_profile() {
         'page-mentions-legales.php' => array( 'Mentions légales | Cabinets dentaires Schmitt', 'Éditeur, coordonnées et hébergement du site des cabinets dentaires Schmitt à Nyon et Bassins, en Suisse.' ),
         'page-protection-des-donnees.php' => array( 'Protection des données | Cabinets dentaires Schmitt', 'Informations sur le traitement de vos données personnelles et la confidentialité aux cabinets dentaires Schmitt à Nyon et Bassins.' ),
     );
+    $profiles['local-nyon'] = array( 'Dentiste à Nyon | Cabinet Dentaire Schmitt', 'Cabinet dentaire Schmitt à Nyon, avenue Reverdil 2, près de la gare et de La Combe. Soins adultes et enfants. Rendez-vous au 022 361 78 44 ou en ligne.' );
+    $profiles['local-bassins'] = array( 'Dentiste à Bassins | Cabinet Dentaire Schmitt', 'Cabinet dentaire Schmitt à Bassins, ruelle de la Repentance 4. Accès de plain-pied et parking devant le cabinet. Rendez-vous au 022 365 26 26 ou en ligne.' );
     return apply_filters( 'dentiste_schmitt_seo_profile', isset( $profiles[ $template ] ) ? $profiles[ $template ] : array(), $template );
 }
 
@@ -132,16 +135,18 @@ function dentiste_schmitt_robots_directives( $robots ) {
 add_filter( 'wp_robots', 'dentiste_schmitt_robots_directives' );
 
 function dentiste_schmitt_business_graph() {
-    if ( ! is_front_page() && ! is_page_template( 'page-cabinets.php' ) && ! is_page( 'cabinets' ) ) {
+    if ( ! is_front_page() && ! is_page_template( 'page-cabinets.php' ) && ! is_page( array( 'cabinets', 'dentiste-nyon', 'dentiste-bassins' ) ) ) {
         return array();
     }
     $graph = array();
-    $url = dentiste_schmitt_page_url( 'page-cabinets.php', '/cabinets/' );
     foreach ( dentiste_schmitt_locations() as $slug => $location ) {
+        if ( is_page( array( 'dentiste-nyon', 'dentiste-bassins' ) ) && ! is_page( 'dentiste-' . $slug ) ) {
+            continue;
+        }
         $node = array(
             '@type' => 'Dentist', '@id' => trailingslashit( get_option( 'home' ) ) . '#cabinet-' . $slug,
             'name' => 'Cabinet Dentaire Schmitt - ' . $location['city'],
-            'url' => $url . '#cabinet-' . $slug,
+            'url' => dentiste_schmitt_location_url( $slug ),
             'telephone' => $location['telephone'], 'email' => $location['email'],
             'address' => array(
                 '@type' => 'PostalAddress', 'streetAddress' => $location['street'],

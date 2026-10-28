@@ -27,7 +27,7 @@ $fallback_img = get_template_directory_uri() . '/images/cabinet-placeholder.svg'
 
     <div class="two-columns-grid" style="margin-top: 60px;">
         <div id="cabinet-nyon" class="cabinet-nyon card">
-            <h2 class="mb-4"><?php esc_html_e( 'Cabinet Nyon', 'dentiste-schmitt' ); ?></h2>
+            <h2 class="mb-4"><a href="<?php echo esc_url( dentiste_schmitt_location_url( 'nyon' ) ); ?>"><?php esc_html_e( 'Cabinet Nyon', 'dentiste-schmitt' ); ?></a></h2>
             <div class="mt-4 mb-4">
                 <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" rel="noopener noreferrer" class="btn btn-sm"><?php esc_html_e( 'Prendre RDV à Nyon', 'dentiste-schmitt' ); ?></a>
             </div>
@@ -78,7 +78,7 @@ $fallback_img = get_template_directory_uri() . '/images/cabinet-placeholder.svg'
         </div>
 
         <div id="cabinet-bassins" class="cabinet-bassins card">
-            <h2 class="mb-4"><?php esc_html_e( 'Cabinet Bassins', 'dentiste-schmitt' ); ?></h2>
+            <h2 class="mb-4"><a href="<?php echo esc_url( dentiste_schmitt_location_url( 'bassins' ) ); ?>"><?php esc_html_e( 'Cabinet Bassins', 'dentiste-schmitt' ); ?></a></h2>
             <div class="mt-4 mb-4">
                 <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" rel="noopener noreferrer" class="btn btn-sm"><?php esc_html_e( 'Prendre RDV à Bassins', 'dentiste-schmitt' ); ?></a>
             </div>

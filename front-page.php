@@ -36,6 +36,7 @@ get_header();
                     <p class="hero-address">
                       <?php echo wp_kses_post( __( 'Avenue Reverdil 2,<br>1260 Nyon', 'dentiste-schmitt' ) );?>
                       <br><a href="tel:+41223617844">+41 22 361 78 44</a>
+                      <br><a href="<?php echo esc_url( dentiste_schmitt_location_url( 'nyon' ) ); ?>"><?php echo esc_html( dentiste_schmitt_text( 'Découvrir le cabinet de Nyon', 'Discover our Nyon practice' ) ); ?></a>
                     </p>
                 </div>
                 <div class="hero-btn-wrapper">
@@ -43,6 +44,7 @@ get_header();
                     <p class="hero-address">
                       <?php echo wp_kses_post( __( 'Ruelle de la Repentance 4,<br>1269 Bassins', 'dentiste-schmitt' ) ); ?>
                       <br><a href="tel:+41223652626">+41 22 365 26 26</a>
+                      <br><a href="<?php echo esc_url( dentiste_schmitt_location_url( 'bassins' ) ); ?>"><?php echo esc_html( dentiste_schmitt_text( 'Découvrir le cabinet de Bassins', 'Discover our Bassins practice' ) ); ?></a>
                     </p>
                 </div>
             </div>

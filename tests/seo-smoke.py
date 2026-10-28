@@ -60,10 +60,13 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--base-url', required=True)
     parser.add_argument('--english', action='store_true')
+    parser.add_argument('--local-pages', action='store_true')
     args = parser.parse_args()
     routes = ['', 'cabinets/', 'page-equipe/', 'page-infos/', 'page-soins/', 'tarifs/', 'mentions-legales/', 'protection-des-donnees/']
     if args.english:
         routes += ['en/', 'en/clinics/', 'en/team/', 'en/informations/', 'en/treatments/', 'en/prices/', 'en/legal-notice/', 'en/privacy-policy/']
+    if args.local_pages:
+        routes += ['dentiste-nyon/', 'dentiste-bassins/']
     titles, descriptions = set(), set()
     for route in routes:
         url = urljoin(args.base_url.rstrip('/') + '/', route)
@@ -83,7 +86,7 @@ def main():
         assert description and description not in descriptions, f'{route}: empty or shared description'
         descriptions.add(description)
         assert len(page.alternates) == len(set(page.alternates)), f'{route}: duplicate hreflang'
-        if args.english:
+        if args.english and not route.startswith('dentiste-'):
             assert len(page.alternates) == 2, f'{route}: missing language alternate'
         assert not any(urlparse(link).path in ('/soins/', '/mention-legales/') for link in page.links), f'{route}: old broken internal link'
         if route in ('', 'en/'):
@@ -101,6 +104,12 @@ def main():
             bassins = next(node for node in clinics if node['address']['addressLocality'] == 'Bassins')
             hours = bassins['openingHoursSpecification'][0]
             assert hours['dayOfWeek'] == ['Tuesday', 'Wednesday', 'Thursday'] and hours['opens'] == '08:30', f'{route}: incorrect Bassins hours'
+        if route.startswith('dentiste-'):
+            city = 'Nyon' if route == 'dentiste-nyon/' else 'Bassins'
+            assert len(clinics) == 1 and clinics[0]['address']['addressLocality'] == city, f'{route}: incorrect local practice schema'
+            assert clinics[0]['url'] == final, f'{route}: incorrect practice URL'
+            other = '/dentiste-bassins/' if city == 'Nyon' else '/dentiste-nyon/'
+            assert other in page.links, f'{route}: missing cross-link'
         print(f'PASS {route or "/"}: metadata, canonical, links, headings, schema')
     for old, target in (('soins/', 'page-soins/'), ('mention-legales/', 'mentions-legales/')):
         result = subprocess.run(['curl', '-sS', '-o', '/dev/null', '-w', '%{http_code}\n%{redirect_url}', urljoin(args.base_url.rstrip('/') + '/', old)], capture_output=True, text=True)

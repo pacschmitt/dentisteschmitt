@@ -65,3 +65,17 @@ function dentiste_schmitt_hero_image() {
     }
     return $url;
 }
+
+
+/** Link to a published local page, falling back to the relevant clinic section. */
+function dentiste_schmitt_location_url( $slug ) {
+    $page = get_page_by_path( 'dentiste-' . $slug );
+    $id = $page ? $page->ID : 0;
+    if ( $id && function_exists( 'pll_get_post' ) ) {
+        $id = pll_get_post( $id );
+    }
+    if ( $id && 'publish' === get_post_status( $id ) ) {
+        return get_permalink( $id );
+    }
+    return dentiste_schmitt_page_url( 'page-cabinets.php', '/cabinets/' ) . '#cabinet-' . $slug;
+}
