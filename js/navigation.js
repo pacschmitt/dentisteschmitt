@@ -1,116 +1,34 @@
-/**
- * File navigation.js.
- *
- * Handles toggling the navigation menu for small screens and enables TAB key
- * navigation support for dropdown menus.
- */
-( function() {
-	const siteNavigation = document.getElementById( 'site-navigation' );
-
-	// Return early if the navigation doesn't exist.
-	if ( ! siteNavigation ) {
-		return;
-	}
-
-	const button = siteNavigation.getElementsByTagName( 'button' )[0];
-
-	// Return early if the button doesn't exist.
-	if ( 'undefined' === typeof button ) {
-		return;
-	}
-
-	const menu = siteNavigation.getElementsByTagName( 'ul' )[0];
-
-	// Hide menu toggle button if menu is empty and return early.
-	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
-		return;
-	}
-
-	if ( ! menu.classList.contains( 'nav-menu' ) ) {
-		menu.classList.add( 'nav-menu' );
-	}
-
-	button.addEventListener( 'click', function() {
-		siteNavigation.classList.toggle( 'toggled' );
-
-		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
-			button.setAttribute( 'aria-expanded', 'false' );
-		} else {
-			button.setAttribute( 'aria-expanded', 'true' );
-		}
-	} );
-
-	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
-	document.addEventListener( 'click', function( event ) {
-		const isClickInside = siteNavigation.contains( event.target );
-
-		if ( ! isClickInside ) {
-			siteNavigation.classList.remove( 'toggled' );
-			button.setAttribute( 'aria-expanded', 'false' );
-		}
-	} );
-
-	// Keep the mobile menu state in sync with keyboard and navigation actions.
-	function closeMenu() {
-		siteNavigation.classList.remove( 'toggled' );
-		button.setAttribute( 'aria-expanded', 'false' );
-	}
-	siteNavigation.addEventListener( 'keydown', function( event ) {
-		if ( event.key === 'Escape' && siteNavigation.classList.contains( 'toggled' ) ) {
-			closeMenu();
-			button.focus();
-		}
-	} );
-	menu.addEventListener( 'click', function( event ) {
-		if ( event.target.closest( 'a' ) ) closeMenu();
-	} );
-	window.matchMedia( '(min-width: 993px)' ).addEventListener( 'change', function( event ) {
-		if ( event.matches ) closeMenu();
-	} );
-
-	// Get all the link elements within the menu.
-	const links = menu.getElementsByTagName( 'a' );
-
-	// Get all the link elements with children within the menu.
-	const linksWithChildren = menu.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
-
-	// Toggle focus each time a menu link is focused or blurred.
-	for ( const link of links ) {
-		link.addEventListener( 'focus', toggleFocus, true );
-		link.addEventListener( 'blur', toggleFocus, true );
-	}
-
-	// Toggle focus each time a menu link with children receive a touch event.
-	for ( const link of linksWithChildren ) {
-		link.addEventListener( 'touchstart', toggleFocus, false );
-	}
-
-	/**
-	 * Sets or removes .focus class on an element.
-	 */
-	function toggleFocus( event ) {
-		if ( event.type === 'focus' || event.type === 'blur' ) {
-			let self = this;
-			// Move up through the ancestors of the current link until we hit .nav-menu.
-			while ( ! self.classList.contains( 'nav-menu' ) ) {
-				// On li elements toggle the class .focus.
-				if ( 'li' === self.tagName.toLowerCase() ) {
-					self.classList.toggle( 'focus' );
-				}
-				self = self.parentElement;
-			}
-		}
-
-		if ( event.type === 'touchstart' ) {
-			const menuItem = this.parentElement;
-			event.preventDefault();
-			for ( const link of menuItem.parentElement.children ) {
-				if ( menuItem !== link ) {
-					link.classList.remove( 'focus' );
-				}
-			}
-			menuItem.classList.toggle( 'focus' );
-		}
-	}
-}() );
+/* Responsive navigation: usable without JavaScript, keyboard and touch friendly. */
+(() => {
+  const nav = document.getElementById('site-navigation');
+  if (!nav) return;
+  const button = nav.querySelector('.menu-toggle');
+  const panel = nav.querySelector('.navigation-panel');
+  if (!button || !panel) return;
+  const mobile = window.matchMedia('(max-width: 992px)');
+  const close = (restoreFocus = false) => {
+    nav.classList.remove('toggled');
+    button.setAttribute('aria-expanded', 'false');
+    panel.inert = mobile.matches;
+    if (restoreFocus) button.focus();
+  };
+  nav.classList.add('menu-enhanced');
+  close();
+  button.addEventListener('click', () => {
+    nav.classList.add('has-interacted');
+    const open = !nav.classList.contains('toggled');
+    nav.classList.toggle('toggled', open);
+    button.setAttribute('aria-expanded', String(open));
+    panel.inert = mobile.matches && !open;
+  });
+  document.addEventListener('click', event => { if (!nav.contains(event.target)) close(); });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && nav.classList.contains('toggled')) close(true);
+  });
+  panel.addEventListener('click', event => { if (event.target.closest('a')) close(); });
+  mobile.addEventListener('change', () => close());
+  // Close once keyboard focus has moved beyond the mobile navigation.
+  nav.addEventListener('focusout', event => {
+    if (event.relatedTarget && !nav.contains(event.relatedTarget)) close();
+  });
+})();

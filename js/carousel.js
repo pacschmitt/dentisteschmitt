@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!track || slides.length === 0) return;
 
+    const counter = document.createElement('span');
+    counter.className = 'carousel-count';
+    counter.setAttribute('aria-hidden', 'true');
+    carousel.insertAdjacentElement('afterend', counter);
+    const english = document.documentElement.lang.startsWith('en');
     let index = 0;
 
     function getSlideWidth() {
@@ -25,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function update() {
+      counter.textContent = `${String(index + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
       const slideWidth = getSlideWidth();
       track.style.transform = `translate3d(-${index * slideWidth}px, 0, 0)`;
       slides.forEach((slide, i) => {
@@ -103,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const dot = document.createElement('button');
         dot.type = 'button';
         dot.className = 'carousel-dot';
-        dot.setAttribute('aria-label', `Aller à la photo ${i + 1}`);
+        dot.setAttribute('aria-label', `${english ? 'Go to photo' : 'Aller à la photo'} ${i + 1}`);
         dot.addEventListener('click', () => goTo(i));
         dotsContainer.appendChild(dot);
       });

@@ -19,41 +19,58 @@ get_header();
     <section class="welcome-hero" <?php echo $hero_style; ?>>
         <div class="hero-overlay"></div>
         <div class="container welcome-content">
+            <p class="hero-eyebrow"><?php echo esc_html( dentiste_schmitt_text( 'Cabinet Dentaire Schmitt', 'Schmitt Dental Practices' ) ); ?></p>
             <h1 class="welcome-title"><?php echo esc_html( dentiste_schmitt_text( 'Dentistes à Nyon et Bassins – Cabinets Schmitt', 'Dentists in Nyon and Bassins – Schmitt Dental Practices' ) ); ?></h1>
+            <p class="welcome-intro"><?php echo esc_html( dentiste_schmitt_text( 'Une équipe familiale, deux cabinets au cœur de la région.', 'A family team, two practices at the heart of the region.' ) ); ?></p>
+            <div class="welcome-actions">
+                <a class="btn" href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" rel="noopener noreferrer"><?php echo esc_html( dentiste_schmitt_text( 'Prendre rendez-vous', 'Book an appointment' ) ); ?><span aria-hidden="true">↗</span></a>
+                <a class="hero-discover" href="#nos-cabinets"><?php echo esc_html( dentiste_schmitt_text( 'Découvrir nos cabinets', 'Explore our practices' ) ); ?><span aria-hidden="true">↓</span></a>
+            </div>
         </div>
+        <span class="hero-location-note" aria-hidden="true">Nyon · Bassins</span>
     </section>
 
     <!-- 1. Locations Section (Previously Hero) -->
-    <section class="hero-section locations-section">
-        <div class="container hero-content">
-            <h2><?php esc_html_e( 'Vos cabinets dentaires à Nyon et Bassins (Vaud)', 'dentiste-schmitt' ); ?></h2>
-            <p class="hero-subtitle">
-                <?php esc_html_e( 'Chirurgie – Orthodontie – Prothèses esthétiques – Soins pédiatriques – Parodontologie', 'dentiste-schmitt' ); ?>
-            </p>
-            <div class="hero-buttons">
-                <div class="hero-btn-wrapper">
-                    <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" rel="noopener noreferrer" class="btn btn-outline mb-5"><?php esc_html_e( 'RDV en ligne à Nyon', 'dentiste-schmitt' ); ?></a>
-                    <p class="hero-address">
-                      <?php echo wp_kses_post( __( 'Avenue Reverdil 2,<br>1260 Nyon', 'dentiste-schmitt' ) );?>
-                      <br><a href="tel:+41223617844">+41 22 361 78 44</a>
-                      <br><a href="<?php echo esc_url( dentiste_schmitt_location_url( 'nyon' ) ); ?>"><?php echo esc_html( dentiste_schmitt_text( 'Découvrir le cabinet de Nyon', 'Discover our Nyon practice' ) ); ?></a>
-                    </p>
-                </div>
-                <div class="hero-btn-wrapper">
-                    <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" rel="noopener noreferrer" class="btn btn-outline mb-5"><?php esc_html_e( 'RDV en ligne à Bassins', 'dentiste-schmitt' ); ?></a>
-                    <p class="hero-address">
-                      <?php echo wp_kses_post( __( 'Ruelle de la Repentance 4,<br>1269 Bassins', 'dentiste-schmitt' ) ); ?>
-                      <br><a href="tel:+41223652626">+41 22 365 26 26</a>
-                      <br><a href="<?php echo esc_url( dentiste_schmitt_location_url( 'bassins' ) ); ?>"><?php echo esc_html( dentiste_schmitt_text( 'Découvrir le cabinet de Bassins', 'Discover our Bassins practice' ) ); ?></a>
-                    </p>
-                </div>
+    <section class="locations-section section-padding" id="nos-cabinets">
+        <div class="container">
+            <div class="section-intro">
+                <p class="eyebrow"><?php echo esc_html( dentiste_schmitt_text( 'Nos deux adresses', 'Our two locations' ) ); ?></p>
+                <h2><?php esc_html_e( 'Vos cabinets dentaires à Nyon et Bassins (Vaud)', 'dentiste-schmitt' ); ?></h2>
+                <p><?php esc_html_e( 'Chirurgie – Orthodontie – Prothèses esthétiques – Soins pédiatriques – Parodontologie', 'dentiste-schmitt' ); ?></p>
+            </div>
+            <div class="practice-grid">
+                <?php foreach ( dentiste_schmitt_locations() as $slug => $location ) :
+                    $photo = get_theme_mod( 'dentiste_schmitt_cabinet_' . $slug . '_1' );
+                    $photo = $photo ?: get_template_directory_uri() . ( 'nyon' === $slug ? '/images/1.webp' : '/images/cabinet-placeholder.svg' );
+                    $local_url = dentiste_schmitt_location_url( $slug );
+                ?>
+                <article class="practice-preview">
+                    <a class="practice-photo" href="<?php echo esc_url( $local_url ); ?>" aria-label="<?php echo esc_attr( dentiste_schmitt_text( 'Découvrir le cabinet de ', 'Explore our practice in ' ) . $location['city'] ); ?>">
+                        <?php echo dentiste_schmitt_image( $photo, dentiste_schmitt_text( 'Cabinet de ', 'Practice in ' ) . $location['city'], array( 'sizes' => '(max-width: 768px) 100vw, 50vw' ) ); ?>
+                        <span class="practice-photo-label"><?php echo esc_html( $location['city'] ); ?></span>
+                        <span class="practice-photo-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <div class="practice-preview-body">
+                        <p class="eyebrow"><?php echo esc_html( dentiste_schmitt_text( 'Cabinet dentaire', 'Dental practice' ) ); ?></p>
+                        <h3><a href="<?php echo esc_url( $local_url ); ?>"><?php echo esc_html( $location['city'] ); ?></a></h3>
+                        <p class="practice-street"><?php echo esc_html( $location['street'] ); ?><br><?php echo esc_html( $location['postcode'] . ' ' . $location['city'] ); ?></p>
+                        <p class="practice-hours"><?php echo esc_html( dentiste_schmitt_text( 'nyon' === $slug ? 'Lundi – vendredi · 8h00 – 18h00' : 'Mardi – jeudi · 8h30 – 18h00', 'nyon' === $slug ? 'Monday – Friday · 8:00 – 18:00' : 'Tuesday – Thursday · 8:30 – 18:00' ) ); ?></p>
+                        <a class="practice-phone" href="tel:<?php echo esc_attr( $location['telephone'] ); ?>"><?php echo esc_html( 'nyon' === $slug ? '+41 22 361 78 44' : '+41 22 365 26 26' ); ?></a>
+                        <div class="practice-preview-actions">
+                            <a class="text-link" href="<?php echo esc_url( $local_url ); ?>"><?php echo esc_html( dentiste_schmitt_text( 'Découvrir le cabinet', 'Explore the practice' ) ); ?><span aria-hidden="true">→</span></a>
+                            <a class="practice-booking" href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" rel="noopener noreferrer"><?php echo esc_html( dentiste_schmitt_text( 'RDV en ligne', 'Book online' ) ); ?><span class="screen-reader-text"> <?php echo esc_html( $location['city'] ); ?></span><span aria-hidden="true">↗</span></a>
+                        </div>
+                    </div>
+                </article>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
 
     <!-- 2. Cabinet Familial -->
-    <section class="section-padding">
+    <section class="section-padding family-intro">
         <div class="container">
+            <p class="eyebrow"><?php echo esc_html( dentiste_schmitt_text( 'Un cabinet, une histoire de famille', 'A practice, a family story' ) ); ?></p>
             <div class="alignwide">
                 <p class="lead text-center">
                     <?php esc_html_e( 'Dentiste Schmitt, c\'est un cabinet familial qui se transmet de père en fils, où la dentisterie globale est pratiquée. Le cabinet répond aux normes les plus sévères et les plus récentes en termes d’hygiène, de numérisation et de technologie. Nous sommes en partenariat avec un technicien dentaire installé à Nyon, au plus près du cabinet qui vous garantit un résultat esthétique et durable conforme à votre sensibilité.', 'dentiste-schmitt' ); ?>
@@ -63,9 +80,9 @@ get_header();
     </section>
 
     <!-- 3. Devenir un nouveau patient -->
-    <section class="section-padding bg-light">
+    <section class="section-padding bg-light patient-section">
         <div class="container">
-            <h2 class="text-center mb-5"><?php esc_html_e( 'Devenir un nouveau patient', 'dentiste-schmitt' ); ?></h2>
+            <h2 class="mb-5"><?php esc_html_e( 'Devenir un nouveau patient', 'dentiste-schmitt' ); ?></h2>
             <div class="two-columns-grid" style="align-items: center;">
                 <div class="text-content mb-5">
                     <p class="mb-4">
@@ -120,7 +137,7 @@ get_header();
     <section class="section-padding bg-light">
         <div class="container">
             <div class="text-center mb-5">
-                <h2>À propos</h2>
+                <h2><?php echo esc_html( dentiste_schmitt_text( 'À propos', 'About us' ) ); ?></h2>
             </div>
             <div class="alignwide" style="max-width: 900px; margin: 0 auto;">
                 <p class="mb-4">

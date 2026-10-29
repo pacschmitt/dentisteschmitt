@@ -61,6 +61,7 @@ def main():
     parser.add_argument('--base-url', required=True)
     parser.add_argument('--english', action='store_true')
     parser.add_argument('--local-pages', action='store_true')
+    parser.add_argument('--staging', action='store_true', help='Require noindex on every staging page')
     args = parser.parse_args()
     routes = ['', 'cabinets/', 'page-equipe/', 'page-infos/', 'page-soins/', 'tarifs/', 'mentions-legales/', 'protection-des-donnees/']
     if args.english:
@@ -76,7 +77,10 @@ def main():
         assert len(page.meta.get('description', [])) == 1, f'{route}: duplicate/missing description'
         assert len(page.canonicals) == 1 and page.canonicals[0] == final, f'{route}: incorrect canonical {page.canonicals}'
         assert len(page.meta.get('robots', [])) == 1, f'{route}: duplicate robots'
-        assert 'noindex' not in page.meta['robots'][0], f'{route}: public page is noindex'
+        if args.staging:
+            assert 'noindex' in page.meta['robots'][0], f'{route}: staging must be noindex'
+        else:
+            assert 'noindex' not in page.meta['robots'][0], f'{route}: public page is noindex'
         for key in ('og:title', 'og:description', 'og:url', 'og:type', 'og:locale', 'twitter:card'):
             assert len(page.meta.get(key, [])) == 1, f'{route}: duplicate/missing {key}'
         title = page.meta['og:title'][0]

@@ -28,6 +28,12 @@ Exécuter une fois avec AIOSEO, puis sans extension SEO pour vérifier le mécan
 
 ## Déploiement
 
-Sauvegarder le thème et la base, valider en préproduction, puis mettre à jour le dossier de thème existant `wp-content/themes/dentisteschmitt/`. Déployer les PHP à la racine, `style.css`, `theme.json` et les dossiers `inc`, `js`, `images` et `languages`. Ne pas déployer les documents, tests, fichiers Git ni le dossier historique imbriqué `wp-content/` du dépôt. Purger ensuite LiteSpeed et le cache Hostinger/CDN, et refaire les contrôles en production. Les réglages et médias sont conservés dans WordPress ; aucune migration automatique de la base n’est déclenchée par le thème.
+Sauvegarder le thème et la base, valider en préproduction, puis mettre à jour le dossier de thème existant `wp-content/themes/dentisteschmitt/`. Déployer les PHP à la racine, `style.css`, `theme.json` et les dossiers `inc`, `css`, `js`, `images` et `languages`. Ne pas déployer les documents, tests, fichiers Git ni le dossier historique imbriqué `wp-content/` du dépôt. Purger ensuite LiteSpeed et le cache Hostinger/CDN, et refaire les contrôles en production. Les réglages et médias sont conservés dans WordPress ; aucune migration automatique de la base n’est déclenchée par le thème.
 
 Les traductions anglaises de production sont stockées hors du thème, dans le répertoire personnalisé de Loco Translate. Préserver cet emplacement lors des futures migrations. Les deux nouvelles pages locales sont enregistrées dans la base WordPress ; le dépôt en conserve les textes dans `docs/SEO-LOCAL-CONTENUS.md`.
+
+## Design en staging
+
+La version `1.2.0-rc2` est installée uniquement sur [la copie de prévisualisation](https://design.dentisteschmittnyon.ch/?design=1.2.0-rc2), en attente de validation. La production reste en 1.1.1. Voir le [compte rendu du staging](docs/STAGING-DESIGN-2026-10-29.md). Les ajouts visuels se trouvent dans `css/premium.css` et `js/interactions.js`.
+
+Créer l’archive du thème avec `python3 scripts/package-theme.py`. Le dossier `dist/` est exclu de Git. Sur le staging, ajouter `--staging` à la commande de contrôle pour exiger noindex.

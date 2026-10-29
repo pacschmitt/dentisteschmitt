@@ -7,7 +7,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.1.1' );
+	define( '_S_VERSION', '1.2.0-rc2' );
 }
 
 /**
@@ -90,6 +90,9 @@ add_action( 'after_setup_theme', 'dentiste_schmitt_setup' );
 function dentiste_schmitt_scripts() {
 	wp_enqueue_style( 'dentiste-schmitt-style', get_stylesheet_uri(), array(), _S_VERSION );
 
+    wp_enqueue_style( 'dentiste-schmitt-premium', get_template_directory_uri() . '/css/premium.css', array( 'dentiste-schmitt-style' ), _S_VERSION );
+    wp_enqueue_script( 'dentiste-schmitt-interactions', get_template_directory_uri() . '/js/interactions.js', array(), _S_VERSION, true );
+
     // Google Fonts (Inter & Montserrat for better readability and a professional medical look)
     wp_enqueue_style( 'dentiste-schmitt-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap', array(), null );
 
@@ -117,72 +120,9 @@ require get_template_directory() . '/inc/customizer.php';
  */
 function dentiste_schmitt_floating_cta() {
     ?>
-    <style>
-        .floating-cta-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 999999;
-            background-color: var(--color-primary) !important; /* Terracotta Primary */
-            color: var(--color-white) !important;
-            padding: 16px 32px;
-            border-radius: 10px;
-            font-weight: 700;
-            box-shadow: 0 4px 20px rgba(127, 70, 48, 0.2);
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-size: 1rem;
-            border: 2px solid var(--color-white);
-            text-decoration: none;
-            font-family: var(--font-body);
-            cursor: pointer;
-            display: block;
-        }
-
-        .floating-cta-btn:hover {
-            background-color: var(--color-primary-dark) !important; /* Terracotta Accent/Dark */
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(127, 70, 48, 0.3);
-            color: var(--color-white) !important;
-        }
-
-        @media (max-width: 768px) {
-            .floating-cta-btn {
-                bottom: 16px;
-                right: 16px;
-                width: 56px;
-                height: 56px;
-                padding: 0;
-                border-radius: 999px;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 0.95rem;
-                letter-spacing: 0;
-                text-transform: uppercase;
-            }
-
-            /* Replace long label with compact “RDV” on mobile */
-            .floating-cta-btn {
-                font-size: 0; /* hide original text visually */
-            }
-            .floating-cta-btn::before {
-                content: 'RDV';
-                font-size: 0.95rem;
-                line-height: 1;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .floating-cta-btn {
-                width: 52px;
-                height: 52px;
-            }
-        }
-    </style>
     <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" rel="noopener noreferrer" class="floating-cta-btn">
-        <?php esc_html_e( 'Prendre RDV', 'dentiste-schmitt' ); ?>
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4m10-4v4M3 11h18m-13 5h8"/></svg>
+        <?php echo esc_html( dentiste_schmitt_text( 'RDV en ligne', 'Book online' ) ); ?>
     </a>
     <?php
 }

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <script>document.documentElement.classList.add('has-js');</script>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -26,10 +27,11 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Menu Principal', 'dentiste-schmitt' ); ?>">
-			<button type="button" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+			<button type="button" class="menu-toggle" aria-controls="navigation-panel" aria-expanded="false">
                 <span class="screen-reader-text"><?php esc_html_e( 'Menu', 'dentiste-schmitt' ); ?></span>
-                ☰
+                <span class="menu-toggle-lines" aria-hidden="true"></span>
             </button>
+			<div class="navigation-panel" id="navigation-panel">
 			<?php
 			wp_nav_menu(
 				array(
@@ -39,6 +41,8 @@
 				)
 			);
 			?>
+                <a class="header-booking" href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" rel="noopener noreferrer"><?php echo esc_html( dentiste_schmitt_text( 'Prendre rendez-vous', 'Book an appointment' ) ); ?><span aria-hidden="true">↗</span></a>
+            </div>
             <div class="lang-switcher">
                 <?php
                 if ( function_exists( 'pll_the_languages' ) ) {
