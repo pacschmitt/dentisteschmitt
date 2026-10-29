@@ -1,0 +1,33 @@
+PASS /: metadata, canonical, links, headings, schema
+PASS cabinets/: metadata, canonical, links, headings, schema
+PASS page-equipe/: metadata, canonical, links, headings, schema
+PASS page-infos/: metadata, canonical, links, headings, schema
+PASS page-soins/: metadata, canonical, links, headings, schema
+PASS tarifs/: metadata, canonical, links, headings, schema
+PASS mentions-legales/: metadata, canonical, links, headings, schema
+PASS protection-des-donnees/: metadata, canonical, links, headings, schema
+PASS en/: metadata, canonical, links, headings, schema
+PASS en/clinics/: metadata, canonical, links, headings, schema
+PASS en/team/: metadata, canonical, links, headings, schema
+PASS en/informations/: metadata, canonical, links, headings, schema
+PASS en/treatments/: metadata, canonical, links, headings, schema
+PASS en/prices/: metadata, canonical, links, headings, schema
+PASS en/legal-notice/: metadata, canonical, links, headings, schema
+PASS en/privacy-policy/: metadata, canonical, links, headings, schema
+PASS dentiste-nyon/: metadata, canonical, links, headings, schema
+PASS dentiste-bassins/: metadata, canonical, links, headings, schema
+PASS legacy links: 301 redirects to published pages
+PASS 404 + search: HTTP status and noindex; 18 public pages checked
+
+PASS assets: 14 images, stylesheets and scripts return HTTP 200
+PASS deployed version: 1.2.0-rc4 on checked staging routes, noindex preserved
+PASS production: remains on 1.1.1, no premium stylesheets, indexable
+PASS staging analytics: Site Kit tag absent
+
+PASS UI at 320px: all 16 interior FR/EN routes have scrollWidth == innerWidth
+PASS team filters: 3 dentists, 2 hygienists, 4 assistants, 9 total
+PASS English keyboard filter: Enter activates Hygienists, 2 team members announced
+PASS gallery: active slide 2 and 02 / 03 counter; native map opens
+PASS FAQ: answer opens and minus indicator has terracotta foreground on transparent background
+PASS legal contents: links resolve to their section IDs
+PASS content preservation: clinical descriptions and numeric tariff amounts retained

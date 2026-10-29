@@ -34,6 +34,6 @@ Les traductions anglaises de production sont stockées hors du thème, dans le r
 
 ## Design en staging
 
-La version `1.2.0-rc2` est installée uniquement sur [la copie de prévisualisation](https://design.dentisteschmittnyon.ch/?design=1.2.0-rc2), en attente de validation. La production reste en 1.1.1. Voir le [compte rendu du staging](docs/STAGING-DESIGN-2026-10-29.md). Les ajouts visuels se trouvent dans `css/premium.css` et `js/interactions.js`.
+La version `1.2.0-rc4` est installée uniquement sur [la copie de prévisualisation](https://design.dentisteschmittnyon.ch/?design=1.2.0-rc4), en attente de validation. La production reste en 1.1.1. Voir le [compte rendu des pages intérieures](docs/STAGING-PAGES-INTERIEURES-2026-10-29.md). Les ajouts visuels se trouvent dans `css/premium.css`, `css/interior.css` et `js/interactions.js`. Les éléments communs aux pages sont dans `inc/presentation.php`.
 
 Créer l’archive du thème avec `python3 scripts/package-theme.py`. Le dossier `dist/` est exclu de Git. Sur le staging, ajouter `--staging` à la commande de contrôle pour exiger noindex.

@@ -7,7 +7,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.2.0-rc2' );
+	define( '_S_VERSION', '1.2.0-rc4' );
 }
 
 /**
@@ -91,6 +91,7 @@ function dentiste_schmitt_scripts() {
 	wp_enqueue_style( 'dentiste-schmitt-style', get_stylesheet_uri(), array(), _S_VERSION );
 
     wp_enqueue_style( 'dentiste-schmitt-premium', get_template_directory_uri() . '/css/premium.css', array( 'dentiste-schmitt-style' ), _S_VERSION );
+    wp_enqueue_style( 'dentiste-schmitt-interior', get_template_directory_uri() . '/css/interior.css', array( 'dentiste-schmitt-premium' ), _S_VERSION );
     wp_enqueue_script( 'dentiste-schmitt-interactions', get_template_directory_uri() . '/js/interactions.js', array(), _S_VERSION, true );
 
     // Google Fonts (Inter & Montserrat for better readability and a professional medical look)
@@ -109,6 +110,7 @@ add_action( 'wp_enqueue_scripts', 'dentiste_schmitt_scripts' );
 
 // SEO defaults, plugin integration and local business data.
 require get_template_directory() . '/inc/seo.php';
+require get_template_directory() . '/inc/presentation.php';
 
 /**
  * Customizer additions.

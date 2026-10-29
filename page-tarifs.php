@@ -8,12 +8,10 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main container section-padding">
+<main id="primary" class="site-main container section-padding interior-page pricing-page">
 
-    <header class="entry-header text-center mb-5">
-        <h1 class="entry-title"><?php esc_html_e( 'Nos Tarifs', 'dentiste-schmitt' ); ?></h1>
-    </header>
-
+    <?php dentiste_schmitt_page_intro( __( 'Nos Tarifs', 'dentiste-schmitt' ), dentiste_schmitt_text( 'Des informations claires', 'Clear information' ) ); ?>
+    <nav class="page-jump-links" aria-label="<?php echo esc_attr( dentiste_schmitt_text( 'Sur cette page', 'On this page' ) ); ?>"><a href="#tarifs-soins"><?php echo esc_html( dentiste_schmitt_text( 'Consulter les tarifs', 'View fees' ) ); ?><span aria-hidden="true">↓</span></a><a href="#paiement"><?php echo esc_html( dentiste_schmitt_text( 'Moyens de paiement', 'Payment options' ) ); ?><span aria-hidden="true">↓</span></a></nav>
     <div class="alignwide text-center mb-5" style="max-width: 900px; margin: 0 auto;">
         <p class="lead">
             <?php esc_html_e( 'La confiance avec nos patients est essentielle. C’est pourquoi nous faisons le choix de la transparence totale sur nos tarifs.', 'dentiste-schmitt' ); ?>
@@ -24,7 +22,8 @@ get_header();
     </div>
 
     <!-- SSO Info -->
-    <div class="p-4 bg-light text-center" style="border-radius: 8px; max-width: 800px; margin: 60px auto;">
+    <div class="point-value-panel" style="border-radius: 8px; max-width: 800px; margin: 60px auto;">
+        <span class="point-value-number" aria-hidden="true">1.20<span>Dentotar</span></span>
         <p class="mb-0">
             <strong><?php esc_html_e( 'Valeur du point', 'dentiste-schmitt' ); ?> :</strong>
             <?php esc_html_e( 'Nous travaillons selon l’actuelle tarification de la SSO. La valeur du point Dentotar appliquée pour les soins est de 1.20.', 'dentiste-schmitt' ); ?>
@@ -32,7 +31,7 @@ get_header();
     </div>
 
     <!-- Prices Grid -->
-    <div class="tarifs-grid mb-5" style="max-width: 900px; margin: 60px auto;">
+    <div class="tarifs-grid mb-5" id="tarifs-soins" style="max-width: 900px; margin: 60px auto;">
         <h2 class="text-center mb-5 mt-5 pt-3"><?php esc_html_e( 'Nos soins dentaires et d’hygiène les plus demandés :', 'dentiste-schmitt' ); ?></h2>
 
         <div class="cards-grid">
@@ -88,7 +87,7 @@ get_header();
     </div>
 
     <!-- Mieux nous connaitre / Payment Details -->
-    <div class="alignwide" style="max-width: 900px; margin: 0 auto; margin-top: 60px;">
+    <div class="alignwide payment-section" id="paiement" style="max-width: 900px; margin: 0 auto; margin-top: 60px;">
         <h2 class="mb-4 text-center"><?php esc_html_e( 'Moyens et facilités de paiement', 'dentiste-schmitt' ); ?></h2>
 
         <div class="card p-5 bg-light" style="border: none;">
@@ -103,6 +102,7 @@ get_header();
         </div>
     </div>
 
+    <?php dentiste_schmitt_page_cta(); ?>
 </main><!-- #main -->
 
 <?php

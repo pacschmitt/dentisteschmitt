@@ -1,135 +1,51 @@
 <?php
-/**
- * Template Name: Page Cabinets
- *
- * @package Dentiste_Schmitt
- */
-
+/** Template Name: Page Cabinets */
 get_header();
-
-$fallback_img = get_template_directory_uri() . '/images/cabinet-placeholder.svg';
 ?>
-
-<main id="primary" class="site-main container section-padding">
-
-    <header class="entry-header text-center mb-5">
-        <h1 class="entry-title"><?php echo esc_html( dentiste_schmitt_text( 'Nos cabinets dentaires à Nyon et Bassins', 'Our dental practices in Nyon and Bassins' ) ); ?></h1>
-    </header>
-
-    <div class="alignwide text-center mb-5" style="max-width: 900px; margin: 0 auto;">
-        <p class="lead">
-            <?php echo esc_html( dentiste_schmitt_text( 'Nos deux cabinets dentaires et toutes leurs équipes vous accueillent chaleureusement pour vous offrir les meilleurs soins bucco-dentaires. Nous mettons toutes nos compétences et notre expérience au service de nos patients, enfant ou adulte, pour prévenir et soigner leur dentition.', 'Our teams welcome you to our two dental practices. We provide dental care for adults and children, with a focus on prevention and treatment tailored to each patient.' ) ); ?>
-        </p>
-        <p>
-            <?php esc_html_e( 'Contactez le cabinet pour prendre rendez-vous avec nos chirurgiens-dentistes et nos hygiénistes de qualité.', 'dentiste-schmitt' ); ?>
-        </p>
-    </div>
-
-    <div class="two-columns-grid" style="margin-top: 60px;">
-        <div id="cabinet-nyon" class="cabinet-nyon card">
-            <h2 class="mb-4"><a href="<?php echo esc_url( dentiste_schmitt_location_url( 'nyon' ) ); ?>"><?php esc_html_e( 'Cabinet Nyon', 'dentiste-schmitt' ); ?></a></h2>
-            <div class="mt-4 mb-4">
-                <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" rel="noopener noreferrer" class="btn btn-sm"><?php esc_html_e( 'Prendre RDV à Nyon', 'dentiste-schmitt' ); ?></a>
-            </div>
-
-            <div class="carousel" data-carousel tabindex="0" aria-label="<?php esc_attr_e( 'Photos du cabinet de Nyon', 'dentiste-schmitt' ); ?>">
-                <div class="carousel-track" data-carousel-track>
-                    <?php
-                    for ( $i = 1; $i <= 3; $i++ ) :
-                        $img_custom = get_theme_mod( "dentiste_schmitt_cabinet_nyon_{$i}" );
-                        // Fallbacks
-                        $exts = array( 1 => 'webp', 2 => 'jpg', 3 => 'webp' );
-                        $img_fallback = get_template_directory_uri() . "/images/{$i}." . $exts[$i];
-                        $img_final = $img_custom ? $img_custom : $img_fallback;
-                    ?>
-                    <div class="carousel-slide" data-carousel-slide aria-hidden="<?php echo $i === 1 ? 'false' : 'true'; ?>">
-                        <?php echo dentiste_schmitt_image( $img_final, sprintf( __( 'Cabinet Nyon - photo %d', 'dentiste-schmitt' ), $i ), array( 'style' => 'object-fit:cover; height:320px; width:100%;', 'sizes' => '(max-width: 768px) 100vw, 50vw', 'onerror' => "this.onerror=null;this.removeAttribute('srcset');this.src='" . esc_url( $fallback_img ) . "';" ) ); ?>
+<main id="primary" class="site-main container section-padding interior-page practices-page">
+    <?php dentiste_schmitt_page_intro( dentiste_schmitt_text( 'Nos cabinets dentaires à Nyon et Bassins', 'Our dental practices in Nyon and Bassins' ), dentiste_schmitt_text( 'Deux lieux, une même équipe', 'Two locations, one team' ) ); ?>
+    <nav class="page-jump-links" aria-label="<?php echo esc_attr( dentiste_schmitt_text( 'Choisir un cabinet', 'Choose a practice' ) ); ?>"><a href="#cabinet-nyon">Nyon <span aria-hidden="true">↓</span></a><a href="#cabinet-bassins">Bassins <span aria-hidden="true">↓</span></a></nav>
+    <?php foreach ( dentiste_schmitt_locations() as $slug => $location ) :
+        $map_query = rawurlencode( $location['street'] . ', ' . $location['postcode'] . ' ' . $location['city'] );
+    ?>
+    <section class="practice-detail card cabinet-<?php echo esc_attr( $slug ); ?>" id="cabinet-<?php echo esc_attr( $slug ); ?>">
+        <header class="practice-detail-title"><p class="eyebrow"><?php echo esc_html( dentiste_schmitt_text( 'Cabinet dentaire', 'Dental practice' ) ); ?></p><h2><a href="<?php echo esc_url( dentiste_schmitt_location_url( $slug ) ); ?>"><?php echo esc_html( $location['city'] ); ?></a></h2></header>
+        <div class="practice-detail-layout">
+            <div class="practice-gallery">
+                <div class="carousel" data-carousel tabindex="0" aria-label="<?php echo esc_attr( dentiste_schmitt_text( 'Photos du cabinet de ', 'Photos of our practice in ' ) . $location['city'] ); ?>">
+                    <div class="carousel-track" data-carousel-track>
+                        <?php for ( $i = 1; $i <= 3; $i++ ) :
+                            $custom = get_theme_mod( "dentiste_schmitt_cabinet_{$slug}_{$i}" );
+                            $extensions = array( 1 => 'webp', 2 => 'jpg', 3 => 'webp' );
+                            $fallback = get_template_directory_uri() . ( 'nyon' === $slug ? '/images/' . $i . '.' . $extensions[$i] : '/images/cabinet-placeholder.svg' );
+                            $photo = $custom ?: $fallback;
+                        ?>
+                        <div class="carousel-slide" data-carousel-slide aria-hidden="<?php echo 1 === $i ? 'false' : 'true'; ?>">
+                            <?php echo dentiste_schmitt_image( $photo, dentiste_schmitt_text( 'Cabinet de ', 'Practice in ' ) . $location['city'] . ' — ' . $i, array( 'sizes' => '(max-width: 768px) 100vw, 55vw' ) ); ?>
+                        </div>
+                        <?php endfor; ?>
                     </div>
-                    <?php endfor; ?>
+                    <div class="carousel-nav">
+                        <button type="button" class="carousel-btn" data-carousel-prev aria-label="<?php esc_attr_e( 'Photo précédente', 'dentiste-schmitt' ); ?>">‹</button>
+                        <button type="button" class="carousel-btn" data-carousel-next aria-label="<?php esc_attr_e( 'Photo suivante', 'dentiste-schmitt' ); ?>">›</button>
+                    </div>
                 </div>
-                <div class="carousel-nav">
-                    <button type="button" class="carousel-btn" data-carousel-prev aria-label="<?php esc_attr_e( 'Photo précédente', 'dentiste-schmitt' ); ?>">‹</button>
-                    <button type="button" class="carousel-btn" data-carousel-next aria-label="<?php esc_attr_e( 'Photo suivante', 'dentiste-schmitt' ); ?>">›</button>
-                </div>
+                <div class="carousel-dots" data-carousel-dots></div>
+                <details class="practice-map"><summary><?php echo esc_html( dentiste_schmitt_text( 'Voir la carte et préparer mon trajet', 'View the map and plan my journey' ) ); ?></summary>
+                    <div class="map-embed"><iframe title="<?php echo esc_attr( $location['city'] . ' — Google Maps' ); ?>" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://www.google.com/maps?q=<?php echo esc_attr( $map_query ); ?>&amp;output=embed"></iframe></div>
+                </details>
             </div>
-            <div class="carousel-dots" data-carousel-dots></div>
-
-            <p>
-                <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> <?php esc_html_e( 'Adresse :', 'dentiste-schmitt' ); ?></strong><br>
-                <?php echo wp_kses_post( __( 'Avenue Reverdil 2<br>1260 Nyon', 'dentiste-schmitt' ) ); ?>
-            </p>
-            <p>
-                <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> <?php esc_html_e( 'Téléphone :', 'dentiste-schmitt' ); ?></strong><br>
-                <a href="tel:+41223617844">+41 22 361 78 44</a>
-            </p>
-            <p>
-                <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> <?php esc_html_e( 'Email :', 'dentiste-schmitt' ); ?></strong><br>
-                <a href="mailto:drschmitt.nyon@bluewin.ch">drschmitt.nyon@bluewin.ch</a>
-            </p>
-            <div class="map-embed mt-4" aria-label="<?php esc_attr_e( 'Carte Google Maps - Cabinet Nyon', 'dentiste-schmitt' ); ?>">
-                <iframe
-                    title="<?php esc_attr_e( 'Cabinet Nyon - Google Maps', 'dentiste-schmitt' ); ?>"
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    allowfullscreen
-                    src="https://www.google.com/maps?q=Avenue%20Reverdil%202%2C%201260%20Nyon&output=embed">
-                </iframe>
+            <div class="practice-detail-information">
+                <?php dentiste_schmitt_practice_contact( $slug ); ?>
+                <a class="btn" href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" rel="noopener noreferrer"><?php echo esc_html( dentiste_schmitt_text( 'Prendre RDV à ', 'Book in ' ) . $location['city'] ); ?><span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="<?php echo esc_url( dentiste_schmitt_location_url( $slug ) ); ?>"><?php echo esc_html( dentiste_schmitt_text( 'Découvrir le cabinet de ', 'Explore our practice in ' ) . $location['city'] ); ?><span aria-hidden="true">→</span></a>
             </div>
         </div>
-
-        <div id="cabinet-bassins" class="cabinet-bassins card">
-            <h2 class="mb-4"><a href="<?php echo esc_url( dentiste_schmitt_location_url( 'bassins' ) ); ?>"><?php esc_html_e( 'Cabinet Bassins', 'dentiste-schmitt' ); ?></a></h2>
-            <div class="mt-4 mb-4">
-                <a href="https://booking.denteo.com/fr/edf983884f60c2615958c45caa5e1e93/" target="_blank" rel="noopener noreferrer" class="btn btn-sm"><?php esc_html_e( 'Prendre RDV à Bassins', 'dentiste-schmitt' ); ?></a>
-            </div>
-
-            <div class="carousel" data-carousel tabindex="0" aria-label="<?php esc_attr_e( 'Photos du cabinet de Bassins', 'dentiste-schmitt' ); ?>">
-                <div class="carousel-track" data-carousel-track>
-                    <?php
-                    for ( $i = 1; $i <= 3; $i++ ) :
-                        $img_custom = get_theme_mod( "dentiste_schmitt_cabinet_bassins_{$i}" );
-                        // Fallbacks
-                        $exts = array( 1 => 'webp', 2 => 'jpg', 3 => 'webp' );
-                        $img_fallback = get_template_directory_uri() . "/images/{$i}." . $exts[$i];
-                        $img_final = $img_custom ? $img_custom : $img_fallback;
-                    ?>
-                    <div class="carousel-slide" data-carousel-slide aria-hidden="<?php echo $i === 1 ? 'false' : 'true'; ?>">
-                        <?php echo dentiste_schmitt_image( $img_final, sprintf( __( 'Cabinet Bassins - photo %d', 'dentiste-schmitt' ), $i ), array( 'style' => 'object-fit:cover; height:320px; width:100%;', 'sizes' => '(max-width: 768px) 100vw, 50vw', 'onerror' => "this.onerror=null;this.removeAttribute('srcset');this.src='" . esc_url( $fallback_img ) . "';" ) ); ?>
-                    </div>
-                    <?php endfor; ?>
-                </div>
-                <div class="carousel-nav">
-                    <button type="button" class="carousel-btn" data-carousel-prev aria-label="<?php esc_attr_e( 'Photo précédente', 'dentiste-schmitt' ); ?>">‹</button>
-                    <button type="button" class="carousel-btn" data-carousel-next aria-label="<?php esc_attr_e( 'Photo suivante', 'dentiste-schmitt' ); ?>">›</button>
-                </div>
-            </div>
-            <div class="carousel-dots" data-carousel-dots></div>
-
-            <p>
-                <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> <?php esc_html_e( 'Adresse :', 'dentiste-schmitt' ); ?></strong><br>
-                <?php echo wp_kses_post( __( 'Ruelle de la Repentance 4<br>1269 Bassins', 'dentiste-schmitt' ) ); ?>
-            </p>
-            <p>
-                <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> <?php esc_html_e( 'Téléphone :', 'dentiste-schmitt' ); ?></strong><br>
-                <a href="tel:+41223652626">+41 22 365 26 26</a>
-            </p>
-            <p>
-                <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> <?php esc_html_e( 'Email :', 'dentiste-schmitt' ); ?></strong><br>
-                <a href="mailto:cabinetdentairebassins@gmail.com">cabinetdentairebassins@gmail.com</a>
-            </p>
-            <div class="map-embed mt-4" aria-label="<?php esc_attr_e( 'Carte Google Maps - Cabinet Bassins', 'dentiste-schmitt' ); ?>">
-                <iframe
-                    title="<?php esc_attr_e( 'Cabinet Bassins - Google Maps', 'dentiste-schmitt' ); ?>"
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    allowfullscreen
-                    src="https://www.google.com/maps?q=Ruelle%20de%20la%20Repentance%204%2C%201269%20Bassins&output=embed">
-                </iframe>
-            </div>
-        </div>
+    </section>
+    <?php endforeach; ?>
+    <div class="page-opening-copy">
+        <p class="lead"><?php echo esc_html( dentiste_schmitt_text( 'Nos deux cabinets dentaires et toutes leurs équipes vous accueillent chaleureusement pour vous offrir les meilleurs soins bucco-dentaires. Nous mettons toutes nos compétences et notre expérience au service de nos patients, enfant ou adulte, pour prévenir et soigner leur dentition.', 'Our teams welcome you to our two dental practices. We provide dental care for adults and children, with a focus on prevention and treatment tailored to each patient.' ) ); ?></p>
+        <p><?php esc_html_e( 'Contactez le cabinet pour prendre rendez-vous avec nos chirurgiens-dentistes et nos hygiénistes de qualité.', 'dentiste-schmitt' ); ?></p>
     </div>
-
-</main><!-- #main -->
-
-<?php
-get_footer();
+</main>
+<?php get_footer(); ?>

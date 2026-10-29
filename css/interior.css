@@ -1,0 +1,238 @@
+/* Interior pages: same palette and type, layouts fitted to each kind of content. */
+.interior-page { padding-top: 42px; padding-bottom: 80px; }
+.page-intro { padding-bottom: 36px; margin-bottom: 36px; border-bottom: 1px solid var(--color-border); }
+.page-breadcrumb { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; margin-bottom: 42px; color: var(--color-text-light); font-size: .73rem; line-height: 1.6; }
+.page-breadcrumb a { color: var(--color-text-light); }
+.page-breadcrumb a:hover { color: var(--color-primary); }
+.page-breadcrumb [aria-current] { max-width: 80%; }
+.page-intro .eyebrow { margin: 0 0 16px; }
+.page-intro .entry-title { text-align: left; margin: 0; max-width: 950px; font-size: clamp(2.2rem,4.5vw,3.65rem); font-weight: 500; line-height: 1.13; letter-spacing: -.04em; }
+.page-intro-lead { text-align: left; margin: 24px 0 0; max-width: 660px; font-size: 1.08rem; color: var(--color-text-light); line-height: 1.8; }
+.interior-page > .alignwide.text-center, .page-opening-copy, .information-page .info-content > .text-center { max-width: 800px !important; margin: 0 0 42px !important; text-align: left; }
+.interior-page > .alignwide p, .page-opening-copy p, .information-page .info-content > .text-center p { margin-inline: 0; }
+.interior-page .lead { font-size: 1.1rem; line-height: 1.8; }
+.page-jump-links { display: flex; flex-wrap: wrap; gap: 12px; padding: 0; margin: 28px 0 42px; }
+.page-jump-links a { display: inline-flex; align-items: center; gap: 28px; padding: 13px 20px; border: 1px solid var(--color-border); border-radius: 8px; font-size: .86rem; background: var(--color-bg-surface); transition: border-color 180ms, background-color 180ms; }
+.page-jump-links a:hover { border-color: var(--color-primary); background: var(--color-bg-secondary); }
+.page-appointment { display: flex; align-items: center; justify-content: space-between; gap: 40px; background: var(--color-primary); color: #fff; border-radius: 12px; padding: 46px; margin-top: 72px; }
+.page-appointment .eyebrow { color: rgba(255,255,255,.75); margin-bottom: 16px; }
+.page-appointment h2 { color: #fff; font-size: clamp(1.55rem,2.5vw,2rem); font-weight: 500; letter-spacing: -.025em; margin-bottom: 16px; }
+.page-appointment p { text-align: left; font-size: .9rem; color: rgba(255,255,255,.85); margin-inline: 0; }
+.page-appointment .btn { display: inline-flex; flex-shrink: 0; align-items: center; gap: 24px; background: var(--color-bg-surface) !important; color: var(--color-primary) !important; border-color: var(--color-bg-surface) !important; font-size: .88rem; padding: 16px 22px; }
+.page-appointment .btn:hover { background: #fff !important; }
+/* Team: keep the actual people and portraits; missing photos use neutral initials. */
+.team-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin: 0 0 30px; }
+.team-toolbar[hidden] { display: none; }
+.team-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.team-page .team-toolbar .team-filters .team-filter { border: 1px solid var(--color-border) !important; background: transparent !important; color: var(--color-text-light) !important; border-radius: 7px; box-shadow: none; font-size: .8rem; font-weight: 500; padding: 11px 16px; transition: background-color 180ms, border-color 180ms; }
+.team-page .team-toolbar .team-filters .team-filter:hover { border-color: var(--color-primary) !important; transform: none; box-shadow: none; }
+.team-page .team-toolbar .team-filters .team-filter[aria-pressed="true"] { background: var(--color-primary) !important; color: #fff !important; border-color: var(--color-primary) !important; }
+.team-count { margin: 0; font-size: .75rem; color: var(--color-text-light); white-space: nowrap; }
+.team-grid .cards-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 32px; margin-top: 0; align-items: start; }
+.team-card { min-width: 0; }
+.team-card[hidden] { display: none; }
+.team-portrait { aspect-ratio: 4/4.4; border-radius: 10px; overflow: hidden; background: var(--color-bg-secondary); border: 1px solid rgba(117,72,52,.08); }
+.team-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; transition: transform 600ms var(--ease-soft); }
+@media (hover:hover) { .team-card:hover img { transform: scale(1.025); } }
+.team-monogram { display: grid; place-items: center; width: 100%; height: 100%; font-family: var(--font-heading); font-size: clamp(3rem,5vw,5rem); font-weight: 500; color: rgba(117,72,52,.38); background: linear-gradient(145deg,var(--color-bg-secondary),var(--color-bg-surface)); letter-spacing: -.06em; }
+.team-card-caption { padding: 20px 0 24px; border-bottom: 1px solid var(--color-border); }
+.team-card-caption h3 { text-align: left; font-size: 1.12rem; font-weight: 600; margin: 0 0 9px; color: var(--color-text); line-height: 1.5; }
+.team-card-caption p { text-align: left; margin: 0; color: var(--color-primary); font-size: .8rem; font-weight: 400; }
+.team-approach { padding-top: 60px; margin-top: 20px; max-width: 880px; }
+.team-approach > .alignwide { text-align: left; margin: 0 !important; }
+.team-approach p { margin-inline: 0; }
+/* Shared address and access descriptions. */
+.contact-list { margin: 0; }
+.contact-list > div { display: grid; grid-template-columns: 92px minmax(0,1fr); gap: 14px; padding-block: 15px; border-bottom: 1px solid rgba(117,72,52,.12); }
+.contact-list dt { font-size: .7rem; font-weight: 500; color: var(--color-text-light); padding-top: 3px; }
+.contact-list dd { margin: 0; font-size: .88rem; line-height: 1.75; overflow-wrap: anywhere; }
+.contact-list > div:first-child { padding-top: 0; }
+.contact-list > div:last-child { border-bottom: 0; }
+.practice-detail.card { display: block; padding: 0; background: transparent; border: 0; border-radius: 0; box-shadow: none; overflow: visible; height: auto; margin-top: 62px; }
+.practice-detail.card:hover { transform: none; box-shadow: none; }
+.practice-detail + .practice-detail { padding-top: 58px; border-top: 1px solid var(--color-border); }
+.practice-detail-title { margin-bottom: 28px; }
+.practice-detail-title .eyebrow { margin-bottom: 10px; }
+.practice-detail-title h2 { margin: 0; font-size: 2.6rem; font-weight: 500; letter-spacing: -.035em; }
+.practice-detail-layout { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,1fr); gap: 56px; align-items: start; }
+.practice-gallery { min-width: 0; }
+.practice-gallery .carousel-slide { aspect-ratio: 4/3; }
+.practice-gallery .carousel-slide img { height: 100%; width: 100%; object-fit: cover; }
+.practice-gallery .carousel-dots { justify-content: flex-start; padding-top: 0; margin-top: -18px; width: fit-content; }
+.practice-gallery .carousel-count { margin-top: 14px; }
+.practice-detail-information .btn { display: inline-flex; gap: 20px; align-items: center; padding: 14px 20px; font-size: .86rem; margin-top: 26px; }
+.practice-detail-information > .text-link { display: flex; width: fit-content; margin-top: 22px; }
+.practice-map { margin-top: 28px; border-block: 1px solid var(--color-border); }
+.practice-map summary { cursor: pointer; padding: 18px 28px 18px 0; font-size: .83rem; color: var(--color-primary); list-style: none; position: relative; }
+.practice-map summary::-webkit-details-marker { display: none; }
+.practice-map summary::after { content: '+'; position: absolute; right: 4px; }
+.practice-map[open] summary::after { content: '−'; }
+.practice-map .map-embed { margin-bottom: 16px; }
+/* Contacts and frequently asked questions. */
+.information-page .info-content { max-width: none !important; margin: 0 !important; }
+.contact-cards { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px; }
+.contact-card { padding: 34px; background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: 10px; }
+.contact-card .eyebrow { margin-bottom: 12px; }
+.contact-card h2 { font-size: 2rem; font-weight: 500; letter-spacing: -.025em; margin-bottom: 26px; }
+.contact-card > .text-link { margin-top: 22px; }
+.information-page .faq-section { display: grid; grid-template-columns: minmax(0,.65fr) minmax(0,1.35fr); gap: 56px; margin-top: 84px; background: transparent; box-shadow: none; }
+.faq-heading { align-self: start; position: sticky; top: 118px; }
+.faq-heading h2 { font-size: 1.8rem; font-weight: 500; letter-spacing: -.025em; line-height: 1.35; margin-bottom: 18px; }
+.faq-heading h2 svg { display: none; }
+.faq-heading p { font-size: .9rem; margin-inline: 0; text-align: left; }
+.information-page .faq-section details { margin: 0; border: 0; border-bottom: 1px solid var(--color-border); border-radius: 0; background: transparent; box-shadow: none; }
+.information-page .faq-section details[open] { background: var(--color-bg-surface); }
+.information-page .faq-section summary { font-size: .97rem; font-weight: 500; padding: 24px 48px 24px 0; }
+.information-page .faq-section summary:hover, .information-page .faq-section details[open] summary { background: transparent; }
+.information-page .faq-section summary::after { background: transparent; color: var(--color-primary); border: 1px solid var(--color-border); font-weight: 400; right: 0; }
+.information-page .faq-section .faq-content { background: transparent; padding: 0 24px 28px 0 !important; animation: detail-arrive 240ms ease; }
+.information-page .faq-section details p { border: 0; padding: 0; font-size: .9rem; }
+/* Care as a clear numbered list, retaining the native details interactions. */
+.care-layout { display: grid; grid-template-columns: minmax(0,.65fr) minmax(0,1.35fr); gap: 64px; margin-top: 56px; align-items: start; }
+.care-heading { position: sticky; top: 118px; }
+.care-heading h2 { text-align: left; font-weight: 500; font-size: 1.65rem; margin: 0; line-height: 1.4; letter-spacing: -.025em; }
+.care-page .soins-grid { display: block; margin: 0; }
+.care-page .soin-details.card { display: block; height: auto; padding: 0; border: 0; border-radius: 0; border-bottom: 1px solid var(--color-border); background: transparent; box-shadow: none; overflow: visible; }
+.care-page .soin-details:first-child { border-top: 1px solid var(--color-border); }
+.care-page .soin-details:hover { transform: none; background: var(--color-bg-surface); }
+.care-page .soin-details summary { display: grid; grid-template-columns: 36px minmax(0,1fr); column-gap: 16px; padding: 28px 48px 28px 0; position: relative; }
+.care-number { grid-row: 1/3; padding-top: 3px; font-size: .7rem; color: var(--color-primary); font-variant-numeric: tabular-nums; letter-spacing: .06em; }
+.care-page .soin-details h3 { font-size: 1.08rem; line-height: 1.55; margin: 0 0 10px; font-weight: 600; }
+.care-page .soin-preview { grid-column: 2; font-size: .86rem; color: var(--color-text-light); line-height: 1.7; }
+.care-page .soin-details summary::after { position: absolute; right: 0; top: 28px; display: grid; place-items: center; width: 29px; height: 29px; margin: 0; border: 1px solid var(--color-border); border-radius: 50%; font-size: 1rem; }
+.care-page .soin-details .soin-description { padding: 0 36px 28px 52px; margin: 0; border: 0; font-size: .91rem; color: var(--color-text); line-height: 1.85; }
+.care-page .soin-details[open] h3 { color: var(--color-primary); }
+/* Tariffs: keep the values unchanged, align labels and amounts. */
+.point-value-panel { max-width: none !important; margin: 36px 0 60px !important; padding: 28px 34px; display: grid; grid-template-columns: 150px minmax(0,1fr); gap: 36px; align-items: center; border-block: 1px solid var(--color-border); border-radius: 0 !important; background: var(--color-bg-secondary); }
+.point-value-number { font-family: var(--font-heading); font-weight: 500; font-size: 3rem; letter-spacing: -.05em; color: var(--color-primary); }
+.point-value-number > span { display: block; font-family: var(--font-body); font-size: .65rem; letter-spacing: .15em; text-transform: uppercase; margin-top: 4px; }
+.point-value-panel p { margin: 0; font-size: .9rem; line-height: 1.85; }
+.pricing-page .tarifs-grid { max-width: none !important; margin: 0 !important; }
+.pricing-page .tarifs-grid > h2 { text-align: left; margin: 0 0 30px; padding: 0; max-width: 700px; font-size: 1.65rem; font-weight: 500; line-height: 1.4; }
+.pricing-page .tarifs-grid .cards-grid { margin-top: 0; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px; }
+.pricing-page .tarifs-grid .card { padding: 30px; border: 1px solid var(--color-border); border-radius: 10px; box-shadow: none; text-align: left; height: auto; }
+.pricing-page .tarifs-grid .card:hover { transform: none; box-shadow: none; }
+.pricing-page .tarifs-grid .card h3 { font-size: 1.15rem; font-weight: 600; }
+.pricing-page .tarifs-grid .card li { display: grid !important; grid-template-columns: minmax(0,1fr) auto; align-items: start !important; gap: 20px; padding: 20px 0 !important; border-bottom-style: solid !important; font-size: .88rem; }
+.pricing-page .tarifs-grid .card li:last-child { border-bottom: 0 !important; }
+.pricing-page .tarifs-grid .card li > strong { margin: 0 !important; font-size: .94rem; font-weight: 500; font-variant-numeric: tabular-nums; }
+.pricing-page .tarifs-grid .card small { font-size: .76rem; display: inline-block; margin-top: 4px; }
+.payment-section { max-width: none !important; margin-top: 64px !important; }
+.payment-section > h2 { text-align: left; font-size: 1.65rem; font-weight: 500; }
+.payment-section .card { padding: 32px; background: var(--color-bg-secondary); box-shadow: none; text-align: left; height: auto; }
+.payment-section .card:hover { transform: none; box-shadow: none; }
+.payment-section .card p { margin-inline: 0; color: var(--color-text); }
+.payment-section .card li { padding-left: 8px; font-size: .9rem; }
+/* Local pages and legal documents have their own reading layouts. */
+.local-page-layout { display: grid; grid-template-columns: minmax(0,1.7fr) minmax(0,1fr); gap: 64px; align-items: start; }
+.local-page-layout .local-practice-content { max-width: none; margin: 0; }
+.local-page-layout .entry-content p { margin-inline: 0; font-size: .95rem; line-height: 1.9; }
+.local-page-layout .entry-content h2 { font-weight: 500; letter-spacing: -.02em; font-size: 1.4rem; line-height: 1.45; }
+.local-practice-sidebar { position: sticky; top: 112px; border: 1px solid var(--color-border); border-radius: 10px; overflow: hidden; background: var(--color-bg-surface); }
+.local-practice-sidebar > img { width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; }
+.local-contact-panel { padding: 26px; }
+.local-contact-panel .eyebrow { margin-bottom: 24px; }
+.local-contact-panel .contact-list > div { grid-template-columns: 1fr; gap: 3px; }
+.local-contact-panel .btn { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; font-size: .81rem; margin-top: 22px; }
+.document-layout { display: grid; grid-template-columns: 215px minmax(0,1fr); gap: 72px; }
+.document-nav { position: sticky; top: 112px; align-self: start; }
+.document-nav .eyebrow { font-size: .65rem; margin-bottom: 18px; }
+.document-nav ol { list-style: none; margin: 0; padding: 0; }
+.document-nav li { margin-bottom: 0; border-bottom: 1px solid var(--color-border); }
+.document-nav a { display: block; padding: 12px 0; font-size: .8rem; line-height: 1.6; color: var(--color-text-light); transition: color 180ms; }
+.document-nav a:hover, .document-nav a[aria-current="location"] { color: var(--color-primary); }
+.document-layout .legal-content { max-width: 790px !important; margin: 0 !important; }
+.document-layout .legal-content h2 { font-size: 1.3rem; font-weight: 500; line-height: 1.45; margin-top: 0; scroll-margin-top: 120px; }
+.document-layout .legal-content p, .document-layout .legal-content li { font-size: .92rem; line-height: 1.9; overflow-wrap: anywhere; }
+.document-layout .legal-content hr { margin-block: 36px; height: 1px; border: 0; background: var(--color-border); }
+.document-reading { max-width: 800px; }
+@media (max-width:992px) {
+ .team-grid .cards-grid { gap: 24px; }
+ .practice-detail-layout { gap: 30px; }
+ .contact-list > div { grid-template-columns: 78px minmax(0,1fr); gap: 10px; }
+ .contact-card { padding: 24px; }
+ .information-page .faq-section, .care-layout { gap: 32px; grid-template-columns: minmax(0,.65fr) minmax(0,1.35fr); }
+ .document-layout { grid-template-columns: 180px minmax(0,1fr); gap: 36px; }
+ .local-page-layout { gap: 32px; }
+ .local-contact-panel { padding: 20px; }
+ .page-appointment { padding: 34px; gap: 28px; }
+}
+@media (max-width:768px) {
+ .interior-page { padding-top: 26px; padding-bottom: 60px; }
+ .page-breadcrumb { font-size: .66rem; gap: 8px; margin-bottom: 30px; }
+ .page-intro { margin-bottom: 28px; padding-bottom: 28px; }
+ .page-intro .eyebrow { font-size: .64rem; letter-spacing: .12em; }
+ .page-intro .entry-title { font-size: clamp(2rem,7.5vw,2.8rem); line-height: 1.15; }
+ .page-intro-lead, .interior-page .lead { font-size: 1rem; line-height: 1.8; }
+ .page-appointment { margin-top: 48px; padding: 28px 24px; flex-direction: column; align-items: flex-start; gap: 24px; }
+ .page-appointment .btn { width: 100%; justify-content: space-between; }
+ .team-toolbar { align-items: flex-start; flex-direction: column; gap: 14px; }
+ .team-filters { gap: 7px; }
+ .team-page .team-toolbar .team-filters .team-filter { padding: 11px 12px; font-size: .74rem; }
+ .team-grid .cards-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px 18px; }
+ .team-portrait { aspect-ratio: 4/5; }
+ .team-monogram { font-size: 2.6rem; }
+ .team-card-caption { padding-block: 15px 18px; }
+ .team-card-caption h3 { font-size: .9rem; }
+ .team-card-caption p { font-size: .72rem; }
+ .team-approach { padding-top: 40px; }
+ .practice-detail-layout, .contact-cards, .care-layout, .information-page .faq-section, .local-page-layout, .document-layout { grid-template-columns: minmax(0,1fr); gap: 28px; }
+ .page-jump-links { margin-bottom: 32px; gap: 9px; }
+ .page-jump-links a { padding: 12px 16px; gap: 22px; font-size: .8rem; }
+ .practice-detail.card { margin-top: 36px; }
+ .practice-detail + .practice-detail { padding-top: 36px; }
+ .practice-detail-title h2 { font-size: 2.1rem; }
+ .practice-detail-title { margin-bottom: 22px; }
+ .practice-gallery .carousel-slide { aspect-ratio: 4/3; }
+ .practice-detail-information .btn { width: 100%; justify-content: space-between; }
+ .contact-list > div { grid-template-columns: 78px minmax(0,1fr); padding-block: 14px; }
+ .contact-list dd { font-size: .83rem; }
+ .contact-card { padding: 26px 22px; }
+ .contact-card h2 { margin-bottom: 24px; }
+ .faq-heading, .care-heading, .document-nav, .local-practice-sidebar { position: static; }
+ .information-page .faq-section { margin-top: 52px; gap: 20px; }
+ .faq-heading h2 { font-size: 1.65rem; }
+ .information-page .faq-section summary { font-size: .9rem; padding-block: 21px; }
+ .care-layout { margin-top: 36px; gap: 28px; }
+ .care-heading h2 { font-size: 1.4rem; }
+ .care-page .soin-details summary { grid-template-columns: 24px minmax(0,1fr); gap: 10px; padding-block: 24px; padding-right: 38px; }
+ .care-page .soin-details h3 { font-size: 1rem; }
+ .care-page .soin-preview { font-size: .82rem; }
+ .care-page .soin-details summary::after { width: 26px; height: 26px; top: 24px; }
+ .care-page .soin-details .soin-description { padding: 0 12px 24px 34px; font-size: .87rem; }
+ .point-value-panel { padding: 24px; grid-template-columns: 1fr; gap: 18px; margin-bottom: 40px !important; }
+ .point-value-number { font-size: 2.4rem; }
+ .pricing-page .tarifs-grid > h2, .payment-section > h2 { font-size: 1.4rem; }
+ .pricing-page .tarifs-grid .cards-grid { grid-template-columns: minmax(0,1fr); gap: 22px; }
+ .pricing-page .tarifs-grid .card { padding: 26px 22px; }
+ .pricing-page .tarifs-grid .card li { gap: 14px; }
+ .pricing-page .tarifs-grid .card li > strong { font-size: .87rem; }
+ .payment-section { margin-top: 42px !important; }
+ .payment-section .card { padding: 25px 22px; }
+ .payment-section .card ul { padding-left: 16px !important; margin-left: 0 !important; }
+ .local-practice-sidebar { margin-top: 12px; }
+ .local-practice-sidebar > img { aspect-ratio: 16/9; }
+ .local-contact-panel { padding: 26px; }
+ .local-contact-panel .contact-list > div { grid-template-columns: 78px minmax(0,1fr); gap: 12px; }
+ .document-nav { margin-bottom: 14px; padding-bottom: 22px; border-bottom: 1px solid var(--color-border); }
+ .document-nav ol { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 18px; }
+ .document-nav a { font-size: .74rem; }
+ .document-layout .legal-content h2 { font-size: 1.2rem; }
+}
+@media (max-width:360px) {
+ .team-grid .cards-grid { gap: 22px 14px; }
+ .team-card-caption h3 { font-size: .84rem; }
+ .contact-list > div { grid-template-columns: minmax(0,1fr); gap: 4px; }
+ .pricing-page .tarifs-grid .card li { grid-template-columns: minmax(0,1fr); gap: 7px; }
+ .pricing-page .tarifs-grid .card li > strong { justify-self: start; }
+ .local-contact-panel .contact-list > div { grid-template-columns: minmax(0,1fr); gap: 4px; }
+}
+
+.practice-detail-title h2 { text-align: left; }
+.practices-page > .page-opening-copy { margin-top: 64px !important; padding-top: 34px; border-top: 1px solid var(--color-border); }
+.page-appointment h2, .contact-card h2, .pricing-page .tarifs-grid .card h3,
+.local-page-layout .entry-content h2, .document-layout .legal-content h2 { text-align: left; }
+.team-page .team-toolbar .team-filters .team-filter { min-height: 44px; }
+.information-page .faq-section details[open] summary::after { background: transparent; color: var(--color-primary); }
+.document-layout .legal-content p, .document-layout .legal-content ul,
+.document-layout .legal-content ol { margin-left: 0; margin-right: 0; }

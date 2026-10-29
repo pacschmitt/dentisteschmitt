@@ -6,6 +6,7 @@ Run with AIOSEO enabled, then disabled, to check the theme fallback as well.
 """
 import argparse
 import json
+import re
 import subprocess
 from html.parser import HTMLParser
 from urllib.parse import urljoin, urlparse
@@ -17,11 +18,14 @@ class Page(HTMLParser):
         self.meta, self.canonicals, self.links, self.schemas = {}, [], [], []
         self.h1, self.details = 0, 0
         self.alternates = []
+        self.ids = []
         self.schema = None
         self.feed(source)
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
+        if a.get('id'):
+            self.ids.append(a['id'])
         if tag == 'meta':
             key = a.get('name', a.get('property', ''))
             self.meta.setdefault(key, []).append(a.get('content', ''))
@@ -74,6 +78,15 @@ def main():
         source, final = fetch(url)
         page = Page(source)
         assert page.h1 == 1, f'{route}: expected exactly one H1'
+        assert len(page.ids) == len(set(page.ids)), f'{route}: duplicate HTML IDs'
+        for link in page.links:
+            if link.startswith('#') and len(link) > 1:
+                assert link[1:] in page.ids, f'{route}: missing anchor target {link}'
+        breadcrumb = re.search(r'<nav class="page-breadcrumb".*?href="([^"]+)"', source, re.S)
+        if breadcrumb:
+            expected_home = 'en/' if route.startswith('en/') else ''
+            assert breadcrumb[1] == urljoin(args.base_url.rstrip('/') + '/', expected_home), f'{route}: breadcrumb points to the wrong language'
+
         assert len(page.meta.get('description', [])) == 1, f'{route}: duplicate/missing description'
         assert len(page.canonicals) == 1 and page.canonicals[0] == final, f'{route}: incorrect canonical {page.canonicals}'
         assert len(page.meta.get('robots', [])) == 1, f'{route}: duplicate robots'

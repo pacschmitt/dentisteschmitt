@@ -8,12 +8,10 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main container section-padding">
+<main id="primary" class="site-main container section-padding interior-page information-page">
 
-    <header class="entry-header text-center mb-5">
-        <h1 class="entry-title"><?php esc_html_e( 'Informations', 'dentiste-schmitt' ); ?></h1>
-    </header>
-
+    <?php dentiste_schmitt_page_intro( __( 'Informations', 'dentiste-schmitt' ), dentiste_schmitt_text( 'Préparer votre visite', 'Plan your visit' ) ); ?>
+    <nav class="page-jump-links" aria-label="<?php echo esc_attr( dentiste_schmitt_text( 'Sur cette page', 'On this page' ) ); ?>"><a href="#contacts"><?php echo esc_html( dentiste_schmitt_text( 'Contacts et accès', 'Contact and access' ) ); ?><span aria-hidden="true">↓</span></a><a href="#questions-frequentes"><?php esc_html_e( 'Questions Fréquentes', 'dentiste-schmitt' ); ?><span aria-hidden="true">↓</span></a></nav>
     <div class="info-content" style="max-width: 900px; margin: 0 auto;">
         <div class="mb-5 text-center">
             <p class="lead">
@@ -24,52 +22,20 @@ get_header();
             </p>
         </div>
 
-        <div class="cards-grid mb-5">
-            <div class="card">
-                <h3><?php esc_html_e( 'Nyon', 'dentiste-schmitt' ); ?></h3>
-                <p>
-                    <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> <?php esc_html_e( 'Adresse', 'dentiste-schmitt' ); ?> :</strong> <?php esc_html_e( 'Avenue Reverdil 2, 1260 Nyon', 'dentiste-schmitt' ); ?><br>
-                    <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> <?php esc_html_e( 'Téléphone', 'dentiste-schmitt' ); ?> :</strong> <a href="tel:+41223617844">+41 22 361 78 44</a><br>
-                    <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> <?php esc_html_e( 'Email', 'dentiste-schmitt' ); ?> :</strong> <a href="mailto:drschmitt.nyon@bluewin.ch">drschmitt.nyon@bluewin.ch</a>
-                </p>
-                <p class="mt-5">
-                    <strong><?php esc_html_e( 'Horaires', 'dentiste-schmitt' ); ?> :</strong><br>
-                    <?php esc_html_e( 'Lundi au Vendredi : 8h00 - 18h00 (sur rendez-vous)', 'dentiste-schmitt' ); ?>
-                </p>
-                <p class="mt-5">
-                    <strong><?php esc_html_e( 'Situation', 'dentiste-schmitt' ); ?> :</strong><br>
-                    <?php esc_html_e( 'Le cabinet est situé en plein centre de Nyon à 100m de la gare au-dessus du centre commercial de La Combe (3ème étage avec ascenseurs).', 'dentiste-schmitt' ); ?>
-                </p>
-                <p class="mt-5">
-                    <strong><?php esc_html_e( 'Parking', 'dentiste-schmitt' ); ?> :</strong><br>
-                    <?php esc_html_e( 'Parking P1 et P2 de la Combe (accès direct avec les ascenseurs).', 'dentiste-schmitt' ); ?>
-                </p>
-            </div>
-
-            <div class="card">
-                <h3><?php esc_html_e( 'Bassins', 'dentiste-schmitt' ); ?></h3>
-                <p>
-                    <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> <?php esc_html_e( 'Adresse', 'dentiste-schmitt' ); ?> :</strong> <?php esc_html_e( 'Ruelle de la Repentance 4, 1269 Bassins', 'dentiste-schmitt' ); ?><br>
-                    <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> <?php esc_html_e( 'Téléphone', 'dentiste-schmitt' ); ?> :</strong> <a href="tel:+41223652626">+41 22 365 26 26</a><br>
-                    <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px; margin-right:5px; color:var(--color-primary);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> <?php esc_html_e( 'Email', 'dentiste-schmitt' ); ?> :</strong> <a href="mailto:cabinetdentairebassins@gmail.com">cabinetdentairebassins@gmail.com</a>
-                </p>
-                <p class="mt-3">
-                    <strong><?php esc_html_e( 'Horaires', 'dentiste-schmitt' ); ?> :</strong><br>
-                    <?php esc_html_e( 'Mardi au Jeudi : 8h30 - 18h00 (sur rendez-vous)', 'dentiste-schmitt' ); ?>
-                </p>
-                <p class="mt-3">
-                    <strong><?php esc_html_e( 'Situation', 'dentiste-schmitt' ); ?> :</strong><br>
-                    <?php esc_html_e( 'Le cabinet est situé au rez-de-chaussée à 50m de la boulangerie de Bassins.', 'dentiste-schmitt' ); ?>
-                </p>
-                <p class="mt-3">
-                    <strong><?php esc_html_e( 'Parking', 'dentiste-schmitt' ); ?> :</strong><br>
-                    <?php esc_html_e( 'Places de parking directement devant le cabinet.', 'dentiste-schmitt' ); ?>
-                </p>
-            </div>
+        <div class="contact-cards" id="contacts">
+            <?php foreach ( dentiste_schmitt_locations() as $slug => $location ) : ?>
+            <section class="contact-card">
+                <p class="eyebrow"><?php echo esc_html( dentiste_schmitt_text( 'Cabinet dentaire', 'Dental practice' ) ); ?></p>
+                <h2><?php echo esc_html( $location['city'] ); ?></h2>
+                <?php dentiste_schmitt_practice_contact( $slug ); ?>
+                <a class="text-link" href="<?php echo esc_url( dentiste_schmitt_location_url( $slug ) ); ?>"><?php echo esc_html( dentiste_schmitt_text( 'Découvrir le cabinet', 'Explore the practice' ) ); ?><span aria-hidden="true">→</span></a>
+            </section>
+            <?php endforeach; ?>
         </div>
 
-        <div class="faq-section mt-5 px-3 py-4 rounded">
-            <div class="text-center mb-5">
+        <section class="faq-section" id="questions-frequentes">
+            <div class="faq-heading">
+                <p class="eyebrow"><?php echo esc_html( dentiste_schmitt_text( 'Vos questions', 'Your questions' ) ); ?></p>
                 <h2 class="h3 d-inline-flex align-items-center mb-3">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2" style="color:var(--color-primary); margin-right: 10px;"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
                     <?php esc_html_e( 'Questions Fréquentes', 'dentiste-schmitt' ); ?>
@@ -139,7 +105,7 @@ get_header();
                     </div>
                 </details>
             </div>
-        </div>
+        </section>
     </div></main><!-- #main -->
 
 <?php
