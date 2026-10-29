@@ -1,5 +1,7 @@
 # Prévisualisation du design — 29 octobre 2026
 
+> Mise à jour : le design validé est publié en production en version **1.2.0** le 29 octobre 2026. Voir le [compte rendu de publication](DEPLOIEMENT-1.2.0-2026-10-29.md). Les états ci-dessous décrivent les étapes antérieures.
+
 Cette première version a été remplacée par `1.2.0-rc4`. Voir le [compte rendu actuel des pages intérieures](STAGING-PAGES-INTERIEURES-2026-10-29.md).
 
 État : **staging uniquement**, en attente de validation du propriétaire. Production conservée en version 1.1.1.

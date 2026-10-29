@@ -1,5 +1,7 @@
 # Pages intérieures du staging — 29 octobre 2026
 
+> Mise à jour : le design validé est publié en production en version **1.2.0** le 29 octobre 2026. Voir le [compte rendu de publication](DEPLOIEMENT-1.2.0-2026-10-29.md). Les états ci-dessous décrivent les étapes antérieures.
+
 État : **installées sur le staging uniquement**, version `1.2.0-rc4`. Production conservée en `1.1.1`. Cette version remplace la prévisualisation `rc2` de l’accueil et conserve ses améliorations.
 
 Prévisualisation : https://design.dentisteschmittnyon.ch/?design=1.2.0-rc4

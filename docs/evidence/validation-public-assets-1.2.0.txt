@@ -1,0 +1,18 @@
+PASS HTTP 200 https://dentisteschmittnyon.ch/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-content-events-90bacb156ab34fa090db.js
+PASS HTTP 200 https://dentisteschmittnyon.ch/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-wpforms-7c53eae50325da8a6935.js
+PASS HTTP 200 https://dentisteschmittnyon.ch/wp-content/themes/dentisteschmitt/css/interior.css?ver=1.2.0
+PASS HTTP 200 https://dentisteschmittnyon.ch/wp-content/themes/dentisteschmitt/css/premium.css?ver=1.2.0
+PASS HTTP 200 https://dentisteschmittnyon.ch/wp-content/themes/dentisteschmitt/js/carousel.js?ver=1.2.0
+PASS HTTP 200 https://dentisteschmittnyon.ch/wp-content/themes/dentisteschmitt/js/interactions.js?ver=1.2.0
+PASS HTTP 200 https://dentisteschmittnyon.ch/wp-content/themes/dentisteschmitt/js/navigation.js?ver=1.2.0
+PASS HTTP 200 https://dentisteschmittnyon.ch/wp-content/themes/dentisteschmitt/style.css?ver=1.2.0
+PASS HTTP 200 https://dentisteschmittnyon.ch/wp-content/uploads/2026/03/IMG_5449-1024x768.jpeg
+PASS HTTP 200 https://dentisteschmittnyon.ch/wp-content/uploads/2026/03/IMG_5455-1024x768.jpeg
+PASS HTTP 200 https://dentisteschmittnyon.ch/wp-content/uploads/2026/03/IMG_5947-1024x768.jpeg
+PASS HTTP 200 https://dentisteschmittnyon.ch/wp-content/uploads/2026/03/cropped-Logo-Schmitt-Contour.png
+PASS HTTP 200 https://dentisteschmittnyon.ch/wp-content/uploads/2026/04/20260326_171327-scaled-e1775659144358-862x1024.jpg
+PASS HTTP 200 https://dentisteschmittnyon.ch/wp-content/uploads/2026/04/IMG_9376-1024x768.jpg
+PASS HTTP 200 https://dentisteschmittnyon.ch/wp-content/uploads/2026/04/IMG_9384-768x1024.jpg
+PASS HTTP 200 https://dentisteschmittnyon.ch/wp-content/uploads/2026/04/IMG_9391-1024x768.jpg
+PASS production: version 1.2.0, premium + interior styles, Google tag retained, no staging host references on sampled pages
+PASS staging: remains 1.2.0-rc4, noindex, no Google analytics tag
